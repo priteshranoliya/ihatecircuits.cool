@@ -1,0 +1,16 @@
+{
+  "name": "@ihatecircuits/core",
+  "version": "0.1.0",
+  "description": "iHateCircuits circuit model and simulation engine (pure TypeScript, no DOM)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./parts": "./src/parts/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "vitest run"
+  }
+}
