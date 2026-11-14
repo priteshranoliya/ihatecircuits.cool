@@ -69,6 +69,8 @@ export function CommandPalette() {
       act('reset', 'Reset the simulation', 'reset', st.resetSim, 'power on clear'),
       act('analyze', 'Analyze: truth table, K-map, expressions', 'table', () => st.setDialog('analysis'), 'karnaugh boolean minimise sop pos'),
       act('build', 'Build a circuit from an expression', 'chip', () => st.setDialog('build'), 'synthesize synthesis generate'),
+      act('verilog', 'Verilog editor', 'code', () => st.setVerilogOpen(true), 'hdl rtl module compile source code'),
+      act('verilog-build', 'Build from Verilog', 'chip', st.requestVerilogBuild, 'hdl rtl compile synthesize lower module'),
       act('tests', 'Run test vectors', 'test', () => st.setDialog('tests'), 'check verify'),
       act('new-circuit', 'Add a circuit to this project', 'plus', () => st.newCircuit(), 'subcircuit module'),
       act('new', 'New project', 'file', newProjectAction),

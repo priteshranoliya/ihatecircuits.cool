@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { saveProject } from '../export/exporters';
 import { useEditor } from '../state/store';
 import { Canvas } from './Canvas';
@@ -15,6 +15,9 @@ import { Sidebar, useResizable } from './Sidebar';
 import { Timeline } from './Timeline';
 
 export { fit };
+
+// The editor, CodeMirror and the compiler load on first use, so they cost the first page nothing.
+const VerilogPanel = lazy(() => import('../verilog/VerilogPanel'));
 
 const narrowQuery = () => window.matchMedia('(max-width: 860px)').matches;
 
@@ -67,6 +70,7 @@ function useShortcuts(ui: { toggleFocus: () => void; toggleLib: () => void; togg
       if (k === 'r') return run(st.rotateSelection);
       if (k === 'k') return run(st.step);
       if (k === 't') return run(() => st.setDialog('analysis'));
+      if (k === 'e') return run(() => st.setVerilogOpen(!st.verilogOpen));
       if (k === '0') return run(fit);
       if (k === '+' || k === '=') return run(() => zoomBy(1.25));
       if (k === '-' || k === '_') return run(() => zoomBy(0.8));
@@ -161,6 +165,8 @@ export function App() {
   const hasSelection = useEditor((s) => s.selection.length > 0);
   const empty = useEditor((s) => Object.keys(s.circuit().components).length === 0);
   const placing = useEditor((s) => s.placing);
+  const verilogOpen = useEditor((s) => s.verilogOpen);
+  const [verilogLoaded, setVerilogLoaded] = useState(false);
   const [narrow, setNarrow] = useState(narrowQuery);
   const [libOpen, setLibOpen] = useState(false);
   const [inspOpen, setInspOpen] = useState(false);
@@ -170,6 +176,7 @@ export function App() {
   const [timeOpen, setTimeOpen] = useState(() => !narrowQuery() && window.innerHeight > 720);
   const lib = useResizable('ihatecircuits:libW', 260, 200, 420, 'left');
   const insp = useResizable('ihatecircuits:inspW', 296, 240, 460, 'right');
+  const vlog = useResizable('ihatecircuits:verilogW', 440, 320, 800, 'right');
   const [ui] = useState(() => ({
     toggleFocus: () => setFocus((f) => !f),
     toggleLib: () =>
@@ -214,7 +221,11 @@ export function App() {
   useEffect(() => {
     const t = setTimeout(fit, 30);
     return () => clearTimeout(t);
-  }, [focus, libHidden, inspHidden]);
+  }, [focus, libHidden, inspHidden, verilogOpen]);
+
+  useEffect(() => {
+    if (verilogOpen) setVerilogLoaded(true);
+  }, [verilogOpen]);
 
   useEffect(() => {
     if (!narrow) {
@@ -241,11 +252,11 @@ export function App() {
     return () => window.removeEventListener('keydown', esc);
   }, []);
 
-  const cols = `${focus || libHidden ? 0 : lib.width}px minmax(0, 1fr) ${focus || inspHidden ? 0 : insp.width}px`;
+  const cols = `${focus || libHidden ? 0 : lib.width}px minmax(0, 1fr) ${focus || !verilogOpen ? 0 : vlog.width}px ${focus || inspHidden ? 0 : insp.width}px`;
   return (
     <div className={`app${focus ? ' focus' : ''}`}>
       <Header onLibrary={() => (setLibOpen(true), setInspOpen(false))} onInspector={() => (setInspOpen(!inspOpen), setLibOpen(false))} />
-      <div className="body-row" style={narrow ? undefined : { gridTemplateColumns: cols }}>
+      <div className={`body-row${verilogOpen ? ' vlog-open' : ''}`} style={narrow ? undefined : { gridTemplateColumns: cols }}>
         <div style={{ display: 'contents', visibility: libHidden && !narrow ? 'hidden' : undefined }}>
           <Sidebar open={libOpen} onClose={() => setLibOpen(false)} onCollapse={ui.toggleLib} handle={lib.handle} />
         </div>
@@ -281,6 +292,20 @@ export function App() {
           </div>
           <Timeline open={timeOpen} onToggle={() => setTimeOpen(!timeOpen)} />
         </div>
+        <section className={`vlog${verilogOpen ? ' open' : ''}`} aria-label="Verilog editor" data-testid="verilog-panel">
+          {!narrow && verilogOpen && vlog.handle}
+          {verilogLoaded && (
+            <Suspense fallback={<p className="vlog-loading">Loading the editor…</p>}>
+              <VerilogPanel
+                open={verilogOpen}
+                onClose={() => {
+                  useEditor.getState().setVerilogOpen(false);
+                  document.querySelector<HTMLElement>('[data-testid="open-verilog"]')?.focus();
+                }}
+              />
+            </Suspense>
+          )}
+        </section>
         <div style={{ display: 'contents', visibility: inspHidden && !narrow ? 'hidden' : undefined }}>
           <Inspector open={inspOpen} handle={insp.handle} onCollapse={ui.toggleInsp} onClose={() => setInspOpen(false)} />
         </div>

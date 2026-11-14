@@ -47,6 +47,7 @@ const paths: Record<string, string> = {
   arrowUp: 'M10 16V4 M5 9l5-5 5 5',
   menu: 'M3 6h14 M3 10h14 M3 14h14',
   memory: 'M4 6h12v8H4z M7 6v8 M10 6v8 M13 6v8',
+  code: 'M7 6l-4 4 4 4 M13 6l4 4-4 4 M11.5 4l-3 12',
   test: 'M7 3h6 M8 3v5l-4 8a1 1 0 0 0 1 1.5h10a1 1 0 0 0 1-1.5l-4-8V3',
 };
 

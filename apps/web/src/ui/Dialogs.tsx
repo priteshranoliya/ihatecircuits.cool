@@ -55,6 +55,7 @@ const SHORTCUTS: [string, string][] = [
   ['+ − 0', 'Zoom in · out · fit'],
   ['K', 'Step the clock one tick'],
   ['T', 'Analyze the circuit'],
+  ['E', 'Open or close the Verilog editor'],
   ['⌘S · ⌘O', 'Save · open a project file'],
 ];
 

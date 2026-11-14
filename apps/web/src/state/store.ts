@@ -115,6 +115,10 @@ export interface EditorState {
   signals: Signal[];
   toast: Toast | null;
   dialog: Dialog;
+  /** The docked Verilog editor. */
+  verilogOpen: boolean;
+  /** Counts requests to build from the editor's text (the ⌘K command), so the panel can answer each one once. */
+  verilogBuildTick: number;
   /** Component the memory editor is open on. */
   memoryTarget: string | null;
   clipboard: Fragment | null;
@@ -161,6 +165,10 @@ export interface EditorState {
   openFile(text: string): void;
   notify(text: string, tone?: Toast['tone'], action?: Toast['action']): void;
   setDialog(d: Dialog, memoryTarget?: string): void;
+  setVerilogOpen(open: boolean): void;
+  requestVerilogBuild(): void;
+  /** Swap in a project that gained circuits from a Verilog build and open the new one: a single undo step. */
+  commitBuilt(next: Project, openId: string): void;
   setPending(p: PinRef | null): void;
   setPlacing(t: string | null): void;
   setTool(t: Tool): void;
@@ -324,6 +332,8 @@ export const useEditor = create<EditorState>()((set, get) => {
     signals: attach(initialSim, circuitById(initialProject, initialActive)!),
     toast: null,
     dialog: null,
+    verilogOpen: false,
+    verilogBuildTick: 0,
     memoryTarget: null,
     clipboard: null,
 
@@ -568,6 +578,16 @@ export const useEditor = create<EditorState>()((set, get) => {
     },
     setDialog(dialog, memoryTarget) {
       set({ dialog, memoryTarget: memoryTarget ?? null });
+    },
+    setVerilogOpen(verilogOpen) {
+      set({ verilogOpen });
+    },
+    requestVerilogBuild() {
+      set({ verilogOpen: true, verilogBuildTick: get().verilogBuildTick + 1 });
+    },
+    commitBuilt(next, openId) {
+      apply(next, openId, { ...pushHistory(), running: false, trail: [], selection: [] });
+      requestFit();
     },
     setPending(pending) {
       set({ pending });

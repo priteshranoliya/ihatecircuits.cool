@@ -142,6 +142,7 @@ export function Header({ onLibrary, onInspector }: { onLibrary: () => void; onIn
   const trail = useEditor((s) => s.trail);
   const running = useEditor((s) => s.running);
   const rate = useEditor((s) => s.rate);
+  const verilogOpen = useEditor((s) => s.verilogOpen);
   const tick = useEditor((s) => s.sim.tick);
   useEditor((s) => s.simRev);
   const [editing, setEditing] = useState(false);
@@ -156,6 +157,7 @@ export function Header({ onLibrary, onInspector }: { onLibrary: () => void; onIn
     { label: 'Open project file…', icon: 'open', hint: '⌘O', run: openFilePicker, testId: 'menu-open' },
     { label: 'Save project file', icon: 'save', hint: '⌘S', run: () => saveProject(useEditor.getState().project), testId: 'menu-save' },
     { label: 'Examples…', icon: 'book', run: () => st.setDialog('examples'), testId: 'menu-examples' },
+    { label: 'Verilog editor', icon: 'code', hint: 'E', run: () => st.setVerilogOpen(true), testId: 'menu-verilog' },
     { label: '', run: nop, divider: true },
     { label: 'Export', run: nop, heading: true },
     { label: 'SVG image', icon: 'export', run: () => runExport('svg'), testId: 'export-svg' },
@@ -261,6 +263,10 @@ export function Header({ onLibrary, onInspector }: { onLibrary: () => void; onIn
           </span>
         </div>
         <span className="vsep hide-narrow" />
+        <button type="button" className="btn ghost" onClick={() => st.setVerilogOpen(!verilogOpen)} aria-pressed={verilogOpen} data-testid="open-verilog" title="Write Verilog and build it into circuits (E)">
+          <Icon name="code" size={16} />
+          <span className="hide-mid">Verilog</span>
+        </button>
         <button type="button" className="btn ghost" onClick={() => st.setDialog('analysis')} data-testid="analyze" title="Truth table, K-map and expressions (T)">
           <Icon name="table" size={16} />
           <span className="hide-mid">Analyze</span>

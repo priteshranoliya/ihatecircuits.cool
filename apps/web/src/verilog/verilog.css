@@ -1,0 +1,167 @@
+/* Verilog panel. Loads with the panel; the dock itself is in styles.css. Uses the app's tokens only. */
+
+.vlog-loading {
+  margin: 0;
+  padding: var(--sp-4);
+  color: var(--text-muted);
+  font-size: var(--fs-13);
+}
+.vlog-head {
+  border-bottom: 1px solid var(--border-subtle);
+  gap: var(--sp-1);
+}
+.vlog-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: var(--fs-13);
+  font-weight: 600;
+}
+.vlog-head .spacer {
+  flex: 1;
+}
+.vlog-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--sp-2) var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.vlog-field {
+  display: grid;
+  gap: 3px;
+  font-size: var(--fs-11);
+  color: var(--text-muted);
+}
+.vlog-field .field {
+  width: auto;
+  min-width: 130px;
+  max-width: 200px;
+}
+.vlog-build {
+  margin-left: auto;
+}
+.vlog-editor {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.vlog-editor .cm-editor {
+  height: 100%;
+}
+
+.vlog-problems {
+  flex: none;
+  max-height: 38%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-panel);
+  min-height: 0;
+}
+.vlog-status {
+  padding: 6px var(--sp-3);
+  font-size: var(--fs-12);
+  color: var(--text-muted);
+  flex: none;
+}
+.vlog-status.bad {
+  color: var(--danger);
+  font-weight: 500;
+}
+.vlog-problems ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  min-height: 0;
+}
+.vlog-problem {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  grid-template-areas: 'level where' 'msg msg';
+  gap: 2px 8px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-top: 1px solid var(--border-subtle);
+  border-left: 3px solid transparent;
+  background: none;
+  padding: 6px var(--sp-3) 6px 9px;
+  font-size: var(--fs-12);
+  cursor: pointer;
+}
+.vlog-problem:hover {
+  background: var(--bg-hover);
+}
+.vlog-problem:focus-visible {
+  outline-offset: -2px;
+}
+.vlog-problem.error {
+  border-left-color: var(--danger);
+}
+.vlog-problem.warning {
+  border-left-color: var(--werr);
+}
+.vlog-problem.info {
+  border-left-color: var(--focus);
+}
+.vlog-level {
+  grid-area: level;
+  font-weight: 600;
+  font-size: var(--fs-11);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.vlog-problem.error .vlog-level {
+  color: var(--danger);
+}
+.vlog-problem.warning .vlog-level {
+  color: var(--werr);
+}
+.vlog-problem.info .vlog-level {
+  color: var(--focus);
+}
+.vlog-where {
+  grid-area: where;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.vlog-msg {
+  grid-area: msg;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.vlog-msg code {
+  font-family: var(--mono);
+  font-size: var(--fs-11);
+  color: var(--text-muted);
+  background: var(--bg-element);
+  border-radius: var(--r-1);
+  padding: 1px 4px;
+}
+.vlog-hint {
+  margin: 0;
+  padding: 6px var(--sp-3) 8px;
+  font-size: var(--fs-11);
+  color: var(--text-faint);
+  border-top: 1px solid var(--border-subtle);
+  flex: none;
+}
+.vlog-hint kbd {
+  padding: 1px 4px;
+}
+
+@media (max-width: 860px) {
+  .vlog-problems {
+    max-height: 34%;
+  }
+  .vlog-hint {
+    display: none;
+  }
+  .vlog-field .field {
+    min-width: 110px;
+  }
+}

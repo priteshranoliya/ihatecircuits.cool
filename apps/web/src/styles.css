@@ -116,6 +116,13 @@
   --t-med: 160ms;
   --t-slow: 240ms;
 
+  /* syntax colours for the Verilog editor, each at least 4.5:1 on the canvas */
+  --syn-keyword: #8e3b9a;
+  --syn-type: #0b6e99;
+  --syn-number: #9a5b00;
+  --syn-string: #1a7f37;
+  --syn-meta: #6b4fb3;
+
   --topbar-h: 48px;
   color-scheme: light;
 }
@@ -152,6 +159,11 @@
   --s0-text: #5286db;
   --se-text: #d5616d;
   --werr: #f59e0b;
+  --syn-keyword: #d49ae0;
+  --syn-type: #6cc1e6;
+  --syn-number: #e0b35a;
+  --syn-string: #7fd08f;
+  --syn-meta: #a99bf0;
   --sel-fill: rgb(239 235 228 / 0.06);
   --shadow-1: 0 0 0 1px rgb(255 255 255 / 0.03);
   --shadow-2: 0 0 0 1px rgb(255 255 255 / 0.04), 0 8px 24px rgb(0 0 0 / 0.45);
@@ -436,6 +448,26 @@ select.field {
   display: grid;
   grid-template-columns: var(--lib-w, 260px) minmax(0, 1fr) var(--insp-w, 296px);
   min-height: 0;
+}
+/* The Verilog panel docks between the canvas and the properties; its styles load with the panel. */
+.vlog {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+.vlog.open {
+  display: flex;
+}
+.vlog .resize-handle {
+  left: -4px;
+}
+.app.focus .vlog {
+  display: none;
 }
 .app.focus .body-row {
   grid-template-columns: 0 minmax(0, 1fr) 0;
@@ -2223,6 +2255,13 @@ select.field {
   .app.focus .body-row,
   .app.no-lib .body-row {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .body-row.vlog-open {
+    grid-template-rows: minmax(0, 1fr) minmax(0, 50%);
+  }
+  .vlog {
+    border-left: 0;
+    border-top: 1px solid var(--border-subtle);
   }
   .library,
   .inspector {
