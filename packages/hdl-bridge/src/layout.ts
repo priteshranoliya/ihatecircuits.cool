@@ -165,14 +165,17 @@ export function layout(input: LayoutInput): Placement[] {
     }
   }
 
-  // Constants go in the nearest free slot beside the part that reads them.
+  // Constants go in the nearest free slot beside the part that reads them. The placed parts of a column never overlap, so
+  // sorted by y they are also sorted by bottom edge: the parts a candidate row clashes with are one contiguous run, found
+  // by binary search, and the candidate only ever moves down.
   const firstSink = new Map<number, PinKey>();
   for (const e of edges) if (!firstSink.has(e.from.part)) firstSink.set(e.from.part, e.to);
-  // Placed parts of each column in ascending index order, so the first clash found is the lowest-numbered one.
   const placedIn: number[][] = Array.from({ length: maxCol + 1 }, () => []);
   nodes.forEach((_, j) => {
     if (placed[j]) placedIn[col[j]!]!.push(j);
   });
+  for (const column of placedIn) column.sort((a, b) => y[a]! - y[b]! || a - b);
+  const bottom = (j: number) => y[j]! + geo[j]!.h + ROW_GAP / 2;
   nodes.forEach((_, i) => {
     if (!isConst[i]) return;
     const sink = firstSink.get(i);
@@ -180,22 +183,25 @@ export function layout(input: LayoutInput): Placement[] {
     if (sink && !placed[sink.part]) want = TOP;
     want = Math.max(want, 0);
     const column = placedIn[col[i]!]!;
+    const h = geo[i]!.h;
+    let lo = 0;
+    let hi = column.length;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (bottom(column[mid]!) > want) hi = mid;
+      else lo = mid + 1;
+    }
+    let k = lo;
     for (;;) {
+      while (k < column.length && bottom(column[k]!) <= want) k++;
       let clash: number | undefined;
-      for (const j of column) {
-        if (y[j]! < want + geo[i]!.h + ROW_GAP / 2 && want < y[j]! + geo[j]!.h + ROW_GAP / 2) {
-          clash = j;
-          break;
-        }
-      }
+      for (let r = k; r < column.length && y[column[r]!]! < want + h + ROW_GAP / 2; r++) if (clash === undefined || column[r]! < clash) clash = column[r];
       if (clash === undefined) break;
       want = y[clash]! + geo[clash]!.h + ROW_GAP;
     }
     y[i] = want;
     placed[i] = true;
-    let at = column.length;
-    while (at > 0 && column[at - 1]! > i) at--;
-    column.splice(at, 0, i);
+    column.splice(k, 0, i);
   });
 
   return nodes.map((_, i) => ({ x: colX[col[i]!]!, y: y[i]!, col: col[i]! }));

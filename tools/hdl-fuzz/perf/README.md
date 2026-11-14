@@ -5,6 +5,7 @@ Timing and profiling scripts for the simulator and the Verilog pipeline. None of
 ```
 npx vitest run --config tools/hdl-fuzz/vitest.perf.config.ts chain        # a+a+... chain, PERF_CHAIN=100,1000,10000
 npx vitest run --config tools/hdl-fuzz/vitest.perf.config.ts mul16        # settle time of a gates-view multiplier and divider, PERF_MUL=16|32 PERF_VIEW=gates,blocks PERF_STEPS=200
+npx vitest run --config tools/hdl-fuzz/vitest.perf.config.ts layout       # lowering and layout of 1,500 and 5,000 cell circuits of several shapes, must stay under 2 s and 10 s
 npx vitest run --config tools/hdl-fuzz/vitest.perf.config.ts make-golden  # regenerate packages/hdl-bridge/tests/golden/fuzz-projects.json.gz
 ```
 
