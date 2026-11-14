@@ -1,0 +1,346 @@
+/* Analysis, tests and memory dialogs. Built on the tokens in styles.css. */
+
+.dlg-stack {
+  display: grid;
+  gap: 14px;
+}
+.dlg-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dlg-row.end {
+  justify-content: flex-end;
+}
+.dlg-grow {
+  flex: 1;
+  min-width: 0;
+}
+.dlg-empty {
+  padding: 28px 12px;
+  text-align: center;
+  color: var(--ink-2);
+  display: grid;
+  gap: 6px;
+}
+.dlg-empty strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.dlg-label {
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.dlg-scroll {
+  max-height: min(52vh, 520px);
+}
+.dlg-details {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.dlg-details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--ink);
+}
+.dlg-details summary:focus-visible,
+.dlg-cell:focus-visible,
+.dlg-grid:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+.dlg-details p,
+.dlg-details ul {
+  margin: 8px 0 0;
+}
+.dlg-details li {
+  margin: 3px 0;
+}
+.dlg-details code {
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+/* truth table values */
+.tt-1 {
+  color: var(--s1);
+  font-weight: 700;
+}
+.tt-0 {
+  color: var(--ink-2);
+}
+.tt-x {
+  color: var(--ink-3);
+  opacity: 0.7;
+}
+
+/* expressions */
+.expr-card {
+  padding: 14px 16px;
+  display: grid;
+  gap: 8px;
+}
+.expr-card h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.expr-line {
+  font-family: var(--mono);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.expr-lists {
+  display: grid;
+  gap: 3px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+.hazard-note {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.hazard-note ul {
+  margin: 6px 0;
+  padding-left: 18px;
+}
+
+/* k-map */
+.kmap-wrap {
+  overflow: auto;
+  padding: 4px 0;
+}
+.kmap {
+  position: relative;
+  display: grid;
+  width: max-content;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.kmap-corner,
+.kmap-axis {
+  display: grid;
+  place-items: center;
+  color: var(--ink-3);
+  font-size: 12px;
+}
+.kmap-axis.col {
+  color: var(--ink-2);
+}
+.kmap-cell {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-2);
+  margin: -0.5px;
+  background: var(--card);
+  position: relative;
+}
+.kmap-cell small {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 9.5px;
+  color: var(--ink-3);
+}
+.kmap-layer {
+  position: absolute;
+  pointer-events: none;
+}
+.kmap-group {
+  position: absolute;
+  border: 2px solid var(--gc);
+  background: color-mix(in srgb, var(--gc) 16%, transparent);
+  border-radius: 14px;
+}
+.kmap-group.open-top {
+  border-top-color: transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: dashed;
+}
+.kmap-group.open-bottom {
+  border-bottom-color: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-style: dashed;
+}
+.kmap-group.open-left {
+  border-left-color: transparent;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-style: dashed;
+}
+.kmap-group.open-right {
+  border-right-color: transparent;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-style: dashed;
+}
+.kmap-legend {
+  display: flex;
+  gap: 8px 14px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+.kmap-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--gc);
+  margin-right: 5px;
+}
+
+/* build */
+.build-text {
+  min-height: 110px;
+  line-height: 1.5;
+}
+.problem-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--se);
+}
+.problem-list .where {
+  font-family: var(--mono);
+  font-size: 12px;
+  margin-right: 6px;
+}
+.opt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px 18px;
+  align-items: center;
+}
+
+/* tests */
+.vec-text {
+  min-height: 190px;
+  line-height: 1.5;
+  white-space: pre;
+  overflow: auto;
+}
+.vec-table tr.fail td {
+  background: color-mix(in srgb, var(--se) 8%, var(--card));
+}
+.vec-table td.bad {
+  color: var(--se);
+  font-weight: 600;
+}
+.vec-table .exp-got {
+  display: grid;
+  gap: 1px;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.vec-status {
+  font-weight: 600;
+}
+.vec-status.pass {
+  color: var(--ink);
+}
+.vec-status.fail {
+  color: var(--se);
+}
+
+/* memory */
+.mem-meta {
+  display: flex;
+  gap: 6px 18px;
+  flex-wrap: wrap;
+  color: var(--ink-2);
+  font-size: 13px;
+}
+.dlg-grid {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  overflow: auto;
+  height: 360px;
+  position: relative;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.dlg-grid-head,
+.dlg-grid-row {
+  display: flex;
+  height: 28px;
+  align-items: stretch;
+}
+.dlg-grid-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 12px;
+}
+.dlg-addr,
+.dlg-cell {
+  display: grid;
+  place-items: center;
+  width: var(--cw, 52px);
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+.dlg-addr {
+  width: var(--aw, 64px);
+  color: var(--ink-3);
+  border-right: 1px solid var(--line);
+  position: sticky;
+  left: 0;
+  background: var(--bg);
+}
+.dlg-cell {
+  cursor: cell;
+  color: var(--ink-3);
+}
+.dlg-cell.nz {
+  color: var(--ink);
+}
+.dlg-cell.active {
+  background: var(--active);
+}
+.dlg-cell:hover {
+  background: var(--hover);
+}
+.dlg-cell input {
+  width: calc(var(--cw, 52px) - 4px);
+  height: 24px;
+  padding: 0 2px;
+  border: 1px solid var(--focus);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  text-align: center;
+}
+.dlg-cell input.invalid {
+  border-color: var(--se);
+}
+.mem-go {
+  width: 110px;
+}
