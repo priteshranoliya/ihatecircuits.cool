@@ -1,0 +1,20 @@
+{
+  "name": "@ihatecircuits/hdl-bridge",
+  "version": "0.1.0",
+  "description": "Connects the HDL compiler to the iHateCircuits circuit core",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "@ihatecircuits/core": "*",
+    "@ihatecircuits/hdl": "*"
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "vitest run"
+  }
+}

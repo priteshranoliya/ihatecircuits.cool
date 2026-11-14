@@ -1,0 +1,2967 @@
+# seed 8080 size 3
+seed8080 construct stable=true comps=709 nets=4442 nets=815b15bfe728cd61
+seed8080 start: events=2034 sha=49fdf74e09016be2
+seed8080 start: stable=true steps=16 time=66 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 9e2a0868ff1edfc5
+seed8080 cycle 0: events=168 sha=a6095cd0e844776b
+seed8080 cycle 0: stable=true steps=7 time=73 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 9e2a0868ff1edfc5
+seed8080 cycle 0 rise: events=2149 sha=8b7c104b11fd17dc
+seed8080 cycle 0 rise: stable=true steps=45 time=118 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 0 fall: events=2 sha=698655515a5153c2
+seed8080 cycle 0 fall: stable=true steps=1 time=119 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 1: events=953 sha=8e7a242228d72bb1
+seed8080 cycle 1: stable=true steps=50 time=169 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 1 rise: events=4208 sha=9c43beffd987d788
+seed8080 cycle 1 rise: stable=true steps=45 time=214 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 1 fall: events=2 sha=060f8d33be93e68b
+seed8080 cycle 1 fall: stable=true steps=1 time=215 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 2: events=768 sha=be9efd230732b629
+seed8080 cycle 2: stable=true steps=50 time=265 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 2 rise: events=3426 sha=f76e6190164c8961
+seed8080 cycle 2 rise: stable=true steps=45 time=310 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 2 fall: events=2 sha=fba8285b8946a409
+seed8080 cycle 2 fall: stable=true steps=1 time=311 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 3: events=1345 sha=37d701bb0f882ef9
+seed8080 cycle 3: stable=true steps=51 time=362 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 3 rise: events=3377 sha=953de723bbfe6e35
+seed8080 cycle 3 rise: stable=true steps=46 time=408 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 3 fall: events=2 sha=a8ee2228f5f85395
+seed8080 cycle 3 fall: stable=true steps=1 time=409 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 4: events=45 sha=783c7bdfb173be8a
+seed8080 cycle 4: stable=true steps=5 time=414 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 4 rise: events=3699 sha=87a07aa617ec4687
+seed8080 cycle 4 rise: stable=true steps=46 time=460 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 4 fall: events=2 sha=43491e7a44303dce
+seed8080 cycle 4 fall: stable=true steps=1 time=461 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 5: events=30 sha=7fab180ac06823f9
+seed8080 cycle 5: stable=true steps=3 time=464 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 5 rise: events=4267 sha=440803383b9ef2d4
+seed8080 cycle 5 rise: stable=true steps=46 time=510 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 5 fall: events=2 sha=c62640758812f8c8
+seed8080 cycle 5 fall: stable=true steps=1 time=511 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 6: events=68 sha=13b86b65cc0c7992
+seed8080 cycle 6: stable=true steps=4 time=515 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 6 rise: events=3426 sha=caca403103591c18
+seed8080 cycle 6 rise: stable=true steps=45 time=560 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 6 fall: events=2 sha=97dcad14119c6f49
+seed8080 cycle 6 fall: stable=true steps=1 time=561 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 7: events=15 sha=6d175400c96a1108
+seed8080 cycle 7: stable=true steps=3 time=564 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 7 rise: events=3363 sha=f94605e7b3ac6c2d
+seed8080 cycle 7 rise: stable=true steps=45 time=609 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 7 fall: events=2 sha=4950e90550777de7
+seed8080 cycle 7 fall: stable=true steps=1 time=610 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 8: events=280 sha=01bd6d4010ab49a4
+seed8080 cycle 8: stable=true steps=33 time=643 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 8 rise: events=3338 sha=c8b056e8aed5da4a
+seed8080 cycle 8 rise: stable=true steps=46 time=689 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 8 fall: events=2 sha=f51b04736f0cc0cc
+seed8080 cycle 8 fall: stable=true steps=1 time=690 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 9: events=755 sha=2dc3f83f1023215a
+seed8080 cycle 9: stable=true steps=51 time=741 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 9 rise: events=4079 sha=045631f39d6252e4
+seed8080 cycle 9 rise: stable=true steps=46 time=787 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 9 fall: events=2 sha=09aa6608b6cb58bc
+seed8080 cycle 9 fall: stable=true steps=1 time=788 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 10: events=74 sha=404754dc052f13b1
+seed8080 cycle 10: stable=true steps=7 time=795 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 10 rise: events=3526 sha=c0fbe1a472f51a16
+seed8080 cycle 10 rise: stable=true steps=46 time=841 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 10 fall: events=2 sha=836fdb15b1e2adde
+seed8080 cycle 10 fall: stable=true steps=1 time=842 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 11: events=37 sha=d70743c02b15164f
+seed8080 cycle 11: stable=true steps=5 time=847 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 11 rise: events=3523 sha=58eac9a246df6cb4
+seed8080 cycle 11 rise: stable=true steps=45 time=892 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 11 fall: events=2 sha=a541203127c1b080
+seed8080 cycle 11 fall: stable=true steps=1 time=893 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 12: events=336 sha=0b08e35224f22b64
+seed8080 cycle 12: stable=true steps=33 time=926 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 12 rise: events=3986 sha=c6280a8b5216d5bc
+seed8080 cycle 12 rise: stable=true steps=46 time=972 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 12 fall: events=2 sha=b38b10bdf59398d2
+seed8080 cycle 12 fall: stable=true steps=1 time=973 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 13: events=1122 sha=22fe3277477de68f
+seed8080 cycle 13: stable=true steps=51 time=1024 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 13 rise: events=4419 sha=d1eb5d3a093f0b19
+seed8080 cycle 13 rise: stable=true steps=45 time=1069 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 13 fall: events=2 sha=40ab28a0d8cfed43
+seed8080 cycle 13 fall: stable=true steps=1 time=1070 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 14: events=929 sha=5414f0eec4a4d7cd
+seed8080 cycle 14: stable=true steps=50 time=1120 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 14 rise: events=3902 sha=c51c698e66f79efc
+seed8080 cycle 14 rise: stable=true steps=45 time=1165 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 14 fall: events=2 sha=19ae98c326181b59
+seed8080 cycle 14 fall: stable=true steps=1 time=1166 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 15: events=1191 sha=768c5799e1360613
+seed8080 cycle 15: stable=true steps=51 time=1217 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 15 rise: events=4517 sha=ad9560435a560ad8
+seed8080 cycle 15 rise: stable=true steps=46 time=1263 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 15 fall: events=2 sha=6970c2ce49c1d1f2
+seed8080 cycle 15 fall: stable=true steps=1 time=1264 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 16: events=1127 sha=747fefd0a67cb771
+seed8080 cycle 16: stable=true steps=51 time=1315 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 16 rise: events=3578 sha=e95963f946617b7a
+seed8080 cycle 16 rise: stable=true steps=46 time=1361 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 16 fall: events=2 sha=693628f82b639cc9
+seed8080 cycle 16 fall: stable=true steps=1 time=1362 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 17: events=21 sha=83733fdf384e7298
+seed8080 cycle 17: stable=true steps=5 time=1367 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 17 rise: events=3643 sha=97a263c9e526b238
+seed8080 cycle 17 rise: stable=true steps=46 time=1413 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 17 fall: events=2 sha=cf11c381f7d838e2
+seed8080 cycle 17 fall: stable=true steps=1 time=1414 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 18: events=776 sha=a9cc33022fb63392
+seed8080 cycle 18: stable=true steps=51 time=1465 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 18 rise: events=4034 sha=a4e3fd97fd2ada31
+seed8080 cycle 18 rise: stable=true steps=45 time=1510 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 18 fall: events=2 sha=5e95e35e400abd96
+seed8080 cycle 18 fall: stable=true steps=1 time=1511 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 19: events=0 sha=e3b0c44298fc1c14
+seed8080 cycle 19: stable=true steps=0 time=1511 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 19 rise: events=4339 sha=0c32a2bdd8cc87ae
+seed8080 cycle 19 rise: stable=true steps=45 time=1556 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 19 fall: events=2 sha=106819b8d41d76c4
+seed8080 cycle 19 fall: stable=true steps=1 time=1557 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 20: events=12 sha=85f9a888e3634659
+seed8080 cycle 20: stable=true steps=3 time=1560 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 20 rise: events=3570 sha=c0fb42f95bf94ade
+seed8080 cycle 20 rise: stable=true steps=45 time=1605 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080 cycle 20 fall: events=2 sha=dc40c5d62398cffc
+seed8080 cycle 20 fall: stable=true steps=1 time=1606 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+seed8080~clone reset: events=5313 sha=cda4b07a0ecef14f
+seed8080~clone reset: stable=true steps=50 time=50 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080~clone nets 815b15bfe728cd61
+seed8080 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8080 original after clone: stable=true steps=1 time=1606 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8080 nets 815b15bfe728cd61
+# seed 8081 size 4
+seed8081 construct stable=true comps=752 nets=4816 nets=9d6dd626411dbdaa
+seed8081 start: events=1408 sha=0c043bcabfdf7fda
+seed8081 start: stable=true steps=14 time=45 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 0: events=128 sha=3018b3a0e8166e35
+seed8081 cycle 0: stable=true steps=7 time=52 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 0 rise: events=506 sha=60ed675eb324f292
+seed8081 cycle 0 rise: stable=true steps=17 time=69 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 0 fall: events=2 sha=65f5c53cbf3d0d3f
+seed8081 cycle 0 fall: stable=true steps=1 time=70 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 1: events=155 sha=dfbdc74433cc8159
+seed8081 cycle 1: stable=true steps=8 time=78 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 1 rise: events=581 sha=04bb2a5f7a8c2733
+seed8081 cycle 1 rise: stable=true steps=11 time=89 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 1 fall: events=2 sha=f9b632a35bd582d2
+seed8081 cycle 1 fall: stable=true steps=1 time=90 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 2: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 2: stable=true steps=0 time=90 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 2 rise: events=90 sha=d9a627ed5b07d02c
+seed8081 cycle 2 rise: stable=true steps=7 time=97 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 2 fall: events=2 sha=5f0377e0f41b5bca
+seed8081 cycle 2 fall: stable=true steps=1 time=98 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 3: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 3: stable=true steps=0 time=98 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 3 rise: events=76 sha=2b98baec7c3bb7d5
+seed8081 cycle 3 rise: stable=true steps=9 time=107 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 3 fall: events=2 sha=81f5fd484a869ecc
+seed8081 cycle 3 fall: stable=true steps=1 time=108 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 4: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 4: stable=true steps=0 time=108 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 4 rise: events=2 sha=4373cf39d9edb1db
+seed8081 cycle 4 rise: stable=true steps=1 time=109 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 4 fall: events=2 sha=f63757f7c903cd7d
+seed8081 cycle 4 fall: stable=true steps=1 time=110 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 5: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 5: stable=true steps=0 time=110 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 5 rise: events=2 sha=fca634e751c24983
+seed8081 cycle 5 rise: stable=true steps=1 time=111 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 5 fall: events=2 sha=cc97df5653bbde0d
+seed8081 cycle 5 fall: stable=true steps=1 time=112 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 6: events=61 sha=95528559990282eb
+seed8081 cycle 6: stable=true steps=10 time=122 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 6 rise: events=62 sha=28f616013d1171eb
+seed8081 cycle 6 rise: stable=true steps=8 time=130 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 6 fall: events=2 sha=8346ea928ed528e5
+seed8081 cycle 6 fall: stable=true steps=1 time=131 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 7: events=49 sha=925ee79cd03199c3
+seed8081 cycle 7: stable=true steps=10 time=141 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 7 rise: events=50 sha=079cdc3d3ced3955
+seed8081 cycle 7 rise: stable=true steps=6 time=147 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 7 fall: events=2 sha=99679750e5a8d6fc
+seed8081 cycle 7 fall: stable=true steps=1 time=148 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 8: events=143 sha=62826cf349f924f8
+seed8081 cycle 8: stable=true steps=9 time=157 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 8 rise: events=362 sha=4075a6cffba61fc3
+seed8081 cycle 8 rise: stable=true steps=15 time=172 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 8 fall: events=2 sha=17707beac2beb476
+seed8081 cycle 8 fall: stable=true steps=1 time=173 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 9: events=99 sha=0fec33ddc86f741d
+seed8081 cycle 9: stable=true steps=7 time=180 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 9 rise: events=408 sha=a8bf67fff7263564
+seed8081 cycle 9 rise: stable=true steps=11 time=191 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 9 fall: events=2 sha=1fde6cd7beea182c
+seed8081 cycle 9 fall: stable=true steps=1 time=192 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 10: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 10: stable=true steps=0 time=192 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 10 rise: events=41 sha=3b820f38a99c4fd9
+seed8081 cycle 10 rise: stable=true steps=7 time=199 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 10 fall: events=2 sha=007b0bec444cf3b7
+seed8081 cycle 10 fall: stable=true steps=1 time=200 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 11: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 11: stable=true steps=0 time=200 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 11 rise: events=101 sha=b4848c41d3288ae6
+seed8081 cycle 11 rise: stable=true steps=9 time=209 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 11 fall: events=2 sha=c5fe218ced476e67
+seed8081 cycle 11 fall: stable=true steps=1 time=210 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 12: events=61 sha=048ff3e06e85889c
+seed8081 cycle 12: stable=true steps=10 time=220 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 12 rise: events=18 sha=0808f48e237e4c5f
+seed8081 cycle 12 rise: stable=true steps=3 time=223 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 12 fall: events=2 sha=8cdb937ec3ecbcb3
+seed8081 cycle 12 fall: stable=true steps=1 time=224 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 13: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 13: stable=true steps=0 time=224 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 13 rise: events=2 sha=b507304caef330b2
+seed8081 cycle 13 rise: stable=true steps=1 time=225 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 13 fall: events=2 sha=536c1c45a48a50d6
+seed8081 cycle 13 fall: stable=true steps=1 time=226 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 14: events=61 sha=d07255429ca18635
+seed8081 cycle 14: stable=true steps=10 time=236 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 14 rise: events=62 sha=34271bd50378125d
+seed8081 cycle 14 rise: stable=true steps=8 time=244 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 14 fall: events=2 sha=f840f0da335636b0
+seed8081 cycle 14 fall: stable=true steps=1 time=245 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 15: events=49 sha=58c09746ebb88213
+seed8081 cycle 15: stable=true steps=10 time=255 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 15 rise: events=50 sha=5bf8507e11158c9a
+seed8081 cycle 15 rise: stable=true steps=6 time=261 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 15 fall: events=2 sha=59ffcec5eef6f178
+seed8081 cycle 15 fall: stable=true steps=1 time=262 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 16: events=61 sha=688ab1272c44fa42
+seed8081 cycle 16: stable=true steps=10 time=272 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 16 rise: events=62 sha=787a331f3169c167
+seed8081 cycle 16 rise: stable=true steps=8 time=280 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 16 fall: events=2 sha=a32614374af6af67
+seed8081 cycle 16 fall: stable=true steps=1 time=281 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 17: events=94 sha=ae06e61719470c51
+seed8081 cycle 17: stable=true steps=7 time=288 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 17 rise: events=359 sha=afb8205f15d45728
+seed8081 cycle 17 rise: stable=true steps=15 time=303 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 17 fall: events=2 sha=78fe98488d5ab16d
+seed8081 cycle 17 fall: stable=true steps=1 time=304 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 18: events=156 sha=893ea12427bdebf6
+seed8081 cycle 18: stable=true steps=10 time=314 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 18 rise: events=369 sha=06e3077c715067c4
+seed8081 cycle 18 rise: stable=true steps=11 time=325 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 18 fall: events=2 sha=5ce0c6ca2636a608
+seed8081 cycle 18 fall: stable=true steps=1 time=326 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 19: events=55 sha=8f61182f67b7f97f
+seed8081 cycle 19: stable=true steps=10 time=336 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 19 rise: events=81 sha=e3c358a30a90954c
+seed8081 cycle 19 rise: stable=true steps=7 time=343 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 19 fall: events=2 sha=058d875be88ea6f8
+seed8081 cycle 19 fall: stable=true steps=1 time=344 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 20: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 20: stable=true steps=0 time=344 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 20 rise: events=101 sha=673bfe0e59765316
+seed8081 cycle 20 rise: stable=true steps=9 time=353 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 20 fall: events=2 sha=35f37fb3762b2f42
+seed8081 cycle 20 fall: stable=true steps=1 time=354 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 21: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 21: stable=true steps=0 time=354 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 21 rise: events=46 sha=9661bc36cedd6a86
+seed8081 cycle 21 rise: stable=true steps=8 time=362 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 21 fall: events=2 sha=d70c782581fb96e4
+seed8081 cycle 21 fall: stable=true steps=1 time=363 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 22: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 22: stable=true steps=0 time=363 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 22 rise: events=46 sha=acf7bba4623a28b7
+seed8081 cycle 22 rise: stable=true steps=9 time=372 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 22 fall: events=2 sha=cca5f289e9194516
+seed8081 cycle 22 fall: stable=true steps=1 time=373 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 23: events=0 sha=e3b0c44298fc1c14
+seed8081 cycle 23: stable=true steps=0 time=373 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 23 rise: events=46 sha=12e7dd831a541d87
+seed8081 cycle 23 rise: stable=true steps=8 time=381 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081 cycle 23 fall: events=2 sha=1ee13f6dcc5af7cc
+seed8081 cycle 23 fall: stable=true steps=1 time=382 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+seed8081~clone reset: events=5722 sha=395e4965d38e3b3c
+seed8081~clone reset: stable=true steps=31 time=31 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081~clone nets 9d6dd626411dbdaa
+seed8081 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8081 original after clone: stable=true steps=1 time=382 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8081 nets b0b89f896e19a08c
+# seed 8082 size 5
+seed8082 construct stable=true comps=2781 nets=27079 nets=166ff4c40e3d8a25
+seed8082 start: events=5718 sha=5be2f44a8a7ff0b2
+seed8082 start: stable=true steps=17 time=45 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 0: events=1285 sha=92325c557a949b86
+seed8082 cycle 0: stable=true steps=15 time=60 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 0 rise: events=5135 sha=a3e826d1b22eb2e3
+seed8082 cycle 0 rise: stable=true steps=23 time=83 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 0 fall: events=2 sha=666b5643c9099a11
+seed8082 cycle 0 fall: stable=true steps=1 time=84 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 1: events=1180 sha=2f0193c9c4fb1345
+seed8082 cycle 1: stable=true steps=16 time=100 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 1 rise: events=2786 sha=aeef582d0d6816af
+seed8082 cycle 1 rise: stable=true steps=21 time=121 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 1 fall: events=2 sha=f4f132cc49476854
+seed8082 cycle 1 fall: stable=true steps=1 time=122 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 2: events=708 sha=cb020e36f008639d
+seed8082 cycle 2: stable=true steps=20 time=142 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 2 rise: events=865 sha=11764917807f7b95
+seed8082 cycle 2 rise: stable=true steps=18 time=160 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 2 fall: events=2 sha=d72f44a45ee2b9e4
+seed8082 cycle 2 fall: stable=true steps=1 time=161 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 3: events=861 sha=7fe9a4b98651c9d4
+seed8082 cycle 3: stable=true steps=20 time=181 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 3 rise: events=930 sha=b771962a89fb954e
+seed8082 cycle 3 rise: stable=true steps=19 time=200 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 3 fall: events=2 sha=44a1f1f96c207f64
+seed8082 cycle 3 fall: stable=true steps=1 time=201 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 4: events=547 sha=9c55953bcc147787
+seed8082 cycle 4: stable=true steps=20 time=221 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 4 rise: events=883 sha=b5ab16adbde92f03
+seed8082 cycle 4 rise: stable=true steps=18 time=239 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 4 fall: events=2 sha=35740006080ff2d3
+seed8082 cycle 4 fall: stable=true steps=1 time=240 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 5: events=797 sha=dfa75a0590ad9c3b
+seed8082 cycle 5: stable=true steps=16 time=256 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 5 rise: events=1722 sha=77b65f3ddf0dd2a9
+seed8082 cycle 5 rise: stable=true steps=16 time=272 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 5 fall: events=2 sha=16b9781285f4cf92
+seed8082 cycle 5 fall: stable=true steps=1 time=273 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 6: events=990 sha=5218a8fd24d644c3
+seed8082 cycle 6: stable=true steps=18 time=291 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 6 rise: events=2429 sha=c4981338148f5fce
+seed8082 cycle 6 rise: stable=true steps=21 time=312 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 6 fall: events=2 sha=bf4fa458766d45d8
+seed8082 cycle 6 fall: stable=true steps=1 time=313 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 7: events=469 sha=55fbcebd3a445009
+seed8082 cycle 7: stable=true steps=20 time=333 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 7 rise: events=874 sha=8d2ca0715def1a46
+seed8082 cycle 7 rise: stable=true steps=18 time=351 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 7 fall: events=2 sha=0fc4196a692f571b
+seed8082 cycle 7 fall: stable=true steps=1 time=352 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 8: events=275 sha=2ac2a12f4cf8e86b
+seed8082 cycle 8: stable=true steps=20 time=372 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 8 rise: events=887 sha=7f42400f1a9a4fe0
+seed8082 cycle 8 rise: stable=true steps=20 time=392 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 8 fall: events=2 sha=95aa840f9bb645ef
+seed8082 cycle 8 fall: stable=true steps=1 time=393 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 9: events=665 sha=8142a531da966d2c
+seed8082 cycle 9: stable=true steps=20 time=413 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 9 rise: events=895 sha=a8591ecaa5b87029
+seed8082 cycle 9 rise: stable=true steps=18 time=431 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 9 fall: events=2 sha=45c4a7ce3efc370c
+seed8082 cycle 9 fall: stable=true steps=1 time=432 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 10: events=465 sha=6375d0756761aec6
+seed8082 cycle 10: stable=true steps=20 time=452 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 10 rise: events=900 sha=90dbfe50d8c8338c
+seed8082 cycle 10 rise: stable=true steps=20 time=472 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 10 fall: events=2 sha=09e92697691b90cc
+seed8082 cycle 10 fall: stable=true steps=1 time=473 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 11: events=714 sha=14b795dedee18a41
+seed8082 cycle 11: stable=true steps=20 time=493 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 11 rise: events=856 sha=362d682ae303f28f
+seed8082 cycle 11 rise: stable=true steps=18 time=511 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 11 fall: events=2 sha=664ffaa13a30485d
+seed8082 cycle 11 fall: stable=true steps=1 time=512 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 12: events=495 sha=af1356e300497a48
+seed8082 cycle 12: stable=true steps=20 time=532 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 12 rise: events=889 sha=c8ecb6d1b4511aed
+seed8082 cycle 12 rise: stable=true steps=19 time=551 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 12 fall: events=2 sha=db1623f2de073db8
+seed8082 cycle 12 fall: stable=true steps=1 time=552 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 13: events=395 sha=7b18a85166e987d5
+seed8082 cycle 13: stable=true steps=18 time=570 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 13 rise: events=884 sha=82a13a698367f1bb
+seed8082 cycle 13 rise: stable=true steps=18 time=588 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 13 fall: events=2 sha=d933c86ba0ea2e74
+seed8082 cycle 13 fall: stable=true steps=1 time=589 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 14: events=601 sha=1f9c4d9004182a57
+seed8082 cycle 14: stable=true steps=18 time=607 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 14 rise: events=896 sha=6e2851e9d9a0de62
+seed8082 cycle 14 rise: stable=true steps=19 time=626 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 14 fall: events=2 sha=54405d7d04bf7661
+seed8082 cycle 14 fall: stable=true steps=1 time=627 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 15: events=142 sha=d5559de2afc5ce62
+seed8082 cycle 15: stable=true steps=18 time=645 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 15 rise: events=856 sha=534fc47fc924732b
+seed8082 cycle 15 rise: stable=true steps=18 time=663 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 15 fall: events=2 sha=4e00654240840d1a
+seed8082 cycle 15 fall: stable=true steps=1 time=664 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 16: events=716 sha=f15f8ece44b8c5f6
+seed8082 cycle 16: stable=true steps=18 time=682 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 16 rise: events=877 sha=c9fcb8dce980d2f2
+seed8082 cycle 16 rise: stable=true steps=20 time=702 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 16 fall: events=2 sha=aaa7a5e80ebd752a
+seed8082 cycle 16 fall: stable=true steps=1 time=703 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 17: events=560 sha=b8a8aa504bb1d5ff
+seed8082 cycle 17: stable=true steps=20 time=723 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 17 rise: events=869 sha=8f382437cf5c2427
+seed8082 cycle 17 rise: stable=true steps=18 time=741 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 17 fall: events=2 sha=b25815782a8ca5f8
+seed8082 cycle 17 fall: stable=true steps=1 time=742 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 18: events=692 sha=8cb65d7ad9d02281
+seed8082 cycle 18: stable=true steps=20 time=762 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 18 rise: events=916 sha=98fd20fb710fa5be
+seed8082 cycle 18 rise: stable=true steps=20 time=782 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 18 fall: events=2 sha=f01d0434dc8403bd
+seed8082 cycle 18 fall: stable=true steps=1 time=783 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 19: events=1151 sha=8669e83ebc97c7ad
+seed8082 cycle 19: stable=true steps=18 time=801 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 19 rise: events=2412 sha=b85fcda00e4504e8
+seed8082 cycle 19 rise: stable=true steps=18 time=819 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 19 fall: events=2 sha=e766e4cfcbb18630
+seed8082 cycle 19 fall: stable=true steps=1 time=820 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 20: events=578 sha=85ad697d8b2f6667
+seed8082 cycle 20: stable=true steps=12 time=832 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 20 rise: events=2 sha=f8204d417c068474
+seed8082 cycle 20 rise: stable=true steps=1 time=833 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 20 fall: events=2 sha=fe5062a93051bfc7
+seed8082 cycle 20 fall: stable=true steps=1 time=834 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 21: events=967 sha=16a955622122f3da
+seed8082 cycle 21: stable=true steps=20 time=854 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 21 rise: events=2441 sha=be2b92e120b1c26e
+seed8082 cycle 21 rise: stable=true steps=21 time=875 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 21 fall: events=2 sha=4c0bf6b4c38e7091
+seed8082 cycle 21 fall: stable=true steps=1 time=876 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 22: events=692 sha=3773975f19b8360b
+seed8082 cycle 22: stable=true steps=20 time=896 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 22 rise: events=907 sha=0799eb86586dafe3
+seed8082 cycle 22 rise: stable=true steps=18 time=914 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 22 fall: events=2 sha=93b97c01a644fd5f
+seed8082 cycle 22 fall: stable=true steps=1 time=915 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 23: events=1463 sha=a68b6f524eb69567
+seed8082 cycle 23: stable=true steps=18 time=933 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 23 rise: events=1730 sha=2ed2f2a275c997e6
+seed8082 cycle 23 rise: stable=true steps=16 time=949 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 23 fall: events=2 sha=e604f24f17fa1bc9
+seed8082 cycle 23 fall: stable=true steps=1 time=950 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 24: events=1352 sha=675eea0d289d7fe6
+seed8082 cycle 24: stable=true steps=20 time=970 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 24 rise: events=2415 sha=3b6c9e8e4b2ab8a7
+seed8082 cycle 24 rise: stable=true steps=21 time=991 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 24 fall: events=2 sha=1a09f6cd4ac584c8
+seed8082 cycle 24 fall: stable=true steps=1 time=992 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 25: events=724 sha=837f249d08b1b844
+seed8082 cycle 25: stable=true steps=20 time=1012 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 25 rise: events=863 sha=b5c8b3ebe4bcb46e
+seed8082 cycle 25 rise: stable=true steps=18 time=1030 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 25 fall: events=2 sha=b136298341390467
+seed8082 cycle 25 fall: stable=true steps=1 time=1031 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 26: events=313 sha=d398722f39bfdc7b
+seed8082 cycle 26: stable=true steps=20 time=1051 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 26 rise: events=847 sha=aecbee29b7358a90
+seed8082 cycle 26 rise: stable=true steps=20 time=1071 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082 cycle 26 fall: events=2 sha=7a4348bd736768c0
+seed8082 cycle 26 fall: stable=true steps=1 time=1072 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+seed8082~clone reset: events=30901 sha=85b48d1ee5849c1c
+seed8082~clone reset: stable=true steps=28 time=28 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082~clone nets 166ff4c40e3d8a25
+seed8082 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8082 original after clone: stable=true steps=1 time=1072 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8082 nets c1e485a6ecd7c4f5
+# seed 8083 size 6
+seed8083 construct stable=true comps=5899 nets=49767 nets=f17939930de6513a
+seed8083 start: events=17594 sha=cd68ca3e38226e07
+seed8083 start: stable=true steps=20 time=93 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 0: events=1552 sha=ce734e9436ffe8eb
+seed8083 cycle 0: stable=true steps=10 time=103 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 0 rise: events=14198 sha=5d6b10bb6f801d8f
+seed8083 cycle 0 rise: stable=true steps=50 time=153 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 0 fall: events=2 sha=de6bdf96ef4b573a
+seed8083 cycle 0 fall: stable=true steps=1 time=154 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 1: events=4097 sha=27809956a7a0df23
+seed8083 cycle 1: stable=true steps=48 time=202 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 1 rise: events=13171 sha=6af3b5cea8759005
+seed8083 cycle 1 rise: stable=true steps=68 time=270 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 1 fall: events=2 sha=0366489af47a3072
+seed8083 cycle 1 fall: stable=true steps=1 time=271 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 2: events=2920 sha=5684d2f0b62befb8
+seed8083 cycle 2: stable=true steps=48 time=319 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets e356df64124775e6
+seed8083 cycle 2 rise: events=7400 sha=7e9d586bf9429e1f
+seed8083 cycle 2 rise: stable=true steps=64 time=383 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 2 fall: events=2 sha=68775a760fd9c563
+seed8083 cycle 2 fall: stable=true steps=1 time=384 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 3: events=721 sha=668921873afa2ca0
+seed8083 cycle 3: stable=true steps=48 time=432 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 3 rise: events=4399 sha=1e6516818f88d000
+seed8083 cycle 3 rise: stable=true steps=53 time=485 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 3 fall: events=2 sha=239915fc33a9d74b
+seed8083 cycle 3 fall: stable=true steps=1 time=486 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 4: events=3090 sha=579d638dfd76b9cc
+seed8083 cycle 4: stable=true steps=48 time=534 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 4 rise: events=8864 sha=9e1ec13b278f45ab
+seed8083 cycle 4 rise: stable=true steps=68 time=602 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 4 fall: events=2 sha=8d375a2b22fcb3bb
+seed8083 cycle 4 fall: stable=true steps=1 time=603 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 5: events=4293 sha=c5a72c0033db001b
+seed8083 cycle 5: stable=true steps=45 time=648 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets 226ba48362571bb1
+seed8083 cycle 5 rise: events=13085 sha=a4ade8f9f18618a1
+seed8083 cycle 5 rise: stable=true steps=66 time=714 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 5 fall: events=2 sha=e1fa1513033b9c03
+seed8083 cycle 5 fall: stable=true steps=1 time=715 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 6: events=2887 sha=a3722f4e2a7ebf6d
+seed8083 cycle 6: stable=true steps=48 time=763 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 6 rise: events=16020 sha=9a5bbd9fbe64e1ee
+seed8083 cycle 6 rise: stable=true steps=64 time=827 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 6 fall: events=2 sha=c342740f9c131c0e
+seed8083 cycle 6 fall: stable=true steps=1 time=828 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 7: events=278 sha=b8359b4e710e900f
+seed8083 cycle 7: stable=true steps=30 time=858 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 7 rise: events=6859 sha=1cc993d45ec70f62
+seed8083 cycle 7 rise: stable=true steps=64 time=922 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 7 fall: events=2 sha=1784343512b36abb
+seed8083 cycle 7 fall: stable=true steps=1 time=923 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 8: events=817 sha=29e1cc2cc25898d8
+seed8083 cycle 8: stable=true steps=48 time=971 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 8 rise: events=3337 sha=dc6a195f58915acd
+seed8083 cycle 8 rise: stable=true steps=53 time=1024 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 8 fall: events=2 sha=a72ca37b555531ef
+seed8083 cycle 8 fall: stable=true steps=1 time=1025 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 9: events=2867 sha=bf477c5c33d42b7a
+seed8083 cycle 9: stable=true steps=48 time=1073 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 9 rise: events=10267 sha=f9a73ef938e15ad0
+seed8083 cycle 9 rise: stable=true steps=68 time=1141 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 9 fall: events=2 sha=4b4d891e8c896185
+seed8083 cycle 9 fall: stable=true steps=1 time=1142 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 10: events=436 sha=f75319d561afaafd
+seed8083 cycle 10: stable=true steps=48 time=1190 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 10 rise: events=6817 sha=be08d5a223f7eae6
+seed8083 cycle 10 rise: stable=true steps=71 time=1261 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 10 fall: events=2 sha=b2a16b364d1a2b41
+seed8083 cycle 10 fall: stable=true steps=1 time=1262 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 11: events=574 sha=0994c88c105dc0bf
+seed8083 cycle 11: stable=true steps=48 time=1310 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 11 rise: events=6591 sha=cd2a909dbff9379c
+seed8083 cycle 11 rise: stable=true steps=66 time=1376 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 11 fall: events=2 sha=35fe92ea0d9d630d
+seed8083 cycle 11 fall: stable=true steps=1 time=1377 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 12: events=2997 sha=24bce35e5ca04605
+seed8083 cycle 12: stable=true steps=48 time=1425 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 12 rise: events=8669 sha=36a0f5538ac02dd5
+seed8083 cycle 12 rise: stable=true steps=69 time=1494 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 12 fall: events=2 sha=5992d5581970b97b
+seed8083 cycle 12 fall: stable=true steps=1 time=1495 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 13: events=3243 sha=0618442ec9c017b3
+seed8083 cycle 13: stable=true steps=48 time=1543 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 13 rise: events=7698 sha=6590ccfe631d6960
+seed8083 cycle 13 rise: stable=true steps=62 time=1605 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 13 fall: events=2 sha=745b34d05e16f7cc
+seed8083 cycle 13 fall: stable=true steps=1 time=1606 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 14: events=3203 sha=8538c507853b037f
+seed8083 cycle 14: stable=true steps=48 time=1654 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 14 rise: events=10068 sha=b9c8dc287a620a93
+seed8083 cycle 14 rise: stable=true steps=69 time=1723 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 14 fall: events=2 sha=413c37fe36f54f94
+seed8083 cycle 14 fall: stable=true steps=1 time=1724 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 15: events=2511 sha=6dca3106e529089f
+seed8083 cycle 15: stable=true steps=48 time=1772 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 15 rise: events=12885 sha=292e4429ada6f232
+seed8083 cycle 15 rise: stable=true steps=69 time=1841 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 15 fall: events=2 sha=c02b12af86b51b1b
+seed8083 cycle 15 fall: stable=true steps=1 time=1842 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 16: events=1946 sha=8e1917748febaacc
+seed8083 cycle 16: stable=true steps=46 time=1888 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 16 rise: events=13316 sha=02722389cd12d60d
+seed8083 cycle 16 rise: stable=true steps=64 time=1952 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 16 fall: events=2 sha=926e63fdf402faab
+seed8083 cycle 16 fall: stable=true steps=1 time=1953 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 17: events=3107 sha=fa0b96ab6de1ed8a
+seed8083 cycle 17: stable=true steps=48 time=2001 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 17 rise: events=7145 sha=aa366e6276d1f7ed
+seed8083 cycle 17 rise: stable=true steps=66 time=2067 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 17 fall: events=2 sha=d6c319b6efc64215
+seed8083 cycle 17 fall: stable=true steps=1 time=2068 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 18: events=571 sha=8ef353fa98a69605
+seed8083 cycle 18: stable=true steps=45 time=2113 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 18 rise: events=5224 sha=ad2062ea0478c25a
+seed8083 cycle 18 rise: stable=true steps=62 time=2175 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 18 fall: events=2 sha=8ff9c53a63ad0c45
+seed8083 cycle 18 fall: stable=true steps=1 time=2176 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 19: events=2738 sha=c6a0b972ce7ad09d
+seed8083 cycle 19: stable=true steps=48 time=2224 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 19 rise: events=13484 sha=d29b0e655da2c4f3
+seed8083 cycle 19 rise: stable=true steps=66 time=2290 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 19 fall: events=2 sha=64fac875d8be83b2
+seed8083 cycle 19 fall: stable=true steps=1 time=2291 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 20: events=4607 sha=b794f93411abf86d
+seed8083 cycle 20: stable=true steps=48 time=2339 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 20 rise: events=12933 sha=9e1901d47b8d4b89
+seed8083 cycle 20 rise: stable=true steps=64 time=2403 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 20 fall: events=2 sha=013668c2e7e06415
+seed8083 cycle 20 fall: stable=true steps=1 time=2404 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 21: events=450 sha=f53aaa5e668660d2
+seed8083 cycle 21: stable=true steps=48 time=2452 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 21 rise: events=5656 sha=b5047ded682d0d32
+seed8083 cycle 21 rise: stable=true steps=64 time=2516 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 21 fall: events=2 sha=ae6dc9b5cd290312
+seed8083 cycle 21 fall: stable=true steps=1 time=2517 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 22: events=518 sha=cc1cfc4af792790a
+seed8083 cycle 22: stable=true steps=48 time=2565 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 22 rise: events=2797 sha=a96e67200dec988f
+seed8083 cycle 22 rise: stable=true steps=53 time=2618 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 22 fall: events=2 sha=bf95d7c169cc12e7
+seed8083 cycle 22 fall: stable=true steps=1 time=2619 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 23: events=666 sha=ffa265df78e66900
+seed8083 cycle 23: stable=true steps=48 time=2667 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 23 rise: events=3038 sha=c5a09f26f82bfd5d
+seed8083 cycle 23 rise: stable=true steps=53 time=2720 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 23 fall: events=2 sha=ff7ff72a66bf51c3
+seed8083 cycle 23 fall: stable=true steps=1 time=2721 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 24: events=2891 sha=5b2736f92a40d44b
+seed8083 cycle 24: stable=true steps=48 time=2769 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 24 rise: events=8222 sha=561cc23ee9cb4fd0
+seed8083 cycle 24 rise: stable=true steps=68 time=2837 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 24 fall: events=2 sha=5be7572b31aea93d
+seed8083 cycle 24 fall: stable=true steps=1 time=2838 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 25: events=644 sha=58e436e9397cc6cb
+seed8083 cycle 25: stable=true steps=48 time=2886 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 25 rise: events=8938 sha=00d41e5e0e809d7b
+seed8083 cycle 25 rise: stable=true steps=71 time=2957 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 25 fall: events=2 sha=3e418a7d0c875249
+seed8083 cycle 25 fall: stable=true steps=1 time=2958 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 26: events=365 sha=9bc7ae588d215343
+seed8083 cycle 26: stable=true steps=48 time=3006 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 26 rise: events=6980 sha=2cc5187caab14ee4
+seed8083 cycle 26 rise: stable=true steps=66 time=3072 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 26 fall: events=2 sha=eb5fafb56e7e3a54
+seed8083 cycle 26 fall: stable=true steps=1 time=3073 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 27: events=2969 sha=78072ca0640f36d1
+seed8083 cycle 27: stable=true steps=48 time=3121 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 27 rise: events=9221 sha=ce759a414b28882e
+seed8083 cycle 27 rise: stable=true steps=69 time=3190 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 27 fall: events=2 sha=05808dbf84803756
+seed8083 cycle 27 fall: stable=true steps=1 time=3191 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 28: events=831 sha=96b06e39a42e3469
+seed8083 cycle 28: stable=true steps=48 time=3239 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 28 rise: events=4774 sha=0b417b712ef19e3e
+seed8083 cycle 28 rise: stable=true steps=66 time=3305 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 28 fall: events=2 sha=badbc54a023426f3
+seed8083 cycle 28 fall: stable=true steps=1 time=3306 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 29: events=3266 sha=9c492d10bae8e611
+seed8083 cycle 29: stable=true steps=48 time=3354 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 29 rise: events=9036 sha=8804431055fab03b
+seed8083 cycle 29 rise: stable=true steps=68 time=3422 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083 cycle 29 fall: events=2 sha=aafcc97b85588599
+seed8083 cycle 29 fall: stable=true steps=1 time=3423 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+seed8083~clone reset: events=56945 sha=7a3897b859ecd284
+seed8083~clone reset: stable=true steps=73 time=73 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083~clone nets f17939930de6513a
+seed8083 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8083 original after clone: stable=true steps=1 time=3423 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8083 nets f17939930de6513a
+# seed 8084 size 6
+seed8084 construct stable=true comps=7643 nets=61636 nets=210beb8f1e37fbbf
+seed8084 start: events=22628 sha=4458574f575755a9
+seed8084 start: stable=true steps=33 time=111 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 0: events=1262 sha=7320638c97dc80e2
+seed8084 cycle 0: stable=true steps=10 time=121 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 0 rise: events=13597 sha=1b9f5f7a7fce450a
+seed8084 cycle 0 rise: stable=true steps=38 time=159 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 0 fall: events=2 sha=b25cbb34a565368e
+seed8084 cycle 0 fall: stable=true steps=1 time=160 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 1: events=2154 sha=105953b0bb6761bf
+seed8084 cycle 1: stable=true steps=22 time=182 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 1 rise: events=12285 sha=20a07a8d1fe94d89
+seed8084 cycle 1 rise: stable=true steps=36 time=218 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 1 fall: events=2 sha=b299ef28760d83dd
+seed8084 cycle 1 fall: stable=true steps=1 time=219 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 2: events=1668 sha=f63a05a74216303d
+seed8084 cycle 2: stable=true steps=15 time=234 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 2 rise: events=7929 sha=312b21d05e74e687
+seed8084 cycle 2 rise: stable=true steps=36 time=270 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 2 fall: events=2 sha=7707369d2bb038fe
+seed8084 cycle 2 fall: stable=true steps=1 time=271 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 3: events=1904 sha=dd88590504da60a9
+seed8084 cycle 3: stable=true steps=15 time=286 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 3 rise: events=7709 sha=9b772345e59be1a4
+seed8084 cycle 3 rise: stable=true steps=36 time=322 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 3 fall: events=2 sha=c6f99a8ad9c1151b
+seed8084 cycle 3 fall: stable=true steps=1 time=323 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 4: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 4: stable=true steps=0 time=323 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 4 rise: events=4596 sha=1bd7b5b149c53b35
+seed8084 cycle 4 rise: stable=true steps=73 time=396 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 4 fall: events=2 sha=bb2f5b464be062de
+seed8084 cycle 4 fall: stable=true steps=1 time=397 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 5: events=2780 sha=7646f73374483054
+seed8084 cycle 5: stable=true steps=56 time=453 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 5 rise: events=14407 sha=5cbafaf9c5d8747d
+seed8084 cycle 5 rise: stable=true steps=77 time=530 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 5 fall: events=2 sha=6f3885fba55914a3
+seed8084 cycle 5 fall: stable=true steps=1 time=531 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 6: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 6: stable=true steps=0 time=531 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 6 rise: events=2 sha=2145bfdb145c368f
+seed8084 cycle 6 rise: stable=true steps=1 time=532 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 6 fall: events=2 sha=fd0f8873cee77593
+seed8084 cycle 6 fall: stable=true steps=1 time=533 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 7: events=5087 sha=ae5d50b5201b1e63
+seed8084 cycle 7: stable=true steps=75 time=608 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 7 rise: events=14031 sha=f214c692c56eecfd
+seed8084 cycle 7 rise: stable=true steps=58 time=666 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 7 fall: events=2 sha=e5c49ab859f79926
+seed8084 cycle 7 fall: stable=true steps=1 time=667 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 8: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 8: stable=true steps=0 time=667 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 8 rise: events=4907 sha=41b7f1279839871f
+seed8084 cycle 8 rise: stable=true steps=73 time=740 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 8 fall: events=2 sha=37fdf5bd3b1debe3
+seed8084 cycle 8 fall: stable=true steps=1 time=741 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 9: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 9: stable=true steps=0 time=741 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 9 rise: events=3609 sha=6f5fbb8bd51e1a60
+seed8084 cycle 9 rise: stable=true steps=58 time=799 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 9 fall: events=2 sha=6c3e568f3f306be4
+seed8084 cycle 9 fall: stable=true steps=1 time=800 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 10: events=1845 sha=c6a7571a0a8e5f73
+seed8084 cycle 10: stable=true steps=29 time=829 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 10 rise: events=11442 sha=002c3d235629bc60
+seed8084 cycle 10 rise: stable=true steps=79 time=908 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 10 fall: events=2 sha=e08fbaa90181a358
+seed8084 cycle 10 fall: stable=true steps=1 time=909 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 11: events=5223 sha=0879239c3ae6d326
+seed8084 cycle 11: stable=true steps=77 time=986 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 11 rise: events=8828 sha=4e4094b94e8a3c7a
+seed8084 cycle 11 rise: stable=true steps=58 time=1044 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 11 fall: events=2 sha=60130bc515cb61af
+seed8084 cycle 11 fall: stable=true steps=1 time=1045 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 12: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 12: stable=true steps=0 time=1045 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 12 rise: events=5858 sha=8fac83ad3099f98c
+seed8084 cycle 12 rise: stable=true steps=74 time=1119 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 12 fall: events=2 sha=09103e118cb92ef7
+seed8084 cycle 12 fall: stable=true steps=1 time=1120 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 13: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 13: stable=true steps=0 time=1120 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 13 rise: events=7472 sha=4f4a4ffc851561bc
+seed8084 cycle 13 rise: stable=true steps=58 time=1178 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 13 fall: events=2 sha=c71c5f33a39a8b16
+seed8084 cycle 13 fall: stable=true steps=1 time=1179 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 14: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 14: stable=true steps=0 time=1179 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 14 rise: events=6701 sha=3e57ecea44bba199
+seed8084 cycle 14 rise: stable=true steps=73 time=1252 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 14 fall: events=2 sha=456050d0cc0f1b1a
+seed8084 cycle 14 fall: stable=true steps=1 time=1253 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 15: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 15: stable=true steps=0 time=1253 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 15 rise: events=7113 sha=5c989fa510bf98bc
+seed8084 cycle 15 rise: stable=true steps=58 time=1311 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 15 fall: events=2 sha=fe9b6f7c8c5281bc
+seed8084 cycle 15 fall: stable=true steps=1 time=1312 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 16: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 16: stable=true steps=0 time=1312 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 16 rise: events=6872 sha=51fd03ba4d816293
+seed8084 cycle 16 rise: stable=true steps=73 time=1385 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 16 fall: events=2 sha=46d44bba78cc37a5
+seed8084 cycle 16 fall: stable=true steps=1 time=1386 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 17: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 17: stable=true steps=0 time=1386 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 17 rise: events=7113 sha=16db7057d01136a9
+seed8084 cycle 17 rise: stable=true steps=58 time=1444 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 17 fall: events=2 sha=0e5287da1083a399
+seed8084 cycle 17 fall: stable=true steps=1 time=1445 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 18: events=1528 sha=a316771bf2b211f2
+seed8084 cycle 18: stable=true steps=15 time=1460 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 18 rise: events=6419 sha=5ad44c4a039422b4
+seed8084 cycle 18 rise: stable=true steps=36 time=1496 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 18 fall: events=2 sha=e1c11acc697c0321
+seed8084 cycle 18 fall: stable=true steps=1 time=1497 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 19: events=1943 sha=645268ecdb368e3a
+seed8084 cycle 19: stable=true steps=18 time=1515 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 19 rise: events=6959 sha=b28fd39c2fe3bd31
+seed8084 cycle 19 rise: stable=true steps=36 time=1551 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 19 fall: events=2 sha=76a37b7acf07faa5
+seed8084 cycle 19 fall: stable=true steps=1 time=1552 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 20: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 20: stable=true steps=0 time=1552 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 20 rise: events=5793 sha=b0fdac2a70e770c8
+seed8084 cycle 20 rise: stable=true steps=74 time=1626 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 20 fall: events=2 sha=b633e393b4527d87
+seed8084 cycle 20 fall: stable=true steps=1 time=1627 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 21: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 21: stable=true steps=0 time=1627 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 21 rise: events=7472 sha=c0ce65e45afb1658
+seed8084 cycle 21 rise: stable=true steps=58 time=1685 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 21 fall: events=2 sha=8fd17dc176ac0b72
+seed8084 cycle 21 fall: stable=true steps=1 time=1686 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 22: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 22: stable=true steps=0 time=1686 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 22 rise: events=6701 sha=3fe6b3edb6bf2b8f
+seed8084 cycle 22 rise: stable=true steps=73 time=1759 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 22 fall: events=2 sha=6d98fe8c6f27fe07
+seed8084 cycle 22 fall: stable=true steps=1 time=1760 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 23: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 23: stable=true steps=0 time=1760 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 23 rise: events=7113 sha=d1b5fc5cabacf2d1
+seed8084 cycle 23 rise: stable=true steps=58 time=1818 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 23 fall: events=2 sha=4329429ae03f1966
+seed8084 cycle 23 fall: stable=true steps=1 time=1819 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 24: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 24: stable=true steps=0 time=1819 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 24 rise: events=6872 sha=d277ffafa8b52485
+seed8084 cycle 24 rise: stable=true steps=73 time=1892 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 24 fall: events=2 sha=f3e1534b909e11bc
+seed8084 cycle 24 fall: stable=true steps=1 time=1893 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 25: events=1701 sha=1f18439d363934ea
+seed8084 cycle 25: stable=true steps=67 time=1960 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 25 rise: events=9213 sha=55b6e4ab0044f792
+seed8084 cycle 25 rise: stable=true steps=58 time=2018 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 25 fall: events=2 sha=41782b89ae7e12a4
+seed8084 cycle 25 fall: stable=true steps=1 time=2019 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 26: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 26: stable=true steps=0 time=2019 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 26 rise: events=6403 sha=1d17c68c329a3b9a
+seed8084 cycle 26 rise: stable=true steps=74 time=2093 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 26 fall: events=2 sha=cb98fea39266e3fc
+seed8084 cycle 26 fall: stable=true steps=1 time=2094 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 27: events=1565 sha=f6b4ede13ca70c2c
+seed8084 cycle 27: stable=true steps=67 time=2161 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 27 rise: events=8204 sha=964e86ee1c95cc10
+seed8084 cycle 27 rise: stable=true steps=58 time=2219 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 27 fall: events=2 sha=84934ac6182a197a
+seed8084 cycle 27 fall: stable=true steps=1 time=2220 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 28: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 28: stable=true steps=0 time=2220 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 28 rise: events=6528 sha=a91aca57f6e9fc46
+seed8084 cycle 28 rise: stable=true steps=73 time=2293 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 28 fall: events=2 sha=12f1c6509bd79125
+seed8084 cycle 28 fall: stable=true steps=1 time=2294 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 29: events=0 sha=e3b0c44298fc1c14
+seed8084 cycle 29: stable=true steps=0 time=2294 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 29 rise: events=7263 sha=a1ff5ff25dd9491d
+seed8084 cycle 29 rise: stable=true steps=58 time=2352 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084 cycle 29 fall: events=2 sha=10c8d47bcea1c9e4
+seed8084 cycle 29 fall: stable=true steps=1 time=2353 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+seed8084~clone reset: events=71652 sha=18d57f6f933f9db3
+seed8084~clone reset: stable=true steps=76 time=76 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084~clone nets 210beb8f1e37fbbf
+seed8084 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8084 original after clone: stable=true steps=1 time=2353 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8084 nets 93b406e2defb6597
+# seed 8183 size 3
+seed8183 construct stable=true comps=1489 nets=10307 nets=78240c32e9afbd69
+seed8183 start: events=2845 sha=913fcd80320c80d2
+seed8183 start: stable=true steps=22 time=141 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 0586b4bf2ca2de9c
+seed8183 cycle 0: events=165 sha=98856f56cc052c1d
+seed8183 cycle 0: stable=true steps=5 time=146 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 0586b4bf2ca2de9c
+seed8183 cycle 0 rise: events=2920 sha=e9ac06d447307311
+seed8183 cycle 0 rise: stable=true steps=67 time=213 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 0 fall: events=4 sha=93d636063000862b
+seed8183 cycle 0 fall: stable=true steps=2 time=215 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 1: events=822 sha=081484f2742b4233
+seed8183 cycle 1: stable=true steps=58 time=273 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 1 rise: events=4800 sha=319da7b97282339d
+seed8183 cycle 1 rise: stable=true steps=62 time=335 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 1 fall: events=4 sha=8c7fc09544abb593
+seed8183 cycle 1 fall: stable=true steps=2 time=337 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 2: events=0 sha=e3b0c44298fc1c14
+seed8183 cycle 2: stable=true steps=0 time=337 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 2 rise: events=2561 sha=aff4dc5d04333b1f
+seed8183 cycle 2 rise: stable=true steps=56 time=393 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 2 fall: events=4 sha=5a34eaead4294856
+seed8183 cycle 2 fall: stable=true steps=2 time=395 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 3: events=1979 sha=9c9483de30b6b896
+seed8183 cycle 3: stable=true steps=48 time=443 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 3 rise: events=3097 sha=0ab5c168ad59848f
+seed8183 cycle 3 rise: stable=true steps=56 time=499 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 3 fall: events=4 sha=ee1e2e342cdd57ba
+seed8183 cycle 3 fall: stable=true steps=2 time=501 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 4: events=1897 sha=3cc2ec38858b32b6
+seed8183 cycle 4: stable=true steps=48 time=549 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 4 rise: events=2 sha=f3406505b295ffcb
+seed8183 cycle 4 rise: stable=true steps=1 time=550 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 4 fall: events=2 sha=9dacdad481652a32
+seed8183 cycle 4 fall: stable=true steps=1 time=551 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 5: events=432 sha=73afac358ce35e22
+seed8183 cycle 5: stable=true steps=36 time=587 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 5afa4df6e2a7d2cf
+seed8183 cycle 5 rise: events=286 sha=f925100914acc518
+seed8183 cycle 5 rise: stable=true steps=42 time=629 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 5afa4df6e2a7d2cf
+seed8183 cycle 5 fall: events=4 sha=3e5a5bc8a97b9ab7
+seed8183 cycle 5 fall: stable=true steps=2 time=631 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 5afa4df6e2a7d2cf
+seed8183 cycle 6: events=1718 sha=41d2678cb71da1cc
+seed8183 cycle 6: stable=true steps=48 time=679 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 6 rise: events=118 sha=62501b9c6707f122
+seed8183 cycle 6 rise: stable=true steps=33 time=712 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 6 fall: events=4 sha=ba9005919050bc7f
+seed8183 cycle 6 fall: stable=true steps=2 time=714 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 7: events=513 sha=3da235db6fa4518b
+seed8183 cycle 7: stable=true steps=37 time=751 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 7 rise: events=4 sha=c19b3cc258dfcfca
+seed8183 cycle 7 rise: stable=true steps=2 time=753 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 7 fall: events=4 sha=d93f21d010bff92a
+seed8183 cycle 7 fall: stable=true steps=2 time=755 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 8: events=2846 sha=0b34c5f528f7cb18
+seed8183 cycle 8: stable=true steps=48 time=803 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 40c71013a0400e71
+seed8183 cycle 8 rise: events=2 sha=bba799e94c46fe8d
+seed8183 cycle 8 rise: stable=true steps=1 time=804 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 40c71013a0400e71
+seed8183 cycle 8 fall: events=2 sha=f8bbfa2a80a49654
+seed8183 cycle 8 fall: stable=true steps=1 time=805 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 40c71013a0400e71
+seed8183 cycle 9: events=2102 sha=5eb076860bd22d35
+seed8183 cycle 9: stable=true steps=48 time=853 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 9 rise: events=2 sha=12976f343db5932e
+seed8183 cycle 9 rise: stable=true steps=1 time=854 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 9 fall: events=2 sha=a33a566d44deb231
+seed8183 cycle 9 fall: stable=true steps=1 time=855 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 10: events=2007 sha=19aa0260c7b8672e
+seed8183 cycle 10: stable=true steps=48 time=903 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 78240c32e9afbd69
+seed8183 cycle 10 rise: events=2 sha=07f69b74028edc62
+seed8183 cycle 10 rise: stable=true steps=1 time=904 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 78240c32e9afbd69
+seed8183 cycle 10 fall: events=2 sha=1e8086955c7913f7
+seed8183 cycle 10 fall: stable=true steps=1 time=905 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 78240c32e9afbd69
+seed8183 cycle 11: events=1258 sha=482cc9da482f3415
+seed8183 cycle 11: stable=true steps=47 time=952 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 11 rise: events=2 sha=7cbac147dedaaa5c
+seed8183 cycle 11 rise: stable=true steps=1 time=953 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 11 fall: events=2 sha=e8928d486c1c3cf9
+seed8183 cycle 11 fall: stable=true steps=1 time=954 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 12: events=1367 sha=61873213b7f2fbdf
+seed8183 cycle 12: stable=true steps=48 time=1002 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 12 rise: events=2 sha=853b00b0c01be2f7
+seed8183 cycle 12 rise: stable=true steps=1 time=1003 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 12 fall: events=2 sha=4ef1404b4eebd77a
+seed8183 cycle 12 fall: stable=true steps=1 time=1004 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 13: events=1585 sha=d190f556c5001534
+seed8183 cycle 13: stable=true steps=48 time=1052 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 13 rise: events=269 sha=4e48b8337f2d3ebd
+seed8183 cycle 13 rise: stable=true steps=42 time=1094 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 13 fall: events=4 sha=730705b1a7010616
+seed8183 cycle 13 fall: stable=true steps=2 time=1096 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 14: events=1451 sha=da79375ced9b72c5
+seed8183 cycle 14: stable=true steps=47 time=1143 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 14 rise: events=118 sha=de08509620ade303
+seed8183 cycle 14 rise: stable=true steps=33 time=1176 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 14 fall: events=4 sha=c58bdab8e219373c
+seed8183 cycle 14 fall: stable=true steps=2 time=1178 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ffdda0dad77986d4
+seed8183 cycle 15: events=2563 sha=d38f0c2a30aa59f3
+seed8183 cycle 15: stable=true steps=48 time=1226 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 15 rise: events=2 sha=9ea74023c307b201
+seed8183 cycle 15 rise: stable=true steps=1 time=1227 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 15 fall: events=2 sha=3bec6851120e397a
+seed8183 cycle 15 fall: stable=true steps=1 time=1228 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 16: events=1701 sha=0f4a0e71fb6fcfd2
+seed8183 cycle 16: stable=true steps=48 time=1276 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 78240c32e9afbd69
+seed8183 cycle 16 rise: events=2 sha=28824e9d472be99e
+seed8183 cycle 16 rise: stable=true steps=1 time=1277 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 78240c32e9afbd69
+seed8183 cycle 16 fall: events=2 sha=0860894e2c5be512
+seed8183 cycle 16 fall: stable=true steps=1 time=1278 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 78240c32e9afbd69
+seed8183 cycle 17: events=2727 sha=be1ba2b0aa8fa7a4
+seed8183 cycle 17: stable=true steps=55 time=1333 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 17 rise: events=4602 sha=7c5f80d1bf8bc377
+seed8183 cycle 17 rise: stable=true steps=64 time=1397 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 17 fall: events=2 sha=d0a7770672c3ac2b
+seed8183 cycle 17 fall: stable=true steps=1 time=1398 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 18: events=845 sha=e2a73c82bac929e4
+seed8183 cycle 18: stable=true steps=58 time=1456 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 18 rise: events=3721 sha=40083f34c5a242bf
+seed8183 cycle 18 rise: stable=true steps=62 time=1518 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 18 fall: events=2 sha=6889e6fa48492f78
+seed8183 cycle 18 fall: stable=true steps=1 time=1519 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets ab0ac1df84ae1b90
+seed8183 cycle 19: events=1823 sha=3a8401215f5cafc7
+seed8183 cycle 19: stable=true steps=48 time=1567 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 19 rise: events=1017 sha=29f6eb48280db11b
+seed8183 cycle 19 rise: stable=true steps=52 time=1619 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 19 fall: events=4 sha=7fbd9da808a66d86
+seed8183 cycle 19 fall: stable=true steps=2 time=1621 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 20: events=0 sha=e3b0c44298fc1c14
+seed8183 cycle 20: stable=true steps=0 time=1621 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 20 rise: events=1493 sha=c8c92ba0c3f4bdb6
+seed8183 cycle 20 rise: stable=true steps=55 time=1676 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183 cycle 20 fall: events=4 sha=bee62d8142ec1dd9
+seed8183 cycle 20 fall: stable=true steps=2 time=1678 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+seed8183~clone reset: events=12395 sha=2bcde758dfdc9f49
+seed8183~clone reset: stable=true steps=147 time=147 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183~clone nets 4f31fd7c438c7225
+seed8183 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8183 original after clone: stable=true steps=2 time=1678 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8183 nets 4f31fd7c438c7225
+# seed 8188 size 4
+seed8188 construct stable=true comps=165 nets=711 nets=a8fba234d147c12a
+seed8188 start: events=118 sha=6b5048918c74c2e0
+seed8188 start: stable=true steps=26 time=84 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets c13e74260053203a
+seed8188 cycle 0: events=137 sha=7573692496c796be
+seed8188 cycle 0: stable=true steps=17 time=101 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets c13e74260053203a
+seed8188 cycle 0 rise: events=122 sha=3bad2cfa7674f565
+seed8188 cycle 0 rise: stable=true steps=43 time=144 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 0 fall: events=6 sha=c410c290370ce435
+seed8188 cycle 0 fall: stable=true steps=2 time=146 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 1: events=1379 sha=9bd9d7b75c7bb5a6
+seed8188 cycle 1: stable=true steps=55 time=201 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 1 rise: events=350 sha=c9100f47c9ca6d2c
+seed8188 cycle 1 rise: stable=true steps=43 time=244 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 1 fall: events=4 sha=04fbd005ba45c00f
+seed8188 cycle 1 fall: stable=true steps=2 time=246 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 2: events=554 sha=a51184f6e2251c96
+seed8188 cycle 2: stable=true steps=46 time=292 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 2 rise: events=12 sha=66720769ccf8bb95
+seed8188 cycle 2 rise: stable=true steps=4 time=296 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 2 fall: events=2 sha=419edade86aab8b1
+seed8188 cycle 2 fall: stable=true steps=1 time=297 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 3: events=461 sha=41130d0242c62384
+seed8188 cycle 3: stable=true steps=39 time=336 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 3 rise: events=12 sha=3d3fe22a2b8ee5c4
+seed8188 cycle 3 rise: stable=true steps=4 time=340 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 3 fall: events=2 sha=54362a4bf4a4b703
+seed8188 cycle 3 fall: stable=true steps=1 time=341 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 4: events=752 sha=f82f9418e505193d
+seed8188 cycle 4: stable=true steps=47 time=388 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 4 rise: events=344 sha=37a2bd068392b746
+seed8188 cycle 4 rise: stable=true steps=43 time=431 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 4 fall: events=2 sha=ea135fcab866b8ca
+seed8188 cycle 4 fall: stable=true steps=1 time=432 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 5: events=1058 sha=a6f3366a61a922aa
+seed8188 cycle 5: stable=true steps=57 time=489 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 5 rise: events=344 sha=31c91f08587f445d
+seed8188 cycle 5 rise: stable=true steps=43 time=532 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 5 fall: events=4 sha=df81d0e39b3ca7e4
+seed8188 cycle 5 fall: stable=true steps=2 time=534 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 6: events=1686 sha=a95f5d64c1e37046
+seed8188 cycle 6: stable=true steps=57 time=591 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 6 rise: events=8 sha=33adeea3dec92537
+seed8188 cycle 6 rise: stable=true steps=3 time=594 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 6 fall: events=4 sha=8d0bae0276cdaccd
+seed8188 cycle 6 fall: stable=true steps=2 time=596 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 7: events=949 sha=9df70b914215fd62
+seed8188 cycle 7: stable=true steps=55 time=651 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 7 rise: events=8 sha=5649ee5d51e3a64c
+seed8188 cycle 7 rise: stable=true steps=3 time=654 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 7 fall: events=4 sha=cecb3eedc79984c5
+seed8188 cycle 7 fall: stable=true steps=2 time=656 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 8: events=333 sha=b1900a92ffb631c4
+seed8188 cycle 8: stable=true steps=39 time=695 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 8 rise: events=346 sha=62885f1301169636
+seed8188 cycle 8 rise: stable=true steps=43 time=738 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 8 fall: events=4 sha=9874afc1c35510ec
+seed8188 cycle 8 fall: stable=true steps=2 time=740 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 9: events=538 sha=3717a87e4c571c04
+seed8188 cycle 9: stable=true steps=46 time=786 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 9 rise: events=12 sha=9f787a6ac6adfc86
+seed8188 cycle 9 rise: stable=true steps=3 time=789 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 9 fall: events=6 sha=66c87152bf38b068
+seed8188 cycle 9 fall: stable=true steps=2 time=791 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 10: events=394 sha=19edd1a74934e427
+seed8188 cycle 10: stable=true steps=49 time=840 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 10 rise: events=4 sha=a0b1d4778a895254
+seed8188 cycle 10 rise: stable=true steps=2 time=842 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 10 fall: events=4 sha=9cadcfaba0307db0
+seed8188 cycle 10 fall: stable=true steps=2 time=844 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 11: events=280 sha=15c8a8dd499148ef
+seed8188 cycle 11: stable=true steps=27 time=871 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 11 rise: events=14 sha=c060b4decc3d1c7a
+seed8188 cycle 11 rise: stable=true steps=4 time=875 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 11 fall: events=4 sha=57e450a717579c38
+seed8188 cycle 11 fall: stable=true steps=2 time=877 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 12: events=561 sha=03df45fdccf70c3c
+seed8188 cycle 12: stable=true steps=49 time=926 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 12 rise: events=20 sha=3c4fcff38124822f
+seed8188 cycle 12 rise: stable=true steps=4 time=930 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 12 fall: events=6 sha=2b1f80d0fe0bcd23
+seed8188 cycle 12 fall: stable=true steps=2 time=932 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 13: events=128 sha=354bb137681b4e9d
+seed8188 cycle 13: stable=true steps=30 time=962 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 13 rise: events=342 sha=be40b0fb1ea3979a
+seed8188 cycle 13 rise: stable=true steps=43 time=1005 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 13 fall: events=6 sha=6bd0944e104c03ec
+seed8188 cycle 13 fall: stable=true steps=2 time=1007 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 14: events=810 sha=a4c066c1b1f3f696
+seed8188 cycle 14: stable=true steps=46 time=1053 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 14 rise: events=14 sha=79d41876314b67f1
+seed8188 cycle 14 rise: stable=true steps=4 time=1057 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 14 fall: events=4 sha=3820520193002ec0
+seed8188 cycle 14 fall: stable=true steps=2 time=1059 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 15: events=755 sha=90d826200ca5848c
+seed8188 cycle 15: stable=true steps=57 time=1116 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 15 rise: events=328 sha=f3276404ae33bcb2
+seed8188 cycle 15 rise: stable=true steps=43 time=1159 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 15 fall: events=4 sha=8201e8baf1778c0e
+seed8188 cycle 15 fall: stable=true steps=2 time=1161 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 16: events=1223 sha=5f955fe3df6d7680
+seed8188 cycle 16: stable=true steps=57 time=1218 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 16 rise: events=10 sha=a520e712d9720b12
+seed8188 cycle 16 rise: stable=true steps=4 time=1222 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 16 fall: events=2 sha=d87daf903697b7af
+seed8188 cycle 16 fall: stable=true steps=1 time=1223 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 17: events=571 sha=c61598124b3afa46
+seed8188 cycle 17: stable=true steps=49 time=1272 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 17 rise: events=4 sha=821dbe7e95fc4762
+seed8188 cycle 17 rise: stable=true steps=2 time=1274 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 17 fall: events=4 sha=6293f7e7a1517687
+seed8188 cycle 17 fall: stable=true steps=2 time=1276 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 18: events=947 sha=de20f8668ace3eab
+seed8188 cycle 18: stable=true steps=49 time=1325 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 18 rise: events=16 sha=f0de4dd2f8c809db
+seed8188 cycle 18 rise: stable=true steps=4 time=1329 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 18 fall: events=4 sha=088fd8212b266c87
+seed8188 cycle 18 fall: stable=true steps=2 time=1331 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 19: events=357 sha=5a2e476ba2bd74a9
+seed8188 cycle 19: stable=true steps=40 time=1371 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 19 rise: events=318 sha=141c50c4e4def61b
+seed8188 cycle 19 rise: stable=true steps=43 time=1414 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 19 fall: events=4 sha=9038df055fc3587e
+seed8188 cycle 19 fall: stable=true steps=2 time=1416 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 20: events=577 sha=eee16fc57afc1425
+seed8188 cycle 20: stable=true steps=49 time=1465 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 20 rise: events=10 sha=02b035882f7ba941
+seed8188 cycle 20 rise: stable=true steps=3 time=1468 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 20 fall: events=6 sha=0ea7b99995ab36a6
+seed8188 cycle 20 fall: stable=true steps=2 time=1470 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 21: events=320 sha=f4bc38b867bd4f3f
+seed8188 cycle 21: stable=true steps=39 time=1509 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 21 rise: events=328 sha=3e75a718ba807485
+seed8188 cycle 21 rise: stable=true steps=43 time=1552 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 21 fall: events=6 sha=c1d01f20ae46b4be
+seed8188 cycle 21 fall: stable=true steps=2 time=1554 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 22: events=504 sha=131f73bb3fad49f3
+seed8188 cycle 22: stable=true steps=49 time=1603 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 22 rise: events=16 sha=5335f6f589cc2098
+seed8188 cycle 22 rise: stable=true steps=4 time=1607 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 22 fall: events=4 sha=ad5e01baa916a83b
+seed8188 cycle 22 fall: stable=true steps=2 time=1609 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 23: events=674 sha=5684803e675d75f0
+seed8188 cycle 23: stable=true steps=46 time=1655 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 23 rise: events=14 sha=05da3fbb99f01930
+seed8188 cycle 23 rise: stable=true steps=4 time=1659 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188 cycle 23 fall: events=2 sha=6fde37a07901b107
+seed8188 cycle 23 fall: stable=true steps=1 time=1660 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+seed8188~clone reset: events=897 sha=8ad57866cbd91e59
+seed8188~clone reset: stable=true steps=57 time=57 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188~clone nets a8fba234d147c12a
+seed8188 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8188 original after clone: stable=true steps=1 time=1660 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8188 nets a8fba234d147c12a
+# seed 8184 size 5
+seed8184 construct stable=true comps=6247 nets=59329 nets=fe7ee1fd64bfcac3
+seed8184 start: events=22601 sha=b82e06882f1c89d0
+seed8184 start: stable=true steps=20 time=93 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 0: events=1437 sha=f32f5ed41fac41c2
+seed8184 cycle 0: stable=true steps=8 time=101 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 0 rise: events=12453 sha=85172e7d1bdc01a8
+seed8184 cycle 0 rise: stable=true steps=50 time=151 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 0 fall: events=4 sha=ec77f1e6bd6e1b63
+seed8184 cycle 0 fall: stable=true steps=2 time=153 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 1: events=4245 sha=67fd8454de496007
+seed8184 cycle 1: stable=true steps=43 time=196 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 1 rise: events=11421 sha=ee473f8660ddbbbd
+seed8184 cycle 1 rise: stable=true steps=50 time=246 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 1 fall: events=4 sha=cd7fd39f29668bee
+seed8184 cycle 1 fall: stable=true steps=2 time=248 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 2: events=4464 sha=a66a96fac4080f13
+seed8184 cycle 2: stable=true steps=43 time=291 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 09f6b336bd48c9ee
+seed8184 cycle 2 rise: events=6413 sha=48207ed568c295cc
+seed8184 cycle 2 rise: stable=true steps=55 time=346 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 2 fall: events=2 sha=45f3cd407734f15a
+seed8184 cycle 2 fall: stable=true steps=1 time=347 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 3: events=3824 sha=d669122550bba1c2
+seed8184 cycle 3: stable=true steps=43 time=390 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 3 rise: events=3840 sha=cd870bd2d08daae8
+seed8184 cycle 3 rise: stable=true steps=55 time=445 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 3 fall: events=2 sha=3fbfb76c9673856d
+seed8184 cycle 3 fall: stable=true steps=1 time=446 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 4: events=580 sha=03cf840c3f0c3d0d
+seed8184 cycle 4: stable=true steps=26 time=472 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 4 rise: events=3132 sha=16ac720a2787ec38
+seed8184 cycle 4 rise: stable=true steps=52 time=524 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 4 fall: events=2 sha=b793d79b75273c63
+seed8184 cycle 4 fall: stable=true steps=1 time=525 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 5: events=684 sha=2a1a3a3532e0256f
+seed8184 cycle 5: stable=true steps=26 time=551 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 5 rise: events=3508 sha=41444a1ec1910145
+seed8184 cycle 5 rise: stable=true steps=52 time=603 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 5 fall: events=2 sha=e0bb101cd010e67c
+seed8184 cycle 5 fall: stable=true steps=1 time=604 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 6: events=1104 sha=3d60acf625eb9208
+seed8184 cycle 6: stable=true steps=49 time=653 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 6 rise: events=2972 sha=d442560827ffb0a4
+seed8184 cycle 6 rise: stable=true steps=52 time=705 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 6 fall: events=4 sha=0d2be4df2900ac4b
+seed8184 cycle 6 fall: stable=true steps=2 time=707 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 7: events=1248 sha=90f49b3a6d3bf6ec
+seed8184 cycle 7: stable=true steps=51 time=758 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 7 rise: events=3253 sha=d37e045ac240d60a
+seed8184 cycle 7 rise: stable=true steps=52 time=810 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 7 fall: events=4 sha=bd565cfa7a09b23c
+seed8184 cycle 7 fall: stable=true steps=2 time=812 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 8: events=853 sha=06349775195ddd04
+seed8184 cycle 8: stable=true steps=26 time=838 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 8 rise: events=2768 sha=41367c3d95fc8fa4
+seed8184 cycle 8 rise: stable=true steps=52 time=890 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 8 fall: events=2 sha=567b182b61bbefb6
+seed8184 cycle 8 fall: stable=true steps=1 time=891 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 9: events=1071 sha=5ccbd99f332a327c
+seed8184 cycle 9: stable=true steps=49 time=940 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 9 rise: events=3444 sha=55c6533ce792d99e
+seed8184 cycle 9 rise: stable=true steps=52 time=992 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 9 fall: events=2 sha=25fda775d4d592be
+seed8184 cycle 9 fall: stable=true steps=1 time=993 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 10: events=309 sha=742161b214ada6a9
+seed8184 cycle 10: stable=true steps=7 time=1000 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 10 rise: events=3595 sha=dff5e22c28b028fe
+seed8184 cycle 10 rise: stable=true steps=52 time=1052 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 10 fall: events=2 sha=3b99236ae341408e
+seed8184 cycle 10 fall: stable=true steps=1 time=1053 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 11: events=242 sha=5cad926eb4956270
+seed8184 cycle 11: stable=true steps=7 time=1060 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 11 rise: events=2997 sha=e31172482a34d83b
+seed8184 cycle 11 rise: stable=true steps=52 time=1112 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 11 fall: events=2 sha=5c7c6620e7277d62
+seed8184 cycle 11 fall: stable=true steps=1 time=1113 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 12: events=1299 sha=33e7fb05fef872e6
+seed8184 cycle 12: stable=true steps=49 time=1162 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 12 rise: events=2285 sha=62ac6225d9ff2440
+seed8184 cycle 12 rise: stable=true steps=52 time=1214 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 12 fall: events=4 sha=623338b17b86a92c
+seed8184 cycle 12 fall: stable=true steps=2 time=1216 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 13: events=2118 sha=63823d8f64e98295
+seed8184 cycle 13: stable=true steps=51 time=1267 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 13 rise: events=4412 sha=5164fa7ebcc215bc
+seed8184 cycle 13 rise: stable=true steps=52 time=1319 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 13 fall: events=4 sha=3e684f45bf4969f1
+seed8184 cycle 13 fall: stable=true steps=2 time=1321 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 14: events=966 sha=1148acec0284213a
+seed8184 cycle 14: stable=true steps=51 time=1372 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 14 rise: events=4067 sha=de3dd9f7e59cc057
+seed8184 cycle 14 rise: stable=true steps=52 time=1424 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 14 fall: events=4 sha=8e4481fd39a4e6be
+seed8184 cycle 14 fall: stable=true steps=2 time=1426 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 15: events=1342 sha=2f582f2ad1949dec
+seed8184 cycle 15: stable=true steps=51 time=1477 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 15 rise: events=2319 sha=d41b9ba0c29c19a7
+seed8184 cycle 15 rise: stable=true steps=52 time=1529 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 15 fall: events=2 sha=7712e446b73a1e76
+seed8184 cycle 15 fall: stable=true steps=1 time=1530 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 16: events=599 sha=66a3cb8b8866d863
+seed8184 cycle 16: stable=true steps=26 time=1556 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 16 rise: events=2715 sha=b7e7616ee62a7637
+seed8184 cycle 16 rise: stable=true steps=52 time=1608 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 16 fall: events=2 sha=3430179623974f06
+seed8184 cycle 16 fall: stable=true steps=1 time=1609 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 17: events=4854 sha=6148bfbc1664ca01
+seed8184 cycle 17: stable=true steps=49 time=1658 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 17 rise: events=4518 sha=246134ae26f9f157
+seed8184 cycle 17 rise: stable=true steps=55 time=1713 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 17 fall: events=2 sha=592ad96059a9f51f
+seed8184 cycle 17 fall: stable=true steps=1 time=1714 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 18: events=1365 sha=ddd2cef9e128ac88
+seed8184 cycle 18: stable=true steps=49 time=1763 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 18 rise: events=329 sha=2bd89774f3f7be61
+seed8184 cycle 18 rise: stable=true steps=13 time=1776 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 18 fall: events=4 sha=e3dd4cdbcd12b2b6
+seed8184 cycle 18 fall: stable=true steps=2 time=1778 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 19: events=3864 sha=a5ae1e549b108ffe
+seed8184 cycle 19: stable=true steps=43 time=1821 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 19 rise: events=4968 sha=0891a235ec34dd67
+seed8184 cycle 19 rise: stable=true steps=55 time=1876 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 19 fall: events=2 sha=725d6615fac9f325
+seed8184 cycle 19 fall: stable=true steps=1 time=1877 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 20: events=1379 sha=f34911eb5419c8b6
+seed8184 cycle 20: stable=true steps=51 time=1928 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 20 rise: events=2806 sha=40fc765940160217
+seed8184 cycle 20 rise: stable=true steps=52 time=1980 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 20 fall: events=2 sha=cbaa6db8669960fd
+seed8184 cycle 20 fall: stable=true steps=1 time=1981 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 21: events=470 sha=366bb84d5599ddf1
+seed8184 cycle 21: stable=true steps=20 time=2001 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 21 rise: events=3718 sha=de75352ba7a638c3
+seed8184 cycle 21 rise: stable=true steps=52 time=2053 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 21 fall: events=4 sha=866420ffb09f64dd
+seed8184 cycle 21 fall: stable=true steps=2 time=2055 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 22: events=177 sha=bbf9e64d81fddc02
+seed8184 cycle 22: stable=true steps=20 time=2075 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 22 rise: events=3648 sha=596d453e06daaed4
+seed8184 cycle 22 rise: stable=true steps=52 time=2127 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 22 fall: events=2 sha=9f582704675815d5
+seed8184 cycle 22 fall: stable=true steps=1 time=2128 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 23: events=1450 sha=6758e8b34592d487
+seed8184 cycle 23: stable=true steps=49 time=2177 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 23 rise: events=2615 sha=7c37b622e30c2296
+seed8184 cycle 23 rise: stable=true steps=52 time=2229 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 23 fall: events=4 sha=20ffdc5f77d336dd
+seed8184 cycle 23 fall: stable=true steps=2 time=2231 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 24: events=480 sha=7d64a7b2b1154892
+seed8184 cycle 24: stable=true steps=20 time=2251 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 24 rise: events=2852 sha=03b72dcc1959b7e0
+seed8184 cycle 24 rise: stable=true steps=52 time=2303 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 24 fall: events=2 sha=64e362eb8cf0e7d6
+seed8184 cycle 24 fall: stable=true steps=1 time=2304 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 25: events=320 sha=d784621409fa0452
+seed8184 cycle 25: stable=true steps=26 time=2330 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 25 rise: events=4122 sha=1dedde43a8fb180d
+seed8184 cycle 25 rise: stable=true steps=52 time=2382 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 25 fall: events=2 sha=ffd1076174a20e41
+seed8184 cycle 25 fall: stable=true steps=1 time=2383 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 26: events=1969 sha=4bdffd40127605ba
+seed8184 cycle 26: stable=true steps=51 time=2434 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 26 rise: events=2892 sha=3e61bc0fa72da124
+seed8184 cycle 26 rise: stable=true steps=52 time=2486 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184 cycle 26 fall: events=2 sha=51d9e56edd0d4578
+seed8184 cycle 26 fall: stable=true steps=1 time=2487 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+seed8184~clone reset: events=66941 sha=108984200cd2cbf2
+seed8184~clone reset: stable=true steps=73 time=73 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184~clone nets fe7ee1fd64bfcac3
+seed8184 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8184 original after clone: stable=true steps=1 time=2487 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets fe7ee1fd64bfcac3
+# seed 8184 size 6
+seed8184 construct stable=true comps=6832 nets=46258 nets=d67c0adb2e4f75a6
+seed8184 start: events=13031 sha=70f4a7d0dc4b19ca
+seed8184 start: stable=true steps=30 time=79 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 0: events=4025 sha=2f759adc1f751261
+seed8184 cycle 0: stable=true steps=23 time=102 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 0 rise: events=7620 sha=66bba73b349feb0a
+seed8184 cycle 0 rise: stable=true steps=48 time=150 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 0 fall: events=4 sha=d28177ae2059fe4f
+seed8184 cycle 0 fall: stable=true steps=2 time=152 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 1: events=1991 sha=007d0c86149b6c5a
+seed8184 cycle 1: stable=true steps=42 time=194 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 1 rise: events=4 sha=94e94d87f7a3ad28
+seed8184 cycle 1 rise: stable=true steps=2 time=196 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 1 fall: events=4 sha=f17386bfd6025890
+seed8184 cycle 1 fall: stable=true steps=2 time=198 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 2: events=3078 sha=28c38dd97e6e6661
+seed8184 cycle 2: stable=true steps=46 time=244 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 2 rise: events=6643 sha=d4a04803007cc715
+seed8184 cycle 2 rise: stable=true steps=48 time=292 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 2 fall: events=4 sha=1a997cc085c8fb9e
+seed8184 cycle 2 fall: stable=true steps=2 time=294 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 3: events=3973 sha=4c8e22f729578b54
+seed8184 cycle 3: stable=true steps=46 time=340 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 3 rise: events=5023 sha=f816bbac8822e7ce
+seed8184 cycle 3 rise: stable=true steps=48 time=388 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 3 fall: events=4 sha=64ecb3dc28fa2fd0
+seed8184 cycle 3 fall: stable=true steps=2 time=390 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 4: events=3975 sha=f218702c7098afe9
+seed8184 cycle 4: stable=true steps=46 time=436 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 4 rise: events=3311 sha=5b52349e29792657
+seed8184 cycle 4 rise: stable=true steps=48 time=484 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 4 fall: events=4 sha=71ba9be2372dbfae
+seed8184 cycle 4 fall: stable=true steps=2 time=486 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 5: events=893 sha=5233cb84725fb6ef
+seed8184 cycle 5: stable=true steps=37 time=523 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 5 rise: events=2601 sha=180ac451fcb157c4
+seed8184 cycle 5 rise: stable=true steps=48 time=571 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 5 fall: events=4 sha=885937a1bf0161b8
+seed8184 cycle 5 fall: stable=true steps=2 time=573 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 6: events=2995 sha=fa2ce130f84efbaf
+seed8184 cycle 6: stable=true steps=46 time=619 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 6 rise: events=2479 sha=a3ae179ea5725c11
+seed8184 cycle 6 rise: stable=true steps=48 time=667 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 6 fall: events=4 sha=f157e15dce70fb73
+seed8184 cycle 6 fall: stable=true steps=2 time=669 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 7: events=1835 sha=30df5edaa085cac1
+seed8184 cycle 7: stable=true steps=46 time=715 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets 4e350cf5f734d026
+seed8184 cycle 7 rise: events=1134 sha=bf6e2c5eb81d4abf
+seed8184 cycle 7 rise: stable=true steps=35 time=750 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 7 fall: events=4 sha=7788bfbf4feb96fe
+seed8184 cycle 7 fall: stable=true steps=2 time=752 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 8: events=1680 sha=502d7508a58d2051
+seed8184 cycle 8: stable=true steps=46 time=798 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 8 rise: events=100 sha=900ef3423915a8a1
+seed8184 cycle 8 rise: stable=true steps=8 time=806 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 8 fall: events=4 sha=33a39de8d3c80255
+seed8184 cycle 8 fall: stable=true steps=2 time=808 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 9: events=4915 sha=d895c169a5ee8939
+seed8184 cycle 9: stable=true steps=46 time=854 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 9 rise: events=3293 sha=edbb59bcdce1d850
+seed8184 cycle 9 rise: stable=true steps=30 time=884 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 9 fall: events=2 sha=8044ea477d7a5423
+seed8184 cycle 9 fall: stable=true steps=1 time=885 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 10: events=5625 sha=2c5538d4b8876beb
+seed8184 cycle 10: stable=true steps=49 time=934 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 10 rise: events=4743 sha=495b3eb39ac026e8
+seed8184 cycle 10 rise: stable=true steps=51 time=985 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 10 fall: events=4 sha=9b96086debeca5bd
+seed8184 cycle 10 fall: stable=true steps=2 time=987 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 11: events=817 sha=94eeaa0c227bae0d
+seed8184 cycle 11: stable=true steps=40 time=1027 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 11 rise: events=4003 sha=d5abdc5372743b08
+seed8184 cycle 11 rise: stable=true steps=51 time=1078 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 11 fall: events=4 sha=0e74a756d7cb2898
+seed8184 cycle 11 fall: stable=true steps=2 time=1080 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 12: events=4670 sha=23f9f694869155e2
+seed8184 cycle 12: stable=true steps=46 time=1126 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 12 rise: events=4135 sha=5f7bdf5fc913a283
+seed8184 cycle 12 rise: stable=true steps=47 time=1173 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 12 fall: events=4 sha=b6649d373868f826
+seed8184 cycle 12 fall: stable=true steps=2 time=1175 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 13: events=3453 sha=c0cd2e0114b80dce
+seed8184 cycle 13: stable=true steps=46 time=1221 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 13 rise: events=4279 sha=f581c77d948217ce
+seed8184 cycle 13 rise: stable=true steps=48 time=1269 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 13 fall: events=4 sha=8c2c3821e4c32301
+seed8184 cycle 13 fall: stable=true steps=2 time=1271 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 14: events=3664 sha=4024cc9127457c03
+seed8184 cycle 14: stable=true steps=46 time=1317 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 14 rise: events=3748 sha=5b20df167cf8f057
+seed8184 cycle 14 rise: stable=true steps=48 time=1365 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 14 fall: events=4 sha=86c4a57a8ac3ac5c
+seed8184 cycle 14 fall: stable=true steps=2 time=1367 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 15: events=3762 sha=ae4247597e529a8b
+seed8184 cycle 15: stable=true steps=46 time=1413 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 15 rise: events=4745 sha=d0f6775a0fc77500
+seed8184 cycle 15 rise: stable=true steps=48 time=1461 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 15 fall: events=4 sha=641871e958ac2edb
+seed8184 cycle 15 fall: stable=true steps=2 time=1463 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 16: events=3639 sha=e11bf267ba6b96bd
+seed8184 cycle 16: stable=true steps=46 time=1509 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 16 rise: events=4354 sha=2cca027a5172ae20
+seed8184 cycle 16 rise: stable=true steps=48 time=1557 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 16 fall: events=4 sha=2e3d3684d608d7f0
+seed8184 cycle 16 fall: stable=true steps=2 time=1559 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 17: events=5279 sha=c2a5bc172e048446
+seed8184 cycle 17: stable=true steps=44 time=1603 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 17 rise: events=2466 sha=0490346e1f6dbcf7
+seed8184 cycle 17 rise: stable=true steps=30 time=1633 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 17 fall: events=2 sha=a2bc78dde1a41f2c
+seed8184 cycle 17 fall: stable=true steps=1 time=1634 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 18: events=4548 sha=89b96fbaf4cdff27
+seed8184 cycle 18: stable=true steps=45 time=1679 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 18 rise: events=3598 sha=ee0bbe5855393ee8
+seed8184 cycle 18 rise: stable=true steps=48 time=1727 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 18 fall: events=4 sha=1e55e0ab8bb1293e
+seed8184 cycle 18 fall: stable=true steps=2 time=1729 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 19: events=1669 sha=6e31e2e25396f6e4
+seed8184 cycle 19: stable=true steps=40 time=1769 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 19 rise: events=3861 sha=d6992968ed0ca52d
+seed8184 cycle 19 rise: stable=true steps=48 time=1817 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 19 fall: events=4 sha=465bc0225cfb8a35
+seed8184 cycle 19 fall: stable=true steps=2 time=1819 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 20: events=4066 sha=0f63e6475a36ac17
+seed8184 cycle 20: stable=true steps=46 time=1865 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 20 rise: events=1206 sha=dc3bc246dd137158
+seed8184 cycle 20 rise: stable=true steps=14 time=1879 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 20 fall: events=2 sha=f4b5b15aec4fe26a
+seed8184 cycle 20 fall: stable=true steps=1 time=1880 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 21: events=2557 sha=6949abc2cbf46ff9
+seed8184 cycle 21: stable=true steps=42 time=1922 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 21 rise: events=760 sha=a096ae39e6ddbf7a
+seed8184 cycle 21 rise: stable=true steps=34 time=1956 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 21 fall: events=2 sha=05b12af14949dc24
+seed8184 cycle 21 fall: stable=true steps=1 time=1957 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 22: events=2061 sha=b597f70d83203aa9
+seed8184 cycle 22: stable=true steps=42 time=1999 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 22 rise: events=1168 sha=c51ad26082931707
+seed8184 cycle 22 rise: stable=true steps=48 time=2047 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 22 fall: events=4 sha=105330245da57234
+seed8184 cycle 22 fall: stable=true steps=2 time=2049 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 23: events=4210 sha=5e680b2c7c5d8e8b
+seed8184 cycle 23: stable=true steps=46 time=2095 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 23 rise: events=4687 sha=1af05a50f99c420c
+seed8184 cycle 23 rise: stable=true steps=48 time=2143 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 23 fall: events=4 sha=7abcceaa529e0334
+seed8184 cycle 23 fall: stable=true steps=2 time=2145 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 24: events=2305 sha=5d6f498c59b96c8c
+seed8184 cycle 24: stable=true steps=40 time=2185 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 24 rise: events=4779 sha=da7415bac9fdede6
+seed8184 cycle 24 rise: stable=true steps=48 time=2233 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 24 fall: events=4 sha=55531dff4b016768
+seed8184 cycle 24 fall: stable=true steps=2 time=2235 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 25: events=2368 sha=1c1008803e5d88e5
+seed8184 cycle 25: stable=true steps=46 time=2281 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 25 rise: events=3898 sha=230fb2d8e7cd9237
+seed8184 cycle 25 rise: stable=true steps=48 time=2329 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 25 fall: events=4 sha=52bbc3f456b05ff8
+seed8184 cycle 25 fall: stable=true steps=2 time=2331 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 26: events=2486 sha=1a6987e515f5ee04
+seed8184 cycle 26: stable=true steps=46 time=2377 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 26 rise: events=957 sha=d35be0ad3488070c
+seed8184 cycle 26 rise: stable=true steps=11 time=2388 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 26 fall: events=2 sha=de76ce51df6b7e47
+seed8184 cycle 26 fall: stable=true steps=1 time=2389 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 27: events=2098 sha=4f7cd9a2171b1031
+seed8184 cycle 27: stable=true steps=42 time=2431 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 27 rise: events=711 sha=d714f4bfb759c772
+seed8184 cycle 27 rise: stable=true steps=21 time=2452 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 27 fall: events=2 sha=67c8b34530f29df8
+seed8184 cycle 27 fall: stable=true steps=1 time=2453 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 28: events=3175 sha=e8b2362a419fd97e
+seed8184 cycle 28: stable=true steps=46 time=2499 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 28 rise: events=706 sha=a6df805f9dec6e7a
+seed8184 cycle 28 rise: stable=true steps=34 time=2533 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 28 fall: events=2 sha=d28a28cdc23f92ca
+seed8184 cycle 28 fall: stable=true steps=1 time=2534 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 29: events=2643 sha=9a147658c94f3d32
+seed8184 cycle 29: stable=true steps=46 time=2580 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 29 rise: events=608 sha=cff235cddbefc0b0
+seed8184 cycle 29 rise: stable=true steps=14 time=2594 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184 cycle 29 fall: events=2 sha=52a896d9bb0fff29
+seed8184 cycle 29 fall: stable=true steps=1 time=2595 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+seed8184~clone reset: events=54830 sha=e9527f038421f6bc
+seed8184~clone reset: stable=true steps=46 time=46 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184~clone nets d67c0adb2e4f75a6
+seed8184 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8184 original after clone: stable=true steps=1 time=2595 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8184 nets d67c0adb2e4f75a6
+# seed 8185 size 6
+seed8185 construct stable=true comps=3459 nets=24109 nets=072a8d49882b4fe4
+seed8185 start: events=7125 sha=aab285c81ccc3cd5
+seed8185 start: stable=true steps=23 time=61 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 0: events=1290 sha=0695418469953b44
+seed8185 cycle 0: stable=true steps=12 time=73 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 0 rise: events=6238 sha=419fb9d0e59bbc89
+seed8185 cycle 0 rise: stable=true steps=26 time=99 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 0 fall: events=4 sha=f71f6d9a995209df
+seed8185 cycle 0 fall: stable=true steps=2 time=101 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 1: events=1506 sha=424d3f52be4cc8db
+seed8185 cycle 1: stable=true steps=18 time=119 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 1 rise: events=3975 sha=d3b13305e20f3caa
+seed8185 cycle 1 rise: stable=true steps=26 time=145 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 1 fall: events=4 sha=64e275691c714a00
+seed8185 cycle 1 fall: stable=true steps=2 time=147 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 2: events=350 sha=126322a29076a52a
+seed8185 cycle 2: stable=true steps=15 time=162 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 2 rise: events=2436 sha=9561a92c76829821
+seed8185 cycle 2 rise: stable=true steps=23 time=185 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 2 fall: events=4 sha=eab5cedc4cdf79b8
+seed8185 cycle 2 fall: stable=true steps=2 time=187 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 3: events=1558 sha=09d818a7c3fc00bf
+seed8185 cycle 3: stable=true steps=20 time=207 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 3 rise: events=764 sha=c05fb6f9bd1f1215
+seed8185 cycle 3 rise: stable=true steps=20 time=227 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 3 fall: events=4 sha=b700e85cc2047e19
+seed8185 cycle 3 fall: stable=true steps=2 time=229 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 4: events=1637 sha=909d7676ac1a87e1
+seed8185 cycle 4: stable=true steps=12 time=241 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 4 rise: events=329 sha=0852eff3e01ab71c
+seed8185 cycle 4 rise: stable=true steps=10 time=251 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 4 fall: events=2 sha=5f660f687af10c82
+seed8185 cycle 4 fall: stable=true steps=1 time=252 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 5: events=1122 sha=90c8ad3576e08e3d
+seed8185 cycle 5: stable=true steps=14 time=266 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 5 rise: events=450 sha=3829017bc556ea2a
+seed8185 cycle 5 rise: stable=true steps=10 time=276 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 5 fall: events=2 sha=b9423f114e444bee
+seed8185 cycle 5 fall: stable=true steps=1 time=277 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 6: events=1244 sha=5d9eefe797d11be2
+seed8185 cycle 6: stable=true steps=13 time=290 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 6 rise: events=109 sha=7c2b2fabb280ffb0
+seed8185 cycle 6 rise: stable=true steps=8 time=298 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 6 fall: events=4 sha=c2a463a7ea5d90f2
+seed8185 cycle 6 fall: stable=true steps=2 time=300 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 7: events=1851 sha=9b6a69d8e279dabc
+seed8185 cycle 7: stable=true steps=15 time=315 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 7 rise: events=160 sha=72a25ca2938f8f15
+seed8185 cycle 7 rise: stable=true steps=7 time=322 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 7 fall: events=2 sha=bba22f95d8671313
+seed8185 cycle 7 fall: stable=true steps=1 time=323 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 8: events=1844 sha=e634062d0cf58438
+seed8185 cycle 8: stable=true steps=14 time=337 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 8 rise: events=740 sha=83938419e7d2e2d6
+seed8185 cycle 8 rise: stable=true steps=18 time=355 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 8 fall: events=4 sha=ce48113b45929953
+seed8185 cycle 8 fall: stable=true steps=2 time=357 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 9: events=953 sha=9fe6afc7c9722cf8
+seed8185 cycle 9: stable=true steps=16 time=373 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 9 rise: events=834 sha=0411a215af8a6593
+seed8185 cycle 9 rise: stable=true steps=19 time=392 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 9 fall: events=4 sha=53a9c995141037dc
+seed8185 cycle 9 fall: stable=true steps=2 time=394 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 10: events=1808 sha=67eeb7c59179da1a
+seed8185 cycle 10: stable=true steps=14 time=408 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 10 rise: events=181 sha=5ecc6267ab27f07c
+seed8185 cycle 10 rise: stable=true steps=10 time=418 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 10 fall: events=2 sha=1d9b57616d7bdb24
+seed8185 cycle 10 fall: stable=true steps=1 time=419 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 11: events=1264 sha=975c18e231e2185a
+seed8185 cycle 11: stable=true steps=13 time=432 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 11 rise: events=628 sha=093a8e005e4f4f4f
+seed8185 cycle 11 rise: stable=true steps=17 time=449 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 11 fall: events=4 sha=85496e09cd3d66da
+seed8185 cycle 11 fall: stable=true steps=2 time=451 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 12: events=1579 sha=afb5866f4a6e7e8c
+seed8185 cycle 12: stable=true steps=12 time=463 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 12 rise: events=152 sha=7ce19c34696e4b46
+seed8185 cycle 12 rise: stable=true steps=7 time=470 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 12 fall: events=2 sha=40320affb386ecc3
+seed8185 cycle 12 fall: stable=true steps=1 time=471 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 13: events=1282 sha=8d34d147ca25e0c4
+seed8185 cycle 13: stable=true steps=16 time=487 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 13 rise: events=50 sha=4bfeff204a240b58
+seed8185 cycle 13 rise: stable=true steps=7 time=494 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 13 fall: events=4 sha=2af4976b40995938
+seed8185 cycle 13 fall: stable=true steps=2 time=496 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 14: events=763 sha=0a165469dcd61569
+seed8185 cycle 14: stable=true steps=14 time=510 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 14 rise: events=806 sha=0d157be84012973c
+seed8185 cycle 14 rise: stable=true steps=19 time=529 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 14 fall: events=4 sha=8db54469f588184a
+seed8185 cycle 14 fall: stable=true steps=2 time=531 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 15: events=229 sha=30817084efca7907
+seed8185 cycle 15: stable=true steps=12 time=543 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 15 rise: events=628 sha=2814ca109088947a
+seed8185 cycle 15 rise: stable=true steps=17 time=560 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 15 fall: events=4 sha=b42ada91a8f55222
+seed8185 cycle 15 fall: stable=true steps=2 time=562 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 16: events=1052 sha=98efdd26c8f52557
+seed8185 cycle 16: stable=true steps=12 time=574 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 16 rise: events=64 sha=4ccced8c8b708a53
+seed8185 cycle 16 rise: stable=true steps=7 time=581 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 16 fall: events=2 sha=713f0799eaf31062
+seed8185 cycle 16 fall: stable=true steps=1 time=582 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 17: events=1065 sha=509578b964566d46
+seed8185 cycle 17: stable=true steps=13 time=595 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 17 rise: events=66 sha=03a16d9cc914351e
+seed8185 cycle 17 rise: stable=true steps=7 time=602 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 17 fall: events=4 sha=bb7a3c485e1dbf78
+seed8185 cycle 17 fall: stable=true steps=2 time=604 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 18: events=1199 sha=8cb3ce2ef4d35417
+seed8185 cycle 18: stable=true steps=12 time=616 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 18 rise: events=50 sha=a85343c95a9cdf5e
+seed8185 cycle 18 rise: stable=true steps=7 time=623 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 18 fall: events=2 sha=d27338ed01286267
+seed8185 cycle 18 fall: stable=true steps=1 time=624 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 19: events=0 sha=e3b0c44298fc1c14
+seed8185 cycle 19: stable=true steps=0 time=624 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 19 rise: events=2 sha=8d61a1992bb559a1
+seed8185 cycle 19 rise: stable=true steps=1 time=625 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 19 fall: events=2 sha=2ac368cff9f40275
+seed8185 cycle 19 fall: stable=true steps=1 time=626 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 20: events=1040 sha=0a57e52137b96aca
+seed8185 cycle 20: stable=true steps=13 time=639 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 20 rise: events=642 sha=6806a0c057e801fe
+seed8185 cycle 20 rise: stable=true steps=17 time=656 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 20 fall: events=4 sha=f1e4c29ab16793db
+seed8185 cycle 20 fall: stable=true steps=2 time=658 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 21: events=763 sha=628f927126c64eaf
+seed8185 cycle 21: stable=true steps=12 time=670 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 21 rise: events=118 sha=556e18c68ef27b4e
+seed8185 cycle 21 rise: stable=true steps=10 time=680 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 21 fall: events=2 sha=b505dd4ae56ed35f
+seed8185 cycle 21 fall: stable=true steps=1 time=681 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 22: events=1065 sha=bfaed78e024e899d
+seed8185 cycle 22: stable=true steps=13 time=694 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 22 rise: events=66 sha=d2836700667dbf8a
+seed8185 cycle 22 rise: stable=true steps=7 time=701 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 22 fall: events=4 sha=e0148492fe010ada
+seed8185 cycle 22 fall: stable=true steps=2 time=703 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 23: events=184 sha=d927186f8b2ef073
+seed8185 cycle 23: stable=true steps=12 time=715 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 23 rise: events=596 sha=df0c1300df229aa8
+seed8185 cycle 23 rise: stable=true steps=17 time=732 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 23 fall: events=4 sha=3db5be956b1457a0
+seed8185 cycle 23 fall: stable=true steps=2 time=734 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 24: events=229 sha=e0310ebec497400b
+seed8185 cycle 24: stable=true steps=12 time=746 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 24 rise: events=628 sha=42e9e5aad60e91a3
+seed8185 cycle 24 rise: stable=true steps=17 time=763 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 24 fall: events=4 sha=f78e2044a110f00c
+seed8185 cycle 24 fall: stable=true steps=2 time=765 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 25: events=2275 sha=3a682fc3054f97e6
+seed8185 cycle 25: stable=true steps=16 time=781 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 25 rise: events=3582 sha=01c44e347fed6e2b
+seed8185 cycle 25 rise: stable=true steps=23 time=804 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 25 fall: events=2 sha=0a07d394d0966ab2
+seed8185 cycle 25 fall: stable=true steps=1 time=805 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 26: events=2605 sha=d001da07c5ec798d
+seed8185 cycle 26: stable=true steps=17 time=822 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 26 rise: events=3016 sha=d6686f4ab207a74c
+seed8185 cycle 26 rise: stable=true steps=26 time=848 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 26 fall: events=2 sha=9480a98bd2aa9935
+seed8185 cycle 26 fall: stable=true steps=1 time=849 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 27: events=749 sha=33217c8c5a731e3c
+seed8185 cycle 27: stable=true steps=12 time=861 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 27 rise: events=353 sha=c38c3f9d2e2ee627
+seed8185 cycle 27 rise: stable=true steps=9 time=870 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 27 fall: events=4 sha=4ce2565c144da805
+seed8185 cycle 27 fall: stable=true steps=2 time=872 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 28: events=749 sha=163c00644bd49af8
+seed8185 cycle 28: stable=true steps=12 time=884 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 28 rise: events=118 sha=7690ded7b0ac032b
+seed8185 cycle 28 rise: stable=true steps=10 time=894 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 28 fall: events=2 sha=8c022e2d880a978f
+seed8185 cycle 28 fall: stable=true steps=1 time=895 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 29: events=0 sha=e3b0c44298fc1c14
+seed8185 cycle 29: stable=true steps=0 time=895 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 29 rise: events=2 sha=77f75965b3407e37
+seed8185 cycle 29 rise: stable=true steps=1 time=896 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185 cycle 29 fall: events=2 sha=f05972745f0998fa
+seed8185 cycle 29 fall: stable=true steps=1 time=897 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+seed8185~clone reset: events=27684 sha=95ada445c6eb21f9
+seed8185~clone reset: stable=true steps=38 time=38 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185~clone nets 072a8d49882b4fe4
+seed8185 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8185 original after clone: stable=true steps=1 time=897 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8185 nets 072a8d49882b4fe4
+# seed 8190 size 4
+seed8190 construct stable=true comps=3883 nets=31442 nets=3be880ec55e47112
+seed8190 start: events=10923 sha=927545137a646c9f
+seed8190 start: stable=true steps=18 time=76 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 0: events=581 sha=d25998370ce9da01
+seed8190 cycle 0: stable=true steps=9 time=85 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 0 rise: events=9243 sha=169e52d09c4893d5
+seed8190 cycle 0 rise: stable=true steps=49 time=134 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 0 fall: events=2 sha=ade02e81882e93b8
+seed8190 cycle 0 fall: stable=true steps=1 time=135 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 1: events=1623 sha=0212562119320eba
+seed8190 cycle 1: stable=true steps=43 time=178 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 1 rise: events=6577 sha=eec13d1a97c338ff
+seed8190 cycle 1 rise: stable=true steps=50 time=228 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 1 fall: events=2 sha=718bcc2aeb82790f
+seed8190 cycle 1 fall: stable=true steps=1 time=229 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 2: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 2: stable=true steps=0 time=229 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 2 rise: events=3413 sha=f952bdb54d6bb0c6
+seed8190 cycle 2 rise: stable=true steps=24 time=253 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 2 fall: events=2 sha=db653b0f6033aeba
+seed8190 cycle 2 fall: stable=true steps=1 time=254 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 3: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 3: stable=true steps=0 time=254 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 3 rise: events=4229 sha=c58d9a15b91b086e
+seed8190 cycle 3 rise: stable=true steps=50 time=304 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 3 fall: events=2 sha=c6b292308ef97c72
+seed8190 cycle 3 fall: stable=true steps=1 time=305 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 4: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 4: stable=true steps=0 time=305 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 4 rise: events=3000 sha=3faf3dca03f643f7
+seed8190 cycle 4 rise: stable=true steps=24 time=329 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 4 fall: events=2 sha=a0f154d2e1b36909
+seed8190 cycle 4 fall: stable=true steps=1 time=330 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 5: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 5: stable=true steps=0 time=330 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 5 rise: events=2937 sha=31ca037926f6b4d7
+seed8190 cycle 5 rise: stable=true steps=24 time=354 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 5 fall: events=2 sha=f3b5d595d4803d64
+seed8190 cycle 5 fall: stable=true steps=1 time=355 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 6: events=418 sha=0349bcc207f51397
+seed8190 cycle 6: stable=true steps=22 time=377 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 6 rise: events=2402 sha=f0dca14f3c01fc4c
+seed8190 cycle 6 rise: stable=true steps=50 time=427 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 6 fall: events=2 sha=d0942abb4a252898
+seed8190 cycle 6 fall: stable=true steps=1 time=428 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 7: events=442 sha=597296792fd11286
+seed8190 cycle 7: stable=true steps=22 time=450 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 7 rise: events=3051 sha=cadb95f75d8db798
+seed8190 cycle 7 rise: stable=true steps=24 time=474 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 7 fall: events=2 sha=301219827ed1b189
+seed8190 cycle 7 fall: stable=true steps=1 time=475 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 8: events=1543 sha=4e70b6dc6c9e08d6
+seed8190 cycle 8: stable=true steps=43 time=518 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 8 rise: events=5039 sha=1f5847fe28788a17
+seed8190 cycle 8 rise: stable=true steps=49 time=567 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 8 fall: events=2 sha=0c05dea258fd08bc
+seed8190 cycle 8 fall: stable=true steps=1 time=568 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 9: events=1194 sha=32d33402f1327e6a
+seed8190 cycle 9: stable=true steps=43 time=611 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 9 rise: events=5959 sha=4ce91d371cd2a078
+seed8190 cycle 9 rise: stable=true steps=50 time=661 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 9 fall: events=2 sha=e87213a8a384fe62
+seed8190 cycle 9 fall: stable=true steps=1 time=662 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 10: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 10: stable=true steps=0 time=662 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 10 rise: events=2177 sha=44e79417a64ebb49
+seed8190 cycle 10 rise: stable=true steps=49 time=711 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 10 fall: events=2 sha=01a0d3eb65744e18
+seed8190 cycle 10 fall: stable=true steps=1 time=712 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 11: events=1510 sha=a037967c8100f71a
+seed8190 cycle 11: stable=true steps=43 time=755 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 11 rise: events=5344 sha=987752e83be69157
+seed8190 cycle 11 rise: stable=true steps=49 time=804 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 11 fall: events=2 sha=ab2d2a395b13fe79
+seed8190 cycle 11 fall: stable=true steps=1 time=805 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 12: events=1144 sha=cf0476f659fbd258
+seed8190 cycle 12: stable=true steps=43 time=848 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 12 rise: events=6041 sha=47e57023b2bcab6a
+seed8190 cycle 12 rise: stable=true steps=50 time=898 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 12 fall: events=2 sha=3788451dcd262c94
+seed8190 cycle 12 fall: stable=true steps=1 time=899 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 13: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 13: stable=true steps=0 time=899 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 13 rise: events=3413 sha=f6fadbf6d913ceed
+seed8190 cycle 13 rise: stable=true steps=24 time=923 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 13 fall: events=2 sha=af07d911d6c2f00f
+seed8190 cycle 13 fall: stable=true steps=1 time=924 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 14: events=360 sha=f0c545fb56fc480b
+seed8190 cycle 14: stable=true steps=22 time=946 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 14 rise: events=4237 sha=60799bdadac36e08
+seed8190 cycle 14 rise: stable=true steps=50 time=996 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 14 fall: events=2 sha=f1b585f3b2e099c2
+seed8190 cycle 14 fall: stable=true steps=1 time=997 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 15: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 15: stable=true steps=0 time=997 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 15 rise: events=2446 sha=2bca90dbaf5c55e4
+seed8190 cycle 15 rise: stable=true steps=50 time=1047 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 15 fall: events=2 sha=c806df036d10e2b5
+seed8190 cycle 15 fall: stable=true steps=1 time=1048 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 16: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 16: stable=true steps=0 time=1048 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 16 rise: events=107 sha=a336f7041fc68af6
+seed8190 cycle 16 rise: stable=true steps=11 time=1059 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 16 fall: events=2 sha=bda60c44281b0c69
+seed8190 cycle 16 fall: stable=true steps=1 time=1060 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 17: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 17: stable=true steps=0 time=1060 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 17 rise: events=2 sha=7f6850ea672dcc39
+seed8190 cycle 17 rise: stable=true steps=1 time=1061 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 17 fall: events=2 sha=ae1588af881406c0
+seed8190 cycle 17 fall: stable=true steps=1 time=1062 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 18: events=404 sha=626f027afb9929db
+seed8190 cycle 18: stable=true steps=22 time=1084 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 18 rise: events=2938 sha=702fd9f590e0c8e2
+seed8190 cycle 18 rise: stable=true steps=24 time=1108 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 18 fall: events=2 sha=01c7672ab54999be
+seed8190 cycle 18 fall: stable=true steps=1 time=1109 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 19: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 19: stable=true steps=0 time=1109 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 19 rise: events=4859 sha=b28edcce099594cb
+seed8190 cycle 19 rise: stable=true steps=50 time=1159 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 19 fall: events=2 sha=10037e4ff951bf58
+seed8190 cycle 19 fall: stable=true steps=1 time=1160 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 20: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 20: stable=true steps=0 time=1160 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 20 rise: events=3028 sha=d46d6b61ee298762
+seed8190 cycle 20 rise: stable=true steps=24 time=1184 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 20 fall: events=2 sha=63645f3b24501379
+seed8190 cycle 20 fall: stable=true steps=1 time=1185 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 21: events=0 sha=e3b0c44298fc1c14
+seed8190 cycle 21: stable=true steps=0 time=1185 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 21 rise: events=2937 sha=35cf132bb5924407
+seed8190 cycle 21 rise: stable=true steps=24 time=1209 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 21 fall: events=2 sha=81b5c4e796a5a2f8
+seed8190 cycle 21 fall: stable=true steps=1 time=1210 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 22: events=418 sha=f96f118d2506ffde
+seed8190 cycle 22: stable=true steps=22 time=1232 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 22 rise: events=2402 sha=f5ddd076b6569d20
+seed8190 cycle 22 rise: stable=true steps=50 time=1282 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 22 fall: events=2 sha=add8351f6552112c
+seed8190 cycle 22 fall: stable=true steps=1 time=1283 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 23: events=1540 sha=d5236057f00334f2
+seed8190 cycle 23: stable=true steps=43 time=1326 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 23 rise: events=5274 sha=f354d70cdb166339
+seed8190 cycle 23 rise: stable=true steps=49 time=1375 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190 cycle 23 fall: events=2 sha=2023a5f4b2f962b5
+seed8190 cycle 23 fall: stable=true steps=1 time=1376 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+seed8190~clone reset: events=35988 sha=f475ecb332f2bfd0
+seed8190~clone reset: stable=true steps=57 time=57 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190~clone nets 3be880ec55e47112
+seed8190 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8190 original after clone: stable=true steps=1 time=1376 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8190 nets 3be880ec55e47112
+# seed 8191 size 5
+seed8191 construct stable=true comps=4037 nets=34246 nets=304c6299814e70aa
+seed8191 start: events=11143 sha=392c6153617976c5
+seed8191 start: stable=true steps=19 time=73 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 0: events=871 sha=344acbe342d3127c
+seed8191 cycle 0: stable=true steps=12 time=85 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 0 rise: events=8371 sha=39ae610e0ffeea0b
+seed8191 cycle 0 rise: stable=true steps=49 time=134 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 0 fall: events=2 sha=1c9186c51908d484
+seed8191 cycle 0 fall: stable=true steps=1 time=135 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 1: events=4800 sha=6d68b107c97f8293
+seed8191 cycle 1: stable=true steps=43 time=178 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 1 rise: events=6830 sha=e0c1a1035fcc6795
+seed8191 cycle 1 rise: stable=true steps=49 time=227 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 1 fall: events=2 sha=b6449c41e4d28f91
+seed8191 cycle 1 fall: stable=true steps=1 time=228 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 2: events=8602 sha=7150e2a3f1d2931c
+seed8191 cycle 2: stable=true steps=45 time=273 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 2 rise: events=7309 sha=0e488a64aaa7403d
+seed8191 cycle 2 rise: stable=true steps=49 time=322 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 2 fall: events=2 sha=ab34899021eb053b
+seed8191 cycle 2 fall: stable=true steps=1 time=323 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 3: events=8315 sha=458f2d2096349334
+seed8191 cycle 3: stable=true steps=43 time=366 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 3 rise: events=7597 sha=604b7f5b4f2b7999
+seed8191 cycle 3 rise: stable=true steps=49 time=415 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 3 fall: events=2 sha=cc57874280d80f56
+seed8191 cycle 3 fall: stable=true steps=1 time=416 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 4: events=5738 sha=b8d2570a0c8438a9
+seed8191 cycle 4: stable=true steps=45 time=461 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 4 rise: events=4303 sha=457159c4a0a8e221
+seed8191 cycle 4 rise: stable=true steps=41 time=502 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 4 fall: events=2 sha=525165d6b804977f
+seed8191 cycle 4 fall: stable=true steps=1 time=503 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 5: events=6374 sha=fc8497be0c4a1ef2
+seed8191 cycle 5: stable=true steps=45 time=548 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 5 rise: events=952 sha=931e3563237f4d41
+seed8191 cycle 5 rise: stable=true steps=44 time=592 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 5 fall: events=2 sha=06ef810487e56bae
+seed8191 cycle 5 fall: stable=true steps=1 time=593 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 6: events=7371 sha=cc455f5041bd0c05
+seed8191 cycle 6: stable=true steps=45 time=638 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 6 rise: events=3453 sha=32dc1b3d88b7db0e
+seed8191 cycle 6 rise: stable=true steps=41 time=679 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 6 fall: events=2 sha=a00b5bb2a241a4c6
+seed8191 cycle 6 fall: stable=true steps=1 time=680 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 7: events=5982 sha=dcc406bc698b87e2
+seed8191 cycle 7: stable=true steps=45 time=725 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 7 rise: events=4022 sha=846555914e5e5076
+seed8191 cycle 7 rise: stable=true steps=44 time=769 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 7 fall: events=2 sha=3b8397265bd50397
+seed8191 cycle 7 fall: stable=true steps=1 time=770 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 8: events=6060 sha=5bbf8c8850e6a4b6
+seed8191 cycle 8: stable=true steps=45 time=815 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 8 rise: events=2894 sha=239a2e4a3547a5f1
+seed8191 cycle 8 rise: stable=true steps=44 time=859 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 8 fall: events=2 sha=3d295490f2c3259f
+seed8191 cycle 8 fall: stable=true steps=1 time=860 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 9: events=4393 sha=8438ffec26f2889c
+seed8191 cycle 9: stable=true steps=43 time=903 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 9 rise: events=1792 sha=22f885b3c8074806
+seed8191 cycle 9 rise: stable=true steps=41 time=944 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 9 fall: events=2 sha=a2dadb29e388602d
+seed8191 cycle 9 fall: stable=true steps=1 time=945 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 10: events=6448 sha=9dba8a0526b8338f
+seed8191 cycle 10: stable=true steps=43 time=988 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 10 rise: events=1849 sha=bdf4c2d88ae4fcda
+seed8191 cycle 10 rise: stable=true steps=41 time=1029 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 10 fall: events=2 sha=e8c821b5a4a5d4aa
+seed8191 cycle 10 fall: stable=true steps=1 time=1030 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 11: events=2081 sha=f162f1a70e3e2cb0
+seed8191 cycle 11: stable=true steps=38 time=1068 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 11 rise: events=1753 sha=ae52197aacbae4b5
+seed8191 cycle 11 rise: stable=true steps=41 time=1109 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 11 fall: events=2 sha=f8fa84a44255a99b
+seed8191 cycle 11 fall: stable=true steps=1 time=1110 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 12: events=6690 sha=19fe43cce97fbca1
+seed8191 cycle 12: stable=true steps=45 time=1155 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 12 rise: events=2555 sha=e381435544460df5
+seed8191 cycle 12 rise: stable=true steps=41 time=1196 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 12 fall: events=2 sha=a60b2cbf5bf3b2a8
+seed8191 cycle 12 fall: stable=true steps=1 time=1197 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 13: events=3905 sha=2024ee6e2d1916fc
+seed8191 cycle 13: stable=true steps=43 time=1240 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 13 rise: events=2 sha=0ce73bd85a97adce
+seed8191 cycle 13 rise: stable=true steps=1 time=1241 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 13 fall: events=2 sha=b5de2f183da046ef
+seed8191 cycle 13 fall: stable=true steps=1 time=1242 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 14: events=2861 sha=f91c2a6466f10c66
+seed8191 cycle 14: stable=true steps=45 time=1287 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 14 rise: events=3074 sha=25fdc1d62cb381b1
+seed8191 cycle 14 rise: stable=true steps=41 time=1328 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 14 fall: events=2 sha=96e271891429e68d
+seed8191 cycle 14 fall: stable=true steps=1 time=1329 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 15: events=6517 sha=5c160b50f04c4f8f
+seed8191 cycle 15: stable=true steps=45 time=1374 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 15 rise: events=3916 sha=313bef0704a2ec8b
+seed8191 cycle 15 rise: stable=true steps=44 time=1418 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 15 fall: events=2 sha=1f8fbfa5836cd744
+seed8191 cycle 15 fall: stable=true steps=1 time=1419 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 16: events=7572 sha=23e8ebca1573cad5
+seed8191 cycle 16: stable=true steps=45 time=1464 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 16 rise: events=2829 sha=c320c15f5a8abc3d
+seed8191 cycle 16 rise: stable=true steps=41 time=1505 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 16 fall: events=2 sha=fdbb158a10ece0f8
+seed8191 cycle 16 fall: stable=true steps=1 time=1506 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 17: events=6905 sha=ec734f7077e24ae0
+seed8191 cycle 17: stable=true steps=45 time=1551 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 17 rise: events=2563 sha=3ff382dd14b6dbfb
+seed8191 cycle 17 rise: stable=true steps=41 time=1592 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 17 fall: events=2 sha=8c6f168f2da7a7ee
+seed8191 cycle 17 fall: stable=true steps=1 time=1593 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 18: events=6516 sha=251426aea0083bff
+seed8191 cycle 18: stable=true steps=43 time=1636 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 18 rise: events=3447 sha=5aa24061231af9f7
+seed8191 cycle 18 rise: stable=true steps=41 time=1677 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 18 fall: events=2 sha=8691ead20b301d60
+seed8191 cycle 18 fall: stable=true steps=1 time=1678 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 19: events=7733 sha=644c8f3e6d23bbbb
+seed8191 cycle 19: stable=true steps=43 time=1721 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 19 rise: events=7121 sha=da12803b770d0e0d
+seed8191 cycle 19 rise: stable=true steps=49 time=1770 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 19 fall: events=2 sha=9ee517f232af7470
+seed8191 cycle 19 fall: stable=true steps=1 time=1771 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 20: events=8568 sha=0fb684c840f50ddb
+seed8191 cycle 20: stable=true steps=45 time=1816 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 20 rise: events=7652 sha=5bfd86b32881a979
+seed8191 cycle 20 rise: stable=true steps=49 time=1865 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 20 fall: events=2 sha=2c0b9a23249b3613
+seed8191 cycle 20 fall: stable=true steps=1 time=1866 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 21: events=1981 sha=31a047d1f1ec7277
+seed8191 cycle 21: stable=true steps=45 time=1911 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 21 rise: events=3903 sha=5960c6f632bf8c72
+seed8191 cycle 21 rise: stable=true steps=41 time=1952 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 21 fall: events=2 sha=9087a3cd383f0a8d
+seed8191 cycle 21 fall: stable=true steps=1 time=1953 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 22: events=7925 sha=8ab50412fdaa86ef
+seed8191 cycle 22: stable=true steps=43 time=1996 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 22 rise: events=6497 sha=3b6bb21fd50310dc
+seed8191 cycle 22 rise: stable=true steps=49 time=2045 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 22 fall: events=2 sha=c62c1030b6b5e6fc
+seed8191 cycle 22 fall: stable=true steps=1 time=2046 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 23: events=9380 sha=0f2218b95ef3c808
+seed8191 cycle 23: stable=true steps=48 time=2094 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 23 rise: events=7442 sha=a3550e84615640ea
+seed8191 cycle 23 rise: stable=true steps=49 time=2143 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 23 fall: events=2 sha=e4c49aa774e6ab6b
+seed8191 cycle 23 fall: stable=true steps=1 time=2144 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 24: events=2940 sha=1949d66f74bbe77a
+seed8191 cycle 24: stable=true steps=45 time=2189 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 24 rise: events=414 sha=b6a0957af7624a76
+seed8191 cycle 24 rise: stable=true steps=25 time=2214 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 24 fall: events=2 sha=4eb3ef1ceed79fa8
+seed8191 cycle 24 fall: stable=true steps=1 time=2215 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 25: events=6991 sha=552766f79ab752ae
+seed8191 cycle 25: stable=true steps=45 time=2260 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 25 rise: events=2491 sha=67b2bc5dadac088a
+seed8191 cycle 25 rise: stable=true steps=41 time=2301 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 25 fall: events=2 sha=4f24c9354044c041
+seed8191 cycle 25 fall: stable=true steps=1 time=2302 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 26: events=6606 sha=8dcae581ec452725
+seed8191 cycle 26: stable=true steps=45 time=2347 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 26 rise: events=2240 sha=d8a2782339e22580
+seed8191 cycle 26 rise: stable=true steps=41 time=2388 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191 cycle 26 fall: events=2 sha=4c8b5aa1dfe5c7b2
+seed8191 cycle 26 fall: stable=true steps=1 time=2389 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
+seed8191~clone reset: events=39042 sha=810b0e2c773d6c7b
+seed8191~clone reset: stable=true steps=54 time=54 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191~clone nets 304c6299814e70aa
+seed8191 original after clone: events=0 sha=e3b0c44298fc1c14
+seed8191 original after clone: stable=true steps=1 time=2389 tick=0 osc=false hot=[e3b0c44298fc1c14:0]
+seed8191 nets 5eac07e2303b2c96
