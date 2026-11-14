@@ -147,3 +147,22 @@ describe('exact minimum cover', () => {
     expect(minimize(3, [0, 1, 2, 5, 6, 7])).toHaveLength(3);
   });
 });
+
+describe('minimisation of large functions', () => {
+  it('a 10-input function stays fast and equivalent', () => {
+    const rand = rng(10);
+    const n = 10;
+    const on: number[] = [];
+    const off: number[] = [];
+    const dc: number[] = [];
+    for (let m = 0; m < 1 << n; m++) {
+      const r = rand();
+      (r < 0.4 ? on : r < 0.85 ? off : dc).push(m);
+    }
+    const t = performance.now();
+    const sop = minimize(n, on, dc);
+    expect(performance.now() - t).toBeLessThan(2000);
+    for (const m of on) expect(evaluateSop(sop, m)).toBe(1);
+    for (const m of off) expect(evaluateSop(sop, m)).toBe(0);
+  });
+});

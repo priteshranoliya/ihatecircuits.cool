@@ -160,42 +160,61 @@ export function hasMemory(circuit: Circuit): boolean {
 /** An implicant over n variables: '0', '1', '-' per variable, variable 0 first. */
 export type Implicant = string;
 
-const toBits = (m: number, n: number) => m.toString(2).padStart(n, '0');
+/** An implicant as two masks: the fixed bit values and the don't-care ('-') positions. Variable 0 is the most significant bit. */
+interface Cube {
+  v: number;
+  d: number;
+}
+const cubes = new Map<Implicant, Cube>();
+function cubeOf(imp: Implicant): Cube {
+  let c = cubes.get(imp);
+  if (!c) {
+    let v = 0;
+    let d = 0;
+    for (let i = 0; i < imp.length; i++) {
+      v = v * 2 + (imp[i] === '1' ? 1 : 0);
+      d = d * 2 + (imp[i] === '-' ? 1 : 0);
+    }
+    c = { v, d };
+    if (cubes.size > 100_000) cubes.clear();
+    cubes.set(imp, c);
+  }
+  return c;
+}
+function cubeText(v: number, d: number, n: number): Implicant {
+  let s = '';
+  for (let i = n - 1; i >= 0; i--) s += (d >> i) & 1 ? '-' : (v >> i) & 1 ? '1' : '0';
+  return s;
+}
 export const covers = (imp: Implicant, m: number) => {
-  const b = toBits(m, imp.length);
-  for (let i = 0; i < imp.length; i++) if (imp[i] !== '-' && imp[i] !== b[i]) return false;
-  return true;
+  const c = cubeOf(imp);
+  return ((m ^ c.v) & ~c.d) === 0;
 };
 const literals = (imp: Implicant) => imp.replace(/-/g, '').length;
 
-function combine(a: Implicant, b: Implicant): Implicant | null {
-  let diff = -1;
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === b[i]) continue;
-    if (a[i] === '-' || b[i] === '-' || diff !== -1) return null;
-    diff = i;
-  }
-  return diff === -1 ? null : a.slice(0, diff) + '-' + a.slice(diff + 1);
-}
-
 /** All prime implicants of the function (ones ∪ don't-cares). */
 export function primeImplicants(n: number, ones: readonly number[], dontCares: readonly number[] = []): Implicant[] {
-  let current = new Set([...ones, ...dontCares].map((m) => toBits(m, n)));
+  // Two cubes merge when they have the same don't-care positions and differ in exactly one other bit,
+  // so each cube only needs to look for its partner with that bit set: linear in the cubes per round.
+  const key = (v: number, d: number) => d * 2 ** n + v;
+  let current = new Map<number, Cube>();
+  for (const m of [...ones, ...dontCares]) current.set(key(m, 0), { v: m, d: 0 });
   const primes = new Set<Implicant>();
   while (current.size) {
-    const list = [...current].sort();
-    const used = new Set<Implicant>();
-    const next = new Set<Implicant>();
-    for (let i = 0; i < list.length; i++)
-      for (let j = i + 1; j < list.length; j++) {
-        const merged = combine(list[i], list[j]);
-        if (merged) {
-          next.add(merged);
-          used.add(list[i]);
-          used.add(list[j]);
-        }
+    const used = new Set<number>();
+    const next = new Map<number, Cube>();
+    for (const [k, { v, d }] of current) {
+      for (let b = 0; b < n; b++) {
+        const bit = 1 << b;
+        if (d & bit || v & bit) continue;
+        const partner = key(v | bit, d);
+        if (!current.has(partner)) continue;
+        next.set(key(v, d | bit), { v, d: d | bit });
+        used.add(k);
+        used.add(partner);
       }
-    for (const imp of list) if (!used.has(imp)) primes.add(imp);
+    }
+    for (const [k, { v, d }] of current) if (!used.has(k)) primes.add(cubeText(v, d, n));
     current = next;
   }
   return [...primes].sort();
@@ -217,7 +236,9 @@ export function minimize(n: number, minterms: readonly number[], dontCares: read
     if (cov.length === 1 && !chosen.includes(cov[0])) chosen.push(cov[0]);
   }
   const remaining = ones.filter((m) => !chosen.some((p) => covers(p, m)));
-  const rest = exactCover(primes.filter((p) => !chosen.includes(p)), remaining) ?? greedyCover(primes.filter((p) => !chosen.includes(p)), remaining);
+  // Above 8 inputs the exact search almost never finishes inside a 200k-node budget, and each node scans
+  // hundreds of minterms, so it gets a smaller budget there before falling back to the greedy cover.
+  const rest = exactCover(primes.filter((p) => !chosen.includes(p)), remaining, n <= 8 ? 200_000 : 20_000) ?? greedyCover(primes.filter((p) => !chosen.includes(p)), remaining);
   chosen.push(...rest);
   return chosen.sort((a, b) => literals(a) - literals(b) || (a < b ? 1 : -1));
 }
@@ -234,6 +255,18 @@ const cost = (imps: readonly Implicant[]) => imps.length * 1000 + imps.reduce((n
 function exactCover(primes: readonly Implicant[], minterms: readonly number[], budget = 200_000): Implicant[] | null {
   if (minterms.length === 0) return [];
   const coverOf = new Map(primes.map((p) => [p, minterms.filter((m) => covers(p, m))]));
+  // Options are always tried in one fixed order (most minterms covered, then fewest literals, then text),
+  // so each minterm's option list is sorted once here rather than at every search node.
+  const lits = new Map(primes.map((p) => [p, literals(p)]));
+  const order = [...primes].sort((a, b) => coverOf.get(b)!.length - coverOf.get(a)!.length || lits.get(a)! - lits.get(b)! || (a < b ? -1 : 1));
+  const cubeV = order.map((p) => cubeOf(p).v);
+  const cubeD = order.map((p) => cubeOf(p).d);
+  const optionsOf: number[][] = [];
+  for (const m of minterms) {
+    const opts: number[] = [];
+    for (let i = 0; i < order.length; i++) if (((m ^ cubeV[i]) & ~cubeD[i]) === 0) opts.push(i);
+    optionsOf[m] = opts;
+  }
   let best: Implicant[] | null = null;
   let bestCost = Infinity;
   let nodes = 0;
@@ -249,18 +282,20 @@ function exactCover(primes: readonly Implicant[], minterms: readonly number[], b
     }
     // At least one more term is needed.
     if ((chosen.length + 1) * 1000 > bestCost) return true;
-    let pivot = remaining[0];
-    let options = primes.filter((p) => covers(p, pivot));
+    let options = optionsOf[remaining[0]];
     for (const m of remaining) {
-      const o = primes.filter((p) => covers(p, m));
-      if (o.length < options.length) {
-        pivot = m;
-        options = o;
-      }
+      const o = optionsOf[m];
+      if (o.length < options.length) options = o;
     }
-    options.sort((a, b) => coverOf.get(b)!.length - coverOf.get(a)!.length || literals(a) - literals(b) || (a < b ? -1 : 1));
-    for (const p of options) {
-      if (!rec(remaining.filter((m) => !covers(p, m)), [...chosen, p])) return false;
+    for (const i of options) {
+      const v = cubeV[i];
+      const nd = ~cubeD[i];
+      const rest: number[] = [];
+      for (const m of remaining) if (((m ^ v) & nd) !== 0) rest.push(m);
+      chosen.push(order[i]);
+      const ok = rec(rest, chosen);
+      chosen.pop();
+      if (!ok) return false;
     }
     return true;
   };
@@ -269,22 +304,40 @@ function exactCover(primes: readonly Implicant[], minterms: readonly number[], b
 
 /** Fallback for very large functions: most new minterms first, then fewest literals. */
 function greedyCover(primes: readonly Implicant[], minterms: readonly number[]): Implicant[] {
+  // Live count of the still-uncovered minterms each prime covers, updated as minterms are covered.
+  const count = primes.map(() => 0);
+  const optionsOf = new Map<number, number[]>();
+  for (const m of minterms) {
+    const opts: number[] = [];
+    primes.forEach((p, i) => {
+      if (covers(p, m)) {
+        opts.push(i);
+        count[i]++;
+      }
+    });
+    optionsOf.set(m, opts);
+  }
+  const lits = primes.map(literals);
   const remaining = new Set(minterms);
+  const taken = primes.map(() => false);
   const chosen: Implicant[] = [];
   while (remaining.size) {
-    let best: Implicant | null = null;
+    let best = -1;
     let bestCount = -1;
-    for (const p of primes) {
-      if (chosen.includes(p)) continue;
-      let count = 0;
-      for (const m of remaining) if (covers(p, m)) count++;
-      if (count > bestCount || (count === bestCount && best !== null && literals(p) < literals(best))) {
-        best = p;
-        bestCount = count;
+    for (let i = 0; i < primes.length; i++) {
+      if (taken[i]) continue;
+      if (count[i] > bestCount || (count[i] === bestCount && best !== -1 && lits[i] < lits[best])) {
+        best = i;
+        bestCount = count[i];
       }
     }
-    chosen.push(best!);
-    for (const m of [...remaining]) if (covers(best!, m)) remaining.delete(m);
+    taken[best] = true;
+    chosen.push(primes[best]);
+    for (const m of minterms) {
+      if (!remaining.has(m) || !covers(primes[best], m)) continue;
+      remaining.delete(m);
+      for (const i of optionsOf.get(m)!) count[i]--;
+    }
   }
   return chosen;
 }
