@@ -1,6 +1,7 @@
 import type { Design, MemoryCell, Net } from '@ihatecircuits/hdl/design';
 import type { Stimulus } from '@ihatecircuits/hdl/trace';
-import { lowerToProject, POWER_ON_MARK } from '@ihatecircuits/hdl-bridge';
+import { Interp } from '@ihatecircuits/hdl/interp';
+import { lowerToProject } from '@ihatecircuits/hdl-bridge';
 import { describe, expect, it } from 'vitest';
 import { compareTraces } from '../src/compare';
 import { designOf, ModuleBuilder } from '../src/irbuild';
@@ -82,6 +83,95 @@ describe.skipIf(!haveIcarus)('registers and latches on every back end', () => {
     m.output('lo', lo);
     const stim = [0, 1, 1, 0, 0, 1, 0, 1, 1, 0].map((e, k) => ({ en: String(e), d: bin(k * 3 + 1, 3) }));
     await agree(designOf(m.build()), stim);
+  });
+});
+
+describe.skipIf(!haveIcarus)('power-on values of registers and latches on every back end', () => {
+  it('dff on both edges with a power-on value, unknown bits included, from 1 to 32 bits', async () => {
+    for (const init of ['1', '0', 'x', '10', '1x0', '01x10', '1010101010101010', '1x'.repeat(16)]) {
+      const w = init.length;
+      const { m, clk } = seqModule();
+      const d = m.input('d', w);
+      const pos = m.net(w);
+      const neg = m.net(w);
+      m.add({ kind: 'dff', clk, edge: 'pos', d, q: pos, init });
+      m.add({ kind: 'dff', clk, edge: 'neg', d, q: neg, init });
+      m.output('pos', pos);
+      m.output('neg', neg);
+      const stim = [5, 2, 7].map((v) => ({ d: bin(v, w) }));
+      await agree(designOf(m.build()), stim, (t) => {
+        expect(t[0]!.pre.pos).toBe(init.padStart(w, '0'));
+        expect(t[0]!.pre.neg).toBe(init.padStart(w, '0'));
+        expect(t[0]!.post.pos).toBe(bin(5, w));
+      });
+    }
+  });
+
+  it('adff with a power-on value that is the reset value, and an unknown bit', async () => {
+    const { m, clk } = seqModule();
+    const d = m.input('d', 4);
+    const rst = m.input('rst', 1);
+    const q = m.net(4);
+    m.add({ kind: 'adff', clk, edge: 'pos', arst: rst, arstLevel: 1, arstValue: '1010', d, q, init: '1x10' });
+    m.output('q', q);
+    const stim = Array.from({ length: 10 }, (_, k) => ({ d: bin(k * 5 + 1, 4), rst: k === 0 ? '0' : String((k >> 1) & 1) }));
+    await agree(designOf(m.build()), stim, (t) => expect(t[0]!.pre.q).toBe('1x10'));
+  });
+
+  it('adff whose reset is not active at power-on shows `init` until the first edge', async () => {
+    const { m, clk } = seqModule();
+    const d = m.input('d', 4);
+    const rst = m.input('rst', 1);
+    const q = m.net(4);
+    m.add({ kind: 'adff', clk, edge: 'pos', arst: rst, arstLevel: 1, arstValue: '0000', d, q, init: '1001' });
+    m.output('q', q);
+    const stim = [0, 0, 1, 0].map((r, k) => ({ d: bin(k + 3, 4), rst: String(r) }));
+    await agree(designOf(m.build()), stim, (t) => {
+      expect(t[0]!.pre.q).toBe('1001');
+      expect(t[0]!.post.q).toBe('0011');
+      expect(t[2]!.pre.q).toBe('0000');
+    });
+  });
+
+  it('a latch that is closed at power-on holds its value, and one that is open follows its data', async () => {
+    for (const en of ['0', '1']) {
+      const { m, clk } = seqModule();
+      const dReg = m.net(3);
+      const dIn = m.input('d', 3);
+      m.add({ kind: 'dff', clk, edge: 'pos', d: dIn, q: dReg, init: '101' });
+      const enable = m.input('en', 1);
+      const q = m.net(3);
+      m.add({ kind: 'latch', en: enable, enLevel: 1, d: dReg, q, init: '010' });
+      m.output('q', q);
+      const stim = [en, en, '1', '0', '1'].map((e, k) => ({ d: bin(k + 1, 3), en: e }));
+      await agree(designOf(m.build()), stim, (t) => expect(t[0]!.pre.q).toBe(en === '0' ? '010' : '101'));
+    }
+  });
+
+  it('the interpreter honours init, and powerOn 0 turns its unknown bits into 0', () => {
+    const { m, clk } = seqModule();
+    const d = m.input('d', 4);
+    const q = m.net(4);
+    m.add({ kind: 'dff', clk, edge: 'pos', d, q, init: '1x01' });
+    m.output('q', q);
+    const design = designOf(m.build());
+    expect(new Interp(design).value('q')).toBe('1x01');
+    expect(new Interp(design, { powerOn: '0' }).value('q')).toBe('1001');
+  });
+
+  it('both views power a register on at `init` in the circuit, and leave a register without one at 0', () => {
+    const { m, clk } = seqModule();
+    const d = m.input('d', 4);
+    const a = m.net(4);
+    const b = m.net(4);
+    m.add({ kind: 'dff', clk, edge: 'pos', d, q: a, init: '1x01' });
+    m.add({ kind: 'dff', clk, edge: 'pos', d, q: b });
+    m.output('a', a);
+    m.output('b', b);
+    const blocks = lowerToProject(designOf(m.build()), { view: 'blocks' }).circuits[0]!;
+    expect(Object.values(blocks.components).filter((c) => c.type === 'register').map((c) => c.props.init)).toEqual(['1x01', '']);
+    const gates = lowerToProject(designOf(m.build()), { view: 'gates' }).circuits[0]!;
+    expect(Object.values(gates.components).filter((c) => c.type === 'dff').map((c) => c.props.init)).toEqual(['1', '0', 'x', '1', '', '', '', '']);
   });
 });
 
@@ -196,8 +286,9 @@ describe.skipIf(!haveIcarus)('memories on every back end', () => {
     await agree(design, memStim(30, 2, 4), (t) => {
       expect([t[0]!.pre.async, t[0]!.post.async].some((v) => v === '1001' || v === '0110' || v === 'xxxx')).toBe(true);
     });
-    const labels = lowerToProject(design, { view: 'blocks' }).circuits[0]!;
-    expect(Object.values(labels.components).some((c) => c.label.endsWith(POWER_ON_MARK))).toBe(true);
+    const main = lowerToProject(design, { view: 'blocks' }).circuits[0]!;
+    const words = Object.values(main.components).filter((c) => c.type === 'register');
+    expect(words.map((c) => c.props.init)).toEqual(['1001', '0110', '', '']);
   });
 
   it('two write ports on one memory: the later port wins', async () => {

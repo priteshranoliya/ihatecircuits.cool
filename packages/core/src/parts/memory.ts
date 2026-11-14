@@ -1,5 +1,6 @@
-import { type Bits, bits, floating, fromStates, isKnown, mask, toUnsigned, unknown } from '../bits';
-import { BITS, DELAY, TRIGGER_ANY, TRIGGER_EDGE, chip, int, layoutFrom, range, type ComponentDef, type EvalCtx, type EvalResult, type PinSpec, type PropDef } from '../library';
+import { type Bits, bits, floating, fromStates, isKnown, mask, parseBitString, toUnsigned, unknown } from '../bits';
+import { BITS, DELAY, POWER_ON, TRIGGER_ANY, TRIGGER_EDGE, chip, int, layoutFrom, range, type ComponentDef, type EvalCtx, type EvalResult, type PinSpec, type PropDef } from '../library';
+import type { Props } from '../types';
 import { fires, hexValue, level, merge, w, type Trigger } from './util';
 
 /**
@@ -7,8 +8,9 @@ import { fires, hexValue, level, merge, w, type Trigger } from './util';
  * a pseudo-random generator, RAM and ROM.
  *
  * Shared rules.
- * - Power-on contents are 0 (deterministic). Resetting the simulation restores
- *   them, except ROM contents which are part of the design.
+ * - Power-on contents are 0 (deterministic), or the `init` prop of a D flip-flop, D latch or
+ *   register (bits over 0, 1 and x). Resetting the simulation restores them, except ROM
+ *   contents which are part of the design.
  * - A clocked part keeps the clock level it saw last. A clock that is unknown
  *   on one side of an edge might or might not have fired, so each stored bit
  *   becomes the merge of "kept" and "updated": bits that agree stay known.
@@ -79,7 +81,7 @@ interface FFState {
   q: Lv;
   clk: Lv | null;
 }
-const ffInit = (): FFState => ({ q: 0, clk: null });
+const ffInit = (p: Props): FFState => ({ q: level(parseBitString(String(p.init ?? ''), 1)), clk: null });
 
 function flipFlop(spec: {
   type: string;
@@ -90,6 +92,8 @@ function flipFlop(spec: {
   inputs: [name: string, label: string][];
   trigger: PropDef;
   next: (q: Lv, d: Lv[]) => Lv;
+  /** Offer a power-on value (the D flip-flop does; the others power on at 0). */
+  powerOn?: boolean;
 }): ComponentDef {
   return {
     type: spec.type,
@@ -98,7 +102,7 @@ function flipFlop(spec: {
     description: spec.description,
     keywords: spec.keywords,
     sequential: true,
-    props: [spec.trigger, DELAY],
+    props: [spec.trigger, DELAY, ...(spec.powerOn ? [POWER_ON] : [])],
     title: () => spec.title,
     ...layoutFrom(() =>
       chip([...spec.inputs.map(([n, l]): PinSpec => [n, l]), CLK], [['q', 'Q'], ['qn', 'Q̅']], 60, {
@@ -130,6 +134,7 @@ const dff = flipFlop({
   inputs: [['d', 'D']],
   trigger: TRIGGER_ANY,
   next: (_q, [d]) => d,
+  powerOn: true,
 });
 
 const tff = flipFlop({
@@ -184,10 +189,10 @@ const dlatch: ComponentDef = {
   description: 'Follows D while EN is 1 (transparent) and holds the last value while EN is 0. If EN is unknown, the bit stays known only when D already equals it.',
   keywords: ['transparent', 'level sensitive', 'gated'],
   sequential: true,
-  props: [DELAY],
+  props: [DELAY, POWER_ON],
   title: () => 'D latch',
   ...layoutFrom(() => chip([['d', 'D'], EN], [['q', 'Q'], ['qn', 'Q̅']])),
-  init: (): LatchState => ({ q: 0, armed: false }),
+  init: (p): LatchState => ({ q: level(parseBitString(String(p.init ?? ''), 1)), armed: false }),
   eval: (ctx) => {
     const st = ctx.state as LatchState;
     const en = lv(ctx, 'en');
@@ -233,10 +238,10 @@ const register: ComponentDef = {
   description: 'Holds a multi-bit value. Loads D when the clock fires and EN is 1. CLR resets it to 0 immediately.',
   keywords: ['latch', 'storage', 'word'],
   sequential: true,
-  props: [BITS(8), TRIGGER_ANY, DELAY],
+  props: [BITS(8), TRIGGER_ANY, DELAY, POWER_ON],
   title: (p) => `REG ${w(p)}`,
   ...layoutFrom((p) => chip([['d', 'D', w(p)], EN, CLK], [['q', 'Q', w(p)]], 60, { bottom: [CLR] })),
-  init: (p): WordState => ({ q: bits(w(p), 0), clk: null }),
+  init: (p): WordState => ({ q: parseBitString(String(p.init ?? ''), w(p)), clk: null }),
   eval: (ctx) => {
     const st = ctx.state as WordState;
     const bw = w(ctx.props);

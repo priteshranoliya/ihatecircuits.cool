@@ -19,5 +19,8 @@ export interface Ctx {
   net(net: NetId): Src;
 }
 
-/** Label of a register that must power on at 0 (the project's own power-on state) instead of x. */
-export const POWER_ON_MARK = ' (power-on 0)';
+/**
+ * The `init` property of a register, flip-flop or latch part for an IR power-on value (MSB first over 0 1 x), or undefined
+ * when no bit is known (a z bit is x, as a Verilog reg holds it when loaded): such a part keeps the project's power-on 0, and the trace runner sets it to x like any other reg.
+ */
+export const powerOnProp = (init: string | undefined): string | undefined => (init !== undefined && /[01]/.test(init) ? init.toLowerCase().replace(/z/g, 'x') : undefined);

@@ -57,6 +57,8 @@ export interface Var {
   nonblockingWrites: number;
   /** Assigned in the header or by `wire w = e;`. */
   declInit: boolean;
+  /** Power-on value of a reg (MSB first over '0' '1' 'x', `width` bits) from `reg q = 5;` or an `initial` block. */
+  init?: string;
   /** Declared with `integer` or used as a procedural loop variable: nothing is built for it unless it is read. */
   scratch: boolean;
   /** Bits that float to 0 or 1 when nothing drives them: `tri0`, `tri1`, `pullup`, `pulldown`. */

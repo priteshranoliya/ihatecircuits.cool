@@ -85,6 +85,15 @@ export function toSigned(b: Bits): number | null {
   return b.v & sign ? b.v - (1 << b.w) : b.v;
 }
 
+/**
+ * A value from text, most significant bit first, over 0, 1 and x. Text shorter than `w` is zero-extended on the left,
+ * longer text keeps its low bits, and any other character is ignored. Empty text is all zeros.
+ */
+export function parseBitString(text: string, w: number): Bits {
+  const t = text.toLowerCase().replace(/[^01x]/g, '').slice(-w).padStart(w, '0');
+  return fromStates(Array.from({ length: w }, (_, i): BitState => (t[w - 1 - i] === 'x' ? 'x' : t[w - 1 - i] === '1' ? 1 : 0)));
+}
+
 /** Treat z and e on an input as plain unknowns. */
 export const asInput = (b: Bits): Bits => (b.z | b.e ? make(b.w, b.v, b.x | b.z | b.e) : b);
 

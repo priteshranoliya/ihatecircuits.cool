@@ -372,13 +372,14 @@ const extender: ComponentDef = {
   eval: (ctx) => {
     const wi = int(ctx.props, 'inBits', 4);
     const wo = int(ctx.props, 'outBits', 8);
-    const v = ctx.get('in');
+    // Wiring: a floating (z) bit stays z through the extender, as it does through a splitter, so this reads the pin raw instead of through `get`.
+    const v = ctx.raw('in');
     if (wo <= wi) return { out: { out: slice(v, 0, wo) } };
     let fillBit: Bits;
     const mode = ctx.props.fill;
     if (mode === 'one') fillBit = bits(1, 1);
     else if (mode === 'sign') fillBit = slice(v, wi - 1, 1);
-    else if (mode === 'input') fillBit = ctx.get('fill');
+    else if (mode === 'input') fillBit = ctx.raw('fill');
     else fillBit = bits(1, 0);
     const extra = wo - wi;
     const run = mask(extra);

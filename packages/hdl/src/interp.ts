@@ -177,11 +177,18 @@ export class Interp {
     return this.powerOn === '0' ? zeros(width) : X(width);
   }
 
+  /** Power-on value of a register or latch: its `init` where it has one (unknown bits become 0 under powerOn '0'), else `start`. */
+  private startOf(width: number, init: string | undefined): V {
+    if (init === undefined) return this.start(width);
+    const t = initialWord(width, init);
+    return this.powerOn === '0' ? t.replace(/x/g, '0') : t;
+  }
+
   private instantiate(mod: Module): Inst {
     const inst: Inst = { mod, val: mod.nets.map((n) => X(n.width)), kids: new Map(), q: new Map(), mem: new Map(), prev: new Map(), inputs: new Map() };
     mod.cells.forEach((c, i) => {
       const w = (n: NetId) => mod.nets[n]!.width;
-      if (c.kind === 'dff' || c.kind === 'adff' || c.kind === 'latch') inst.q.set(i, this.start(w(c.q)));
+      if (c.kind === 'dff' || c.kind === 'adff' || c.kind === 'latch') inst.q.set(i, this.startOf(w(c.q), c.init));
       else if (c.kind === 'memory') {
         const words = Array.from({ length: c.depth }, (_, a) => (c.init?.[a] !== undefined ? initialWord(c.width, c.init[a]) : this.start(c.width)));
         inst.mem.set(i, { words, rd: c.readPorts.map(() => this.start(c.width)), });
@@ -215,6 +222,7 @@ export class Interp {
     for (let pass = 0; ; pass++) {
       if (pass > 64) throw new Error('the design did not settle: clock edges keep firing');
       this.comb(this.root);
+      this.storeLatches(this.root);
       if (!this.fire()) return;
     }
   }
@@ -321,9 +329,9 @@ export class Interp {
         return [[c.out, s === '1' ? t : s === '0' ? f : merge(t, f)]];
       }
       case 'concat':
-        return [[c.out, c.parts.map(v).join('')]];
+        return [[c.out, c.parts.map((n) => val[n]!).join('')]];
       case 'slice': {
-        const a = v(c.a);
+        const a = val[c.a]!;
         const hi = a.length - c.lsb;
         return [[c.out, a.slice(hi - w(c.out), hi)]];
       }
@@ -341,15 +349,8 @@ export class Interp {
         const q = inst.q.get(index)!;
         return [[c.q, this.asyncValue(c, q, v(c.arst))]];
       }
-      case 'latch': {
-        const en = v(c.en);
-        const held = inst.q.get(index)!;
-        const d = v(c.d);
-        const on = String(c.enLevel);
-        const q = en === on ? d : en === (c.enLevel === 1 ? '0' : '1') ? held : merge(held, d);
-        inst.q.set(index, q);
-        return [[c.q, q]];
-      }
+      case 'latch':
+        return [[c.q, this.latchValue(inst, c, index)]];
       case 'memory': {
         const m = inst.mem.get(index)!;
         const out: [NetId, V][] = [];
@@ -359,6 +360,25 @@ export class Interp {
         return out;
       }
     }
+  }
+
+  /** What a latch shows given the current nets and what it holds: `d` while open, the held value while closed, their merge when `en` is unknown. */
+  private latchValue(inst: Inst, c: Extract<Cell, { kind: 'latch' }>, index: number): V {
+    const en = readX(inst.val[c.en]!);
+    const held = inst.q.get(index)!;
+    if (en === String(c.enLevel)) return readX(inst.val[c.d]!);
+    return en === (c.enLevel === 1 ? '0' : '1') ? held : merge(held, readX(inst.val[c.d]!));
+  }
+
+  /**
+   * A latch stores what it shows once the combinational values have settled. Storing during the settling would let a
+   * net that has not been computed yet (still x on the first round) overwrite a latch that holds a value.
+   */
+  private storeLatches(inst: Inst): void {
+    inst.mod.cells.forEach((c, i) => {
+      if (c.kind === 'latch') inst.q.set(i, this.latchValue(inst, c, i));
+      else if (c.kind === 'instance') this.storeLatches(inst.kids.get(i)!);
+    });
   }
 
   private readWord(c: Extract<Cell, { kind: 'memory' }>, words: V[], addr: V): V {

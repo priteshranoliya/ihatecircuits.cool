@@ -26,7 +26,8 @@ const PORT_ITEM = /^(?:(input|output|inout)\b)?\s*(?:(?:wire|reg|logic|tri)\b)?\
 
 /**
  * Regex-level parse of the ANSI port list of `module <top>`. Handles direction and
- * range carry-over (`input [3:0] a, b`). Non-ANSI headers and parameters are not supported.
+ * range carry-over (`input [3:0] a, b`) and an initial value on an output reg (`output reg [3:0] q = 4'd5`, a literal without commas).
+ * Non-ANSI headers and parameters are not supported.
  */
 export function parseTopPorts(source: string, top: string): HeaderPort[] {
   const text = stripComments(source);
@@ -47,7 +48,7 @@ export function parseTopPorts(source: string, top: string): HeaderPort[] {
   let dir: 'in' | 'out' | undefined;
   let range = '';
   for (const raw of body.split(',')) {
-    const item = raw.trim().replace(/\s+/g, ' ');
+    const item = raw.replace(/=[\s\S]*$/, '').trim().replace(/\s+/g, ' ');
     const m = PORT_ITEM.exec(item);
     if (!m) throw new Error(`cannot parse port "${item}" of module "${top}"`);
     if (m[1]) {

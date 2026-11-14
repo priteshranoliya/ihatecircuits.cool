@@ -86,6 +86,15 @@ const NET_KIND: Record<string, NetKindIR> = {
 
 const nameOf = (r: A.Ref) => r.name;
 
+/** A register's power-on bits from a constant: a z becomes x, as it does when a z is loaded into a register. */
+const initBits = (v: CVal): string => cv.toBits(v).replace(/z/g, 'x');
+
+/** The part of a variable's power-on bits that a run of `width` bits from bit `lo` holds, or undefined when none of them is known. */
+const initSlice = (v: Var, lo: number, width: number): string | undefined => {
+  const bits = v.init?.slice(v.width - lo - width, v.width - lo);
+  return bits !== undefined && /[01]/.test(bits) ? bits : undefined;
+};
+
 export class ModuleElab {
   readonly sink = new DiagnosticSink();
   readonly nl: Netlist;
@@ -310,9 +319,18 @@ export class ModuleElab {
     if (!v) return;
     if (decl.init) {
       v.declInit = true;
-      if (isVar) this.warn('ignored', `The initial value of '${v.name}' is ignored: a register has no power-on value in the circuit, so it starts unknown (x) until its first clock edge. (The design format cannot hold a register's initial value yet.)`, decl.init.span);
+      if (isVar) this.guarded(() => this.declareInit(v, decl.init!));
       else this.guarded(() => this.assignWire(decl.name as A.Ident, decl.init!, d.span));
     }
+  }
+
+  /** `reg [3:0] q = 5;`: the register powers on at that value (IEEE 1364-2005 12.3.3 sets it at time 0). */
+  private declareInit(v: Var, rhs: A.Expr) {
+    if (v.mem) {
+      this.warn('ignored', `The initial value of the memory '${v.name}' is ignored: give its words values in an initial block instead.`, rhs.span);
+      return;
+    }
+    v.init = initBits(this.consts.evalAssigned(rhs, v.width, this.scope, `The initial value of '${v.name}'`));
   }
 
   private assignWire(name: A.Ident, rhs: A.Expr, span: Span) {
@@ -456,7 +474,7 @@ export class ModuleElab {
       }
       if (init) {
         v.declInit = true;
-        if (pt.isVariable) this.warn('ignored', `The initial value of '${v.name}' is ignored: a register has no power-on value in the circuit, so it starts unknown (x) until its first clock edge. (The design format cannot hold a register's initial value yet.)`, init.span);
+        if (pt.isVariable) this.guarded(() => this.declareInit(v, init));
         else this.guarded(() => this.assignWire(name, init, span));
       }
       this.ports.push({ name: ext, dir, v, bad });
@@ -673,6 +691,7 @@ export class ModuleElab {
 
   private initialBlock(item: A.InitialBlock) {
     const store = newStore(true);
+    for (const v of this.vars) if (v.init !== undefined && !v.mem) store.vars.set(v, cv.fromBits(v.init, v.signed));
     try {
       this.consts.exec(item.body, this.scope, store);
     } catch (e) {
@@ -684,7 +703,7 @@ export class ModuleElab {
     for (const [v, val] of store.vars) {
       if (v.isLocal || v.scratch) continue;
       if (!v.isVariable) this.fail('bad-assignment', `'${v.name}' is a wire, so an initial block cannot set it.`, item.span);
-      this.warn('ignored', `The initial value ${cv.toBits(val)} of '${v.name}' is ignored: a register has no power-on value in the circuit, so it starts unknown (x) until its first clock edge. (The design format cannot hold a register's initial value yet.)`, item.span);
+      v.init = initBits(cv.resize(val, v.width, false));
     }
     for (const [v, words] of store.mems) {
       const mem = v.mem!;
@@ -1053,22 +1072,29 @@ export class ModuleElab {
           }
           break;
         }
-        case 'dff':
+        case 'dff': {
           q = nl.newNet(out.width);
-          nl.emit({ kind: 'dff', clk: out.clk!, edge: out.edge!, d: out.d, q }, [q]);
+          const init = initSlice(v, out.lo, out.width);
+          nl.emit({ kind: 'dff', clk: out.clk!, edge: out.edge!, d: out.d, q, ...(init ? { init } : {}) }, [q]);
           break;
-        case 'adff':
+        }
+        case 'adff': {
           q = nl.newNet(out.width);
-          nl.emit({ kind: 'adff', clk: out.clk!, edge: out.edge!, arst: out.arst!, arstLevel: out.arstLevel!, arstValue: out.arstValue!, d: out.d, q }, [q]);
+          const init = initSlice(v, out.lo, out.width);
+          nl.emit({ kind: 'adff', clk: out.clk!, edge: out.edge!, arst: out.arst!, arstLevel: out.arstLevel!, arstValue: out.arstValue!, d: out.d, q, ...(init ? { init } : {}) }, [q]);
           break;
-        case 'latch':
+        }
+        case 'latch': {
           q = nl.newNet(out.width);
-          nl.emit({ kind: 'latch', en: out.en!, enLevel: 1, d: out.d, q }, [q]);
+          const init = initSlice(v, out.lo, out.width);
+          nl.emit({ kind: 'latch', en: out.en!, enLevel: 1, d: out.d, q, ...(init ? { init } : {}) }, [q]);
           break;
+        }
       }
       if (out.kind !== 'wire') this.dffVars.push(v);
       this.pushFrag(v, { lo: out.lo, width: out.width, net: q, proc: true, what: 'an always block', span: out.span });
     }
+    for (const v of this.vars) this.warnLostInit(v);
     for (const v of this.vars) {
       const list = this.frags.get(v);
       if (list || v.pulls.length > 0) this.guarded(() => this.composeVar(v, list ?? []));
@@ -1082,6 +1108,16 @@ export class ModuleElab {
       nl.emit(cell, mem.readPorts.map((p) => p.data));
     }
     this.fuseSyncReads();
+  }
+
+  /** An initial value only survives on bits a clocked block or latch assigns; anywhere else it has nowhere to live in the IR. */
+  private warnLostInit(v: Var) {
+    if (v.init === undefined || v.mem || !v.isVariable || v.scratch) return;
+    const kept = Array<boolean>(v.width).fill(false);
+    for (const o of this.outs) if (o.v === v && o.kind !== 'wire') for (let i = o.lo; i < o.lo + o.width; i++) kept[i] = true;
+    if (kept.some((k, i) => !k && v.init![v.width - 1 - i] !== 'x')) {
+      this.warn('ignored', `The initial value of '${v.name}' is ignored for the bits that no clocked block assigns: a register only keeps it until its first clock edge.`, v.span);
+    }
   }
 
   /**
@@ -1099,7 +1135,7 @@ export class ModuleElab {
         const root = nl.find(port.data);
         if (readers.get(root) !== 1) continue;
         const dff = nl.cells.find((c): c is Extract<Cell, { kind: 'dff' }> => c.kind === 'dff' && nl.find(c.d) === root);
-        if (!dff) continue;
+        if (!dff || dff.init !== undefined) continue;
         port.clk = dff.clk;
         port.edge = dff.edge;
         nl.removeCell(dff);
@@ -1241,6 +1277,8 @@ export class ModuleElab {
     for (const o of this.outs) {
       if (o.kind === 'adff') reset.add(o.v);
       else if (o.kind === 'dff' && this.assignsConstant(o.d, cellOf)) reset.add(o.v);
+      const init = o.kind === 'wire' ? undefined : initSlice(o.v, o.lo, o.width);
+      if (init !== undefined && !init.includes('x')) reset.add(o.v);
     }
     const reported = new Set<string>();
     for (const cond of this.ifConditions) {

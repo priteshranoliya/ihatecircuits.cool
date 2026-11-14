@@ -28,7 +28,9 @@
  *
  * Value semantics (what a consumer must implement)
  *   Values are four-state per bit: 0, 1, x (unknown) and z (high impedance).
- *   A cell reads z as x. Every operator below is evaluated per its Verilog
+ *   A cell reads z as x, except `concat` and `slice`: they are wiring, so a z bit passes through
+ *   unchanged (`assign o = w;` on a floating `w` gives z at `o`, however it is widened or cut).
+ *   Every other operator below is evaluated per its Verilog
  *   definition on 0/1 inputs; on unknown inputs it follows the Verilog tables
  *   (e.g. `and` of 0 and x is 0), except where a cell says otherwise.
  *
@@ -43,7 +45,8 @@
  *     a reset assignment feeding an `if` condition (directly or through
  *     combinational logic) is reported as `if-unknown-condition`. The `?:`
  *     operator does merge in Verilog, so it carries no warning.
- *   - Power-on. A Verilog reg starts as x and is x until written. An undriven
+ *   - Power-on. A Verilog reg starts as x and is x until written, unless it has an initial value
+ *     (`init` on a `dff`, `adff` or `latch`; memory words have `init` too). An undriven
  *     wire reads z, and every cell reads z as x. A reg that is never assigned
  *     therefore reads x in Verilog but is an undriven (floating) net here, which
  *     reads z at an output: the `undriven` warning says so. A z loaded into a reg
@@ -155,7 +158,8 @@ export interface SliceCell {
 /**
  * Edge-triggered register. On the `edge` of `clk` it loads `d` into `q`; otherwise it holds.
  * `q` is the only net a register drives, and `d` and `q` have the same width.
- * `clk` is 1 bit. Before the first edge `q` is unknown (x), as a Verilog reg is.
+ * `clk` is 1 bit. Before the first edge `q` is `init` (MSB first over '0' '1' 'x', the width of `q`), or
+ * unknown (x) when `init` is absent, as a Verilog reg is (`reg q = 4'd5;`, `initial q = 5;`).
  */
 export interface DffCell {
   kind: 'dff';
@@ -163,6 +167,7 @@ export interface DffCell {
   edge: 'pos' | 'neg';
   d: NetId;
   q: NetId;
+  init?: string;
 }
 
 /**
@@ -246,6 +251,7 @@ export interface ReduceCell {
  * Register with an asynchronous reset or set. While `arst` is at its active level (`arstLevel`),
  * `q` is forced to `arstValue` (MSB first, over '0' '1', length = width); otherwise it behaves as a
  * `dff`. An unknown `arst` makes the bits where `arstValue` and the would-be value differ x.
+ * `init` is the power-on value of the stored bits, as for `dff`; a reset active at power-on still shows `arstValue`.
  */
 export interface AdffCell {
   kind: 'adff';
@@ -256,11 +262,13 @@ export interface AdffCell {
   arstValue: string;
   d: NetId;
   q: NetId;
+  init?: string;
 }
 
 /**
  * Level-sensitive latch: while `en` is at `enLevel`, `q` follows `d`; otherwise it holds.
  * Usually inferred from incomplete combinational assignments (the compiler warns `latch-inferred`).
+ * Before it is first transparent it holds `init` (MSB first over '0' '1' 'x'), or x when `init` is absent.
  */
 export interface LatchCell {
   kind: 'latch';
@@ -268,6 +276,7 @@ export interface LatchCell {
   enLevel: 0 | 1;
   d: NetId;
   q: NetId;
+  init?: string;
 }
 
 /**

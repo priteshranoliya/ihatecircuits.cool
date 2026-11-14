@@ -1,5 +1,5 @@
 import { KEYWORDS } from '@ihatecircuits/hdl';
-import { POWER_ON_MARK } from './ctx';
+import { powerOnProp } from './ctx';
 import { type Circuit, type Component, type PinDef, type Project, getDef, portNames, portsOf, splitterMap, useProject } from './core';
 
 /**
@@ -25,7 +25,7 @@ import { type Circuit, type Component, type PinDef, type Project, getDef, portNa
  * Known differences when the result is simulated: the library adder is more
  * precise than Verilog's `+` on unknown inputs, a divider divides by zero as all ones
  * where Verilog gives x, and library registers power on at 0 where a Verilog reg starts as x
- * (except a register whose label ends in POWER_ON_MARK, which is initialised to 0 here too).
+ * (a register, flip-flop or latch with an `init` property is declared with that value instead: `reg q = 4'b0101;`).
  * None of these affects 0/1 behaviour away from a division by zero.
  */
 
@@ -314,7 +314,7 @@ function exportCircuit(c: Circuit, project: Project, moduleNames: Map<string, st
         if (props.trigger === 'high' || props.trigger === 'low') throw new ExportError(`The register in circuit '${c.name}' is level triggered, which cannot be exported.`);
         if (!isWired(comp, 'clk')) throw new ExportError(`A register in circuit '${c.name}' has no clock connected.`);
         const reg = identifier(`reg${comp.id}`, taken);
-        decls.push(`  reg ${decl(bits)}${reg}${powersOnAtZero(comp) ? ` = ${bits}'d0` : ''};`);
+        decls.push(`  reg ${decl(bits)}${reg}${initOf(props.init, bits)};`);
         const edge = props.trigger === 'falling' ? 'negedge' : 'posedge';
         const d = operand(comp, 'd', unknownBits(bits));
         if (isWired(comp, 'clr')) {
@@ -334,7 +334,7 @@ function exportCircuit(c: Circuit, project: Project, moduleNames: Map<string, st
         if (props.trigger === 'high' || props.trigger === 'low') throw new ExportError(`The flip-flop in circuit '${c.name}' is level triggered, which cannot be exported.`);
         if (!isWired(comp, 'clk')) throw new ExportError(`A flip-flop in circuit '${c.name}' has no clock connected.`);
         const reg = identifier(`ff${comp.id}`, taken);
-        decls.push(`  reg ${reg}${powersOnAtZero(comp) ? " = 1'b0" : ''};`);
+        decls.push(`  reg ${reg}${initOf(props.init, 1)};`);
         const edge = props.trigger === 'falling' ? 'negedge' : 'posedge';
         let next = operand(comp, 'd', unknownBits(1));
         let shown = reg;
@@ -353,10 +353,14 @@ function exportCircuit(c: Circuit, project: Project, moduleNames: Map<string, st
       }
       case 'dlatch': {
         const reg = identifier(`latch${comp.id}`, taken);
-        decls.push(`  reg ${reg};`);
+        decls.push(`  reg ${reg}${initOf(props.init, 1)};`);
         const en = operand(comp, 'en', "1'bx");
         const d = operand(comp, 'd', unknownBits(1));
-        body.push(`  always @* if (${en} === 1'b1) ${reg} = ${d}; else if (${en} !== 1'b0) ${reg} = ${en} ? ${d} : ${reg};`);
+        // As for a falling edge: a latch holding a power-on value must not merge it away while the nets are still settling and the
+        // enable reads x, so the merge waits until time 1. A known enable acts at once.
+        const holds = powerOnProp(String(props.init ?? '')) !== undefined;
+        if (holds) usesLive = true;
+        body.push(`  always @* if (${en} === 1'b1) ${reg} = ${d}; else if (${en} !== 1'b0${holds ? ` && ${live}` : ''}) ${reg} = ${en} ? ${d} : ${reg};`);
         if (isWired(comp, 'q')) body.push(`  assign ${out('q')} = ${reg};`);
         if (isWired(comp, 'qn')) body.push(`  assign ${out('qn')} = ~${reg};`);
         break;
@@ -476,7 +480,12 @@ function exportCircuit(c: Circuit, project: Project, moduleNames: Map<string, st
 
 const SUPPORTED = new Set(['pin', 'const', 'not', 'and', 'or', 'nand', 'nor', 'xor', 'xnor', 'adder', 'subtractor', 'multiplier', 'divider', 'negator', 'comparator', 'shifter', 'mux', 'splitter', 'extender', 'register', 'junction', 'pull', 'tribuf', 'dff', 'dlatch', 'rom', 'ram']);
 
-const powersOnAtZero = (comp: Component) => comp.label.includes(POWER_ON_MARK);
+/** ` = N'b0101` for a part with a power-on value (bits over 0 1 x, as the `init` property is read), nothing for one that starts at x. */
+function initOf(init: unknown, width: number): string {
+  const text = powerOnProp(String(init ?? ''));
+  if (text === undefined) return '';
+  return ` = ${width}'b${text.toLowerCase().replace(/[^01x]/g, '').slice(-width).padStart(width, '0')}`;
+}
 
 export function exportVerilog(project: Project): string {
   useProject(project);

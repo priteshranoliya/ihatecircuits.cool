@@ -5,7 +5,7 @@ import { DEFAULT_FEATURES, generateCase, parseFeatureList, renderModule, resolve
 import { compileCheck, iverilogAvailable, withoutWidthMismatchWarnings } from '../src/iverilog';
 
 const ALL: Partial<Features> = { clocks: true, undriven: true };
-const NONE: Features = { unreset: false, widthMismatch: false, clocks: false, wide: false, deep: false, undriven: false };
+const NONE: Features = { unreset: false, widthMismatch: false, clocks: false, wide: false, deep: false, undriven: false, init: false };
 
 function stmtRegs(stmts: Stmt[], into: string[]): void {
   for (const s of walkStmts(stmts)) if (s.k === 'nb') into.push(s.lhs);
@@ -343,6 +343,27 @@ describe('x-safety: an unreset reg never reaches an if condition', () => {
     expect(on.undriven).toBeGreaterThan(20);
     expect(count({})).toMatchObject({ undriven: 0 });
     expect(count({ unreset: false })).toMatchObject({ unreset: 0, noReset: 0, undriven: 0 });
+  });
+
+  it('the generator gives regs a power-on value (`reg [3:0] r = 4\'d5;`, `output reg q = 1\'b1`) only when the init feature is on', () => {
+    const count = (features: Partial<Features>) => {
+      let decls = 0;
+      let ports = 0;
+      let text = 0;
+      for (const g of sources(150, { features })) {
+        for (const m of g.program.modules) {
+          decls += m.items.filter((it) => it.k === 'decl' && it.type === 'reg' && it.init).length;
+          ports += m.ports.filter((p) => p.reg && p.init).length;
+          text += (renderModule(m).match(/(reg|output reg) [^;,\n]*\w = /g) ?? []).length;
+        }
+      }
+      return { decls, ports, text };
+    };
+    const on = count({});
+    expect(on.decls).toBeGreaterThan(10);
+    expect(on.ports).toBeGreaterThan(10);
+    expect(on.text).toBe(on.decls + on.ports);
+    expect(count({ init: false })).toEqual({ decls: 0, ports: 0, text: 0 });
   });
 
   it('shrink candidates are screened: a reduction that unresets a reg feeding an if is rejected', () => {

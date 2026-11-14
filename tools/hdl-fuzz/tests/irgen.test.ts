@@ -104,3 +104,31 @@ describe('generateIrCase', () => {
     expect([async, sync, writes, init, twoWrites].every((n) => n > 0)).toBe(true);
   });
 });
+
+describe('IR generator power-on values', () => {
+  it('gives dff, adff and latch cells an init sometimes, over 0 1 x and of the width of q, and an adff init agrees with its reset value', () => {
+    const seen = { dff: 0, adff: 0, latch: 0, partialX: 0, bare: 0 };
+    for (let seed = 1; seed <= 300; seed++) {
+      const { design } = generateIrCase(seed);
+      for (const m of design.modules) {
+        for (const c of m.cells) {
+          if (c.kind !== 'dff' && c.kind !== 'adff' && c.kind !== 'latch') continue;
+          if (c.init === undefined) {
+            seen.bare++;
+            continue;
+          }
+          seen[c.kind]++;
+          expect(c.init).toMatch(/^[01x]+$/);
+          expect(c.init.length).toBe(m.nets[c.q]!.width);
+          if (/x/.test(c.init) && /[01]/.test(c.init)) seen.partialX++;
+          if (c.kind === 'adff') for (let i = 0; i < c.init.length; i++) if (c.init[i] !== 'x') expect(c.init[i]).toBe(c.arstValue[i]);
+        }
+      }
+    }
+    expect(seen.dff).toBeGreaterThan(20);
+    expect(seen.adff).toBeGreaterThan(10);
+    expect(seen.latch).toBeGreaterThan(10);
+    expect(seen.partialX).toBeGreaterThan(5);
+    expect(seen.bare).toBeGreaterThan(50);
+  });
+});

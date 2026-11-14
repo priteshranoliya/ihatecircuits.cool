@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { Simulator } from '../src/sim';
-import { T, drive, num, str } from './helpers';
+import { T, bits, drive, num, str } from './helpers';
 
 describe('propagation and timing', () => {
   it('a chain of N inverters takes N gate delays (plus one for the switch)', () => {
@@ -490,6 +490,38 @@ describe('wiring parts', () => {
     const x = t.add('extender', { inBits: 8, outBits: 3 });
     t.wire(c, 'out', x, 'in');
     expect(str(t.sim().value(x, 'out'))).toBe('110');
+  });
+
+  it('bit extender passes a floating (z) bit through when it widens or narrows, as a splitter does', () => {
+    const t = new T();
+    const buf = t.add('tribuf', { bits: 4 });
+    const data = t.add('const', { bits: 4, value: '5' });
+    const off = t.add('const', { bits: 1, value: '0' });
+    t.wire(data, 'out', buf, 'in0').wire(off, 'out', buf, 'en');
+    const wide = t.add('extender', { inBits: 4, outBits: 8, fill: 'zero' });
+    const narrow = t.add('extender', { inBits: 4, outBits: 2 });
+    const sign = t.add('extender', { inBits: 4, outBits: 6, fill: 'sign' });
+    for (const x of [wide, narrow, sign]) t.wire(buf, 'out', x, 'in');
+    const sim = t.sim();
+    expect(str(sim.value(wide, 'out'))).toBe('0000zzzz');
+    expect(str(sim.value(narrow, 'out'))).toBe('zz');
+    expect(str(sim.value(sign, 'out'))).toBe('zzzzzz');
+  });
+
+  it('a register, flip-flop and latch power on at their `init` property, and a reset of the simulation restores it', () => {
+    const t = new T();
+    const reg = t.add('register', { bits: 4, init: '1x01' });
+    const ff = t.add('dff', { init: '1' });
+    const latch = t.add('dlatch', { init: 'x' });
+    const plain = t.add('register', { bits: 4 });
+    const sim = t.sim();
+    expect(str(sim.value(reg, 'q'))).toBe('1x01');
+    expect(str(sim.value(ff, 'q'))).toBe('1');
+    expect(str(sim.value(latch, 'q'))).toBe('x');
+    expect(str(sim.value(plain, 'q'))).toBe('0000');
+    sim.setState(reg, { q: bits(4, 3), clk: null });
+    sim.reset();
+    expect(str(sim.value(reg, 'q'))).toBe('1x01');
   });
 
   it('power and ground are constant 1s and 0s', () => {

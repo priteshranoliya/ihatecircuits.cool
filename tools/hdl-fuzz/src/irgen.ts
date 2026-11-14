@@ -74,6 +74,9 @@ interface Built {
 
 const bits = (rng: Rng, w: number): string => Array.from({ length: w }, () => (rng.bool() ? '1' : '0')).join('');
 
+/** Sometimes a power-on value for a register or latch: each bit 0 or 1, a few of them x. Absent means the register starts at x. */
+const powerOn = (rng: Rng, w: number): { init?: string } => (rng.bool(0.35) ? { init: Array.from({ length: w }, () => (rng.bool(0.15) ? 'x' : rng.bool() ? '1' : '0')).join('') } : {});
+
 class ModGen {
   readonly m: ModuleBuilder;
   readonly pool: Pooled[] = [];
@@ -249,7 +252,7 @@ class ModGen {
   private dff() {
     const d = this.rng.bool(0.3) ? this.forward(this.width()) : (this.pick() ?? this.constant(this.width())).id;
     const w = this.m.width(d);
-    this.m.add({ kind: 'dff', clk: this.clk(), edge: this.rng.bool(0.75) ? 'pos' : 'neg', d, q: this.fresh(w, { known: false, clean: false, stable: true }) });
+    this.m.add({ kind: 'dff', clk: this.clk(), edge: this.rng.bool(0.75) ? 'pos' : 'neg', d, q: this.fresh(w, { known: false, clean: false, stable: true }), ...powerOn(this.rng, w) });
   }
 
   private adff() {
@@ -257,13 +260,16 @@ class ModGen {
     const w = this.width();
     const d = this.rng.bool(0.3) ? this.forward(w) : this.fit('any', w).id;
     const value = this.rng.bool(0.5) ? '0'.repeat(w) : bits(this.rng, w);
-    this.m.add({ kind: 'adff', clk: this.clk(), edge: this.rng.bool(0.75) ? 'pos' : 'neg', arst: rst.id, arstLevel: this.rng.bool() ? 1 : 0, arstValue: value, d, q: this.fresh(w, NONE) });
+    // A reset that is active when the design powers on (every input is 0 then) clears a circuit's register, where the interpreter keeps
+    // `init` until the first clock edge. So `init` agrees with the reset value on every bit it gives; the other bits start unknown.
+    const init = this.rng.bool(0.35) ? { init: Array.from({ length: w }, (_, i) => (this.rng.bool(0.3) ? 'x' : value[i]!)).join('') } : {};
+    this.m.add({ kind: 'adff', clk: this.clk(), edge: this.rng.bool(0.75) ? 'pos' : 'neg', arst: rst.id, arstLevel: this.rng.bool() ? 1 : 0, arstValue: value, d, q: this.fresh(w, NONE), ...init });
   }
 
   private latch() {
     const en = this.fit('clean', 1);
     const d = this.fit('stable', this.width());
-    this.m.add({ kind: 'latch', en: en.id, enLevel: this.rng.bool() ? 1 : 0, d: d.id, q: this.fresh(d.width, NONE) });
+    this.m.add({ kind: 'latch', en: en.id, enLevel: this.rng.bool() ? 1 : 0, d: d.id, q: this.fresh(d.width, NONE), ...powerOn(this.rng, d.width) });
   }
 
   /** A net that a later cell will drive: lets a register read a value computed from its own output. */

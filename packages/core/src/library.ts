@@ -228,6 +228,18 @@ export const DELAY: PropDef = {
   hint: 'Propagation delay in gate delays. Unequal delays make glitches visible.',
 };
 
+/**
+ * Power-on value of a stored bit or word (registers, flip-flops, latches). It is where the part starts and what a
+ * reset of the simulation restores; empty means 0.
+ */
+export const POWER_ON: PropDef = {
+  key: 'init',
+  label: 'Power-on value',
+  kind: 'text',
+  default: '',
+  hint: 'Bits, most significant first, over 0, 1 and x (unknown). Empty powers on at 0.',
+};
+
 export const TRIGGER_EDGE: PropDef = {
   key: 'trigger',
   label: 'Trigger',

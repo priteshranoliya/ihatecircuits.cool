@@ -1,6 +1,6 @@
 import type { Cell, Design, Module, NetId } from '@ihatecircuits/hdl';
 import { blocksCell } from './blocks';
-import { type Ctx, type View } from './ctx';
+import { type Ctx, type View, powerOnProp } from './ctx';
 import { type Circuit, type Project, buildCircuit, emptyCircuit, getDef, pinPoint, subType, useProject } from './core';
 import { GB, type Src, type SupportLib } from './gb';
 import { bitwiseLatch, bitwiseRegister, gatesCell } from './gates';
@@ -42,8 +42,9 @@ import { memoryCell } from './memory';
  * the deepest clock path so a register clocked late still sees the data from
  * before the edge, as Verilog's nonblocking assignments guarantee.
  *
- * A Project powers its registers on at 0. Verilog starts a reg at x;
- * runSimulator sets the registers to x before the first cycle to match.
+ * A Project powers its registers on at 0 unless the part has an `init` property, which the IR's
+ * `init` (`reg q = 4'd5;`) becomes. Verilog starts a reg without one at x; runSimulator sets those
+ * registers to x before the first cycle to match.
  */
 
 export { LowerError };
@@ -58,6 +59,12 @@ const CLOCKED = new Set(['register', 'dff', 'ram']);
 const STORED = new Set(['register', 'dff']);
 
 const isStoredQ = (from: PinKey, nodes: PartNode[]) => STORED.has(nodes[from.part]!.type) && from.pin === 'q';
+
+/** The `init` prop of a power-on part for an IR `init`, as props to spread: nothing when no bit is known. */
+const powerOn = (init: string | undefined) => {
+  const v = powerOnProp(init);
+  return v ? { init: v } : {};
+};
 
 const isZero = (bits: string | undefined) => bits !== undefined && /^0+$/.test(bits);
 
@@ -116,11 +123,11 @@ function expandCell(ctx: Ctx, cell: Cell, wired: Map<NetId, Wired>) {
       const trigger = cell.edge === 'pos' ? 'rising' : 'falling';
       const label = m.nets[cell.q]!.names[0] ?? '';
       if (ctx.view === 'gates') {
-        ctx.drive(cell.q, b.sig(bitwiseRegister(b, width(cell.q), ctx.net(cell.d), ctx.net(cell.clk), trigger, undefined, label), width(cell.q)));
+        ctx.drive(cell.q, b.sig(bitwiseRegister(b, width(cell.q), ctx.net(cell.d), ctx.net(cell.clk), trigger, undefined, label, cell.init), width(cell.q)));
         return;
       }
       // A register with CLR and EN left unconnected: CLR is asynchronous, so it is never used for a synchronous reset.
-      const n = g.add('register', { bits: width(cell.q), trigger }, label);
+      const n = g.add('register', { bits: width(cell.q), trigger, ...powerOn(cell.init) }, label);
       g.read(cell.d, { part: n, pin: 'd' });
       g.read(cell.clk, { part: n, pin: 'clk' });
       ctx.drive(cell.q, out(n, 'q'));
@@ -134,7 +141,7 @@ function expandCell(ctx: Ctx, cell: Cell, wired: Map<NetId, Wired>) {
       const active: Src = cell.arstLevel === 1 ? ctx.net(cell.arst) : b.not(ctx.net(cell.arst));
       if (ctx.view === 'blocks' && isZero(cell.arstValue)) {
         // The Register's CLR resets to 0 and beats the clock; it is active high.
-        const n = g.add('register', { bits: w, trigger }, label);
+        const n = g.add('register', { bits: w, trigger, ...powerOn(cell.init) }, label);
         g.read(cell.d, { part: n, pin: 'd' });
         g.read(cell.clk, { part: n, pin: 'clk' });
         b.connect(active, { part: n, pin: 'clr' });
@@ -142,13 +149,13 @@ function expandCell(ctx: Ctx, cell: Cell, wired: Map<NetId, Wired>) {
         return;
       }
       // Any other reset value needs a flip-flop per bit: SET for the bits that reset to 1, CLR for those that reset to 0.
-      ctx.drive(cell.q, b.sig(bitwiseRegister(b, w, ctx.net(cell.d), ctx.net(cell.clk), trigger, { active, value: cell.arstValue }, label), w));
+      ctx.drive(cell.q, b.sig(bitwiseRegister(b, w, ctx.net(cell.d), ctx.net(cell.clk), trigger, { active, value: cell.arstValue }, label, cell.init), w));
       return;
     }
     case 'latch': {
       const w = width(cell.q);
       const en = cell.enLevel === 1 ? ctx.net(cell.en) : b.not(ctx.net(cell.en));
-      ctx.drive(cell.q, b.sig(bitwiseLatch(b, w, ctx.net(cell.d), en), w));
+      ctx.drive(cell.q, b.sig(bitwiseLatch(b, w, ctx.net(cell.d), en, cell.init), w));
       return;
     }
     case 'tribuf': {
@@ -279,9 +286,11 @@ function buildGraph(m: Module, view: View, circuitOf: (module: string) => string
   const g = new ModuleGraph();
   const b = new GB(g, lib);
   const wired = new Map<NetId, Wired>();
+  const tribufOuts = new Set<NetId>();
+  for (const c of m.cells) if (c.kind === 'tribuf') tribufOuts.add(c.out);
   for (const net of m.nets) {
     if (net.kind === 'wand' || net.kind === 'wor') {
-      if (m.cells.some((c) => c.kind === 'tribuf' && c.out === net.id)) wired.set(net.id, { op: net.kind === 'wand' ? 'and' : 'or', width: net.width, others: [], buffers: [] });
+      if (tribufOuts.has(net.id)) wired.set(net.id, { op: net.kind === 'wand' ? 'and' : 'or', width: net.width, others: [], buffers: [] });
     }
     if (net.kind === 'supply0' || net.kind === 'supply1') g.constBits.set(net.id, (net.kind === 'supply1' ? '1' : '0').repeat(net.width));
     if (net.kind === 'pull0' || net.kind === 'pull1') g.pull(net.id, net.kind === 'pull1' ? 'up' : 'down');

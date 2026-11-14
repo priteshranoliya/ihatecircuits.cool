@@ -26,13 +26,15 @@ export interface Port {
   sig: Sig;
   dir: 'in' | 'out';
   reg: boolean;
+  /** `output reg [3:0] q = 4'd5`: a constant power-on value. */
+  init?: Expr;
   /** A top-level input that gates a derived clock. The stimulus holds it at 1 in cycle 0 so gated regs are reset. */
   enable?: boolean;
 }
 
 export type Item =
   /** A wire with `undriven` set is intentionally never assigned. */
-  | { k: 'decl'; type: 'wire' | 'reg'; sig: Sig; undriven?: boolean }
+  | { k: 'decl'; type: 'wire' | 'reg'; sig: Sig; undriven?: boolean; /** `reg [3:0] r = 4'd5;`: a constant power-on value (a reg only). */ init?: Expr }
   | { k: 'assign'; lhs: string; rhs: Expr }
   /** `wire <name> = clk & <en>;` (or the declaration plus a separate assign), only ever in the top module. */
   | { k: 'gate'; name: string; en: string; inline: boolean }

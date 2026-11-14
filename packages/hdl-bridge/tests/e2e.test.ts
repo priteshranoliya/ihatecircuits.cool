@@ -108,7 +108,8 @@ endmodule`;
 
   it('keeps a known result where Verilog does and reports x where it must', () => {
     const res = trace({ source, top: 'm', clock: 'clk', stimulus: [{}] });
-    expect(res.cycles[0]!.pre).toEqual({ v: 'x101', eq_known: '0', eq_unknown: 'x', mixed: '1xx0', masked: '0000', inv: 'xxxx' });
+    // `r` is never assigned, so it is a floating net here (the `undriven` warning says so): its z bit now passes through the bit select and the splitter as z.
+    expect(res.cycles[0]!.pre).toEqual({ v: 'z101', eq_known: '0', eq_unknown: 'x', mixed: '1xx0', masked: '0000', inv: 'xxxx' });
   });
 });
 

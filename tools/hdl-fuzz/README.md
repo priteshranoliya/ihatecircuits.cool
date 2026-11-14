@@ -20,7 +20,7 @@ Program `i` uses seed `seed + i`, so a run is reproducible and a failing seed ca
 | `--seed S` | First seed. Default 1. |
 | `--size K` | Program size, 1 to 10. Scales module count, item count and expression depth. Default 3. |
 | `--clocks`, `--undriven` | Generator features that are off by default. `--clocks` adds gated clocks (`always @(posedge g)`), `--undriven` adds declared wires that nothing drives. |
-| `--no-unreset`, `--no-width-mismatch`, `--no-wide`, `--no-deep` | Turn off features that are on by default. |
+| `--no-unreset`, `--no-width-mismatch`, `--no-wide`, `--no-deep`, `--no-init` | Turn off features that are on by default. `init` declares some regs with a constant power-on value (`reg [3:0] r = 4'd5;`, `output reg q = 1'b1`). |
 | `--strict` | Compare exactly: a reference `x` must be matched by `x`. For targeted runs. |
 | `--corpus DIR` | Where failing cases are written. Default `packages/hdl/tests/corpus`. |
 | `--no-shrink` | Skip reducing a failing program to a small one. |
@@ -86,8 +86,11 @@ The export keeps plain `~`. Rewriting every inverter as `in ^ 4'hF` would hide t
 ### Other known differences
 
 - **A register that loads an undriven wire.** Verilog keeps the z. iHateCircuits loads x. The fuzzer reports `reference z vs ours x`.
-- **An undriven wire widened by an extender.** iHateCircuits's zero-extension turns the floating bits into x where Verilog keeps z.
-- **Power-on values.** Library registers start at 0 where a Verilog `reg` starts as x. `runSimulator` sets registers to x before the first cycle to match, but the exported circuit does not.
+- **A conditional whose chosen arm floats.** `assign o = s ? w : 1'b0;` with a known `s` and an undriven `w` gives z in Verilog; a circuit's multiplexer, like a gate, reads z as x. The fuzzer reports `reference z vs ours x` (with `--undriven`).
+- **Power-on values.** Library registers start at 0 where a Verilog `reg` starts as x. `runSimulator` sets registers to x before the first cycle to match, but the exported circuit does not. A register with an initial value (`reg q = 5;`) is the exception: its part has an `init` property, and the runner and the exporter both start it there.
+- **A falling-edge register, in Verilog source.** Icarus counts the clock going from x to 0 at time 0 as a falling edge and loads the register then, so a `negedge` register with an initial value shows its input instead (the generator only makes `posedge` registers). `designToVerilog` and `exportVerilog` hold falling-edge blocks back until time 1, so `fuzz:ir` is not affected.
+
+Wiring passes z (a slice, a concatenation, a zero-extension, an instance port wider than its signal); this used to be a difference and is not any more. Expect the remaining `reference z vs ours x` reports to be one of the two kinds above, or the `~z` quirk.
 
 ## Fuzzing the IR back ends (`fuzz:ir`)
 
@@ -115,7 +118,7 @@ The reference is Icarus running `designToVerilog(design)`, the IR printed as beh
 
 A reference `x` accepts any value, as in `fuzz:hdl`. The summary line reads `ir-fuzz: 1000 designs (seeds 1..1000, size 3), reference iverilog-ir, runners [...], 0 failing, ...`.
 
-`src/irgen.ts` builds designs that use every cell kind, several modules and instances, `wire`, `pull0`, `pull1`, `wand`, `wor` and `supply` nets with tri-state drivers, memories with up to two write and two read ports (asynchronous and synchronous, with initial contents), `adff` and `latch`. It is valid by construction (one ordinary driver per net, loops only through a flip-flop or a memory write port) and keeps anything that decides *when* something happens out of reach of unknown values and glitches; the comments at the top of the file say how, and `packages/hdl-bridge/README.md` says why. `src/irprint.ts` prints a design compactly for reading a failing case.
+`src/irgen.ts` builds designs that use every cell kind, several modules and instances, registers and latches with a power-on value (`init`, with some unknown bits; an `adff`'s agrees with its reset value, because a circuit's register is cleared by a reset that is active at power-on), `wire`, `pull0`, `pull1`, `wand`, `wor` and `supply` nets with tri-state drivers, memories with up to two write and two read ports (asynchronous and synchronous, with initial contents), `adff` and `latch`. It is valid by construction (one ordinary driver per net, loops only through a flip-flop or a memory write port) and keeps anything that decides *when* something happens out of reach of unknown values and glitches; the comments at the top of the file say how, and `packages/hdl-bridge/README.md` says why. `src/irprint.ts` prints a design compactly for reading a failing case.
 
 `tests/ir-cells.test.ts` runs every cell exhaustively at 1 to 4 bits (x and z inputs included up to 3 bits) through the interpreter and Icarus, and through every back end. `tests/ir-seq.test.ts` does the same for registers, latches, tri-state nets, memories and values up to 32 bits.
 

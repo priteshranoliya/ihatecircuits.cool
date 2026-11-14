@@ -1,6 +1,6 @@
 import { type Design, type TraceRequest, type TraceResult, type TracePort, type TraceRunner, compile, findModule, formatDiagnostic } from '@ihatecircuits/hdl';
 import { type Bits, type Circuit, Simulator, bitAt, lookupIn, unknown, useProject } from './core';
-import { POWER_ON_MARK, type View } from './ctx';
+import { type View, powerOnProp } from './ctx';
 import { lowerToProject } from './lower';
 
 /**
@@ -12,8 +12,8 @@ import { lowerToProject } from './lower';
  *   - Verilog regs start as x; library registers, flip-flops and latches start at 0.
  *     Before the first cycle every one's stored value is set to x, so unreset
  *     registers show x as they would in a Verilog simulator. The exception is a
- *     register labelled with POWER_ON_MARK (a memory word with initial contents,
- *     see memory.ts), which keeps the project's power-on 0 on purpose.
+ *     part with an `init` property (`reg q = 4'd5;`, a memory word with initial
+ *     contents, see memory.ts), which keeps the value that property gives it.
  *   - A fought-over net is 'e' in the library; the trace reports it as 'x'.
  */
 
@@ -58,7 +58,7 @@ function simulate(design: Design, req: Omit<TraceRequest, 'source' | 'top'>, vie
 
   const sim = new Simulator(main, { lookup: lookupIn(project) });
   for (const fc of sim.comps) {
-    if (fc.comp.label.includes(POWER_ON_MARK)) continue;
+    if (powerOnProp(String(fc.comp.props.init ?? '')) !== undefined) continue;
     if (fc.def.type === 'register') sim.setState(fc.id, { q: unknown(Number(fc.comp.props.bits)), clk: null });
     else if (fc.def.type === 'dff') sim.setState(fc.id, { q: 'x', clk: null });
     else if (fc.def.type === 'dlatch') sim.setState(fc.id, { q: 'x', armed: false });

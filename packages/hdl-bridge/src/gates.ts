@@ -1,5 +1,5 @@
 import type { Cell, NetId } from '@ihatecircuits/hdl';
-import type { Ctx } from './ctx';
+import { type Ctx, powerOnProp } from './ctx';
 import { type GB, type Src, type SupportLib } from './gb';
 
 /**
@@ -183,11 +183,13 @@ export interface BitDffOptions {
   set?: Src;
   clr?: Src;
   label?: string;
+  /** Power-on value of the bit: '0', '1' or 'x'. Absent means the project's power-on 0. */
+  init?: string;
 }
 
 /** A one-bit D flip-flop. Returns its Q pin and the part, so a caller can wire D later (a register with an enable feeds Q back). */
 export function bitDff(b: GB, o: BitDffOptions): { q: Src; part: number } {
-  const part = b.g.add('dff', { trigger: o.trigger }, o.label ?? '');
+  const part = b.g.add('dff', { trigger: o.trigger, ...(o.init ? { init: o.init } : {}) }, o.label ?? '');
   b.connect(o.clk, { part, pin: 'clk' });
   if (o.d) b.connect(o.d, { part, pin: 'd' });
   if (o.set) b.connect(o.set, { part, pin: 'set' });
@@ -200,20 +202,22 @@ export function bitDff(b: GB, o: BitDffOptions): { q: Src; part: number } {
  * use CLR and bits that reset to 1 use SET, so only one of the two is ever connected on a bit and CLR winning over
  * SET never matters. `active` is the reset signal at its active-high level.
  */
-export function bitwiseRegister(b: GB, width: number, d: Src, clk: Src, trigger: 'rising' | 'falling', reset?: { active: Src; value: string }, label = ''): Src {
+export function bitwiseRegister(b: GB, width: number, d: Src, clk: Src, trigger: 'rising' | 'falling', reset?: { active: Src; value: string }, label = '', init?: string): Src {
   const dBits = b.fan(d, width);
+  const start = powerOnProp(init);
   const q = dBits.map((bit, i) => {
     const value = reset?.value[width - 1 - i];
-    return bitDff(b, { trigger, clk, d: bit, ...(reset && value === '1' ? { set: reset.active } : {}), ...(reset && value === '0' ? { clr: reset.active } : {}), label: label && width > 1 ? `${label}[${i}]` : label }).q;
+    return bitDff(b, { trigger, clk, d: bit, ...(reset && value === '1' ? { set: reset.active } : {}), ...(reset && value === '0' ? { clr: reset.active } : {}), label: label && width > 1 ? `${label}[${i}]` : label, ...(start ? { init: start[width - 1 - i]! } : {}) }).q;
   });
   return b.join(q);
 }
 
 /** A level-sensitive latch, one D latch per bit, transparent while `en` is 1. */
-export function bitwiseLatch(b: GB, width: number, d: Src, en: Src): Src {
+export function bitwiseLatch(b: GB, width: number, d: Src, en: Src, init?: string): Src {
   const dBits = b.fan(d, width);
-  const q = dBits.map((bit) => {
-    const part = b.g.add('dlatch', {});
+  const start = powerOnProp(init);
+  const q = dBits.map((bit, i) => {
+    const part = b.g.add('dlatch', start ? { init: start[width - 1 - i]! } : {});
     b.connect(bit, { part, pin: 'd' });
     b.connect(en, { part, pin: 'en' });
     return { part, pin: 'q' };

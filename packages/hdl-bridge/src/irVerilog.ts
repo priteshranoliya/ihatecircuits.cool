@@ -12,9 +12,10 @@ import type { Cell, Design, Module, Net, NetId } from '@ihatecircuits/hdl/design
  * internal net that the port is assigned from or to.
  *
  * Where Verilog and the IR differ, the text is written to follow the IR.
- *   - A cell reads z as x. Operators already do. Where a Verilog expression would pass z through
- *     (a slice, a concatenation, a register's data) the value is XORed with zero (`^ 4'd0`), which
- *     turns z into x and leaves 0 and 1 alone. The same wrapper goes inside `~`, because Icarus
+ *   - A cell reads z as x, except a slice and a concatenation, which are wiring and pass z through as a
+ *     Verilog expression does. Operators already read z as x. Where a Verilog expression would pass z
+ *     through into a cell that must not (a register's data, a mux arm) the value is XORed with zero
+ *     (`^ 4'd0`), which turns z into x and leaves 0 and 1 alone. The same wrapper goes inside `~`, because Icarus
  *     answers z for the complement of an all-z vector.
  *   - A tri-state buffer is written out per bit: the data while enabled, z while disabled, and
  *     with an unknown enable x where the data is not z.
@@ -47,6 +48,8 @@ function ident(raw: string, taken: Set<string>): string {
 const vec = (w: number) => `[${w - 1}:0] `;
 const lit = (bits: string) => `${bits.length}'b${bits}`;
 const zeroOf = (w: number) => `${w}'d0`;
+/** A register's declaration initialiser (` = 4'b1x01`), or nothing when it starts unknown. */
+const startsAt = (init: string | undefined, w: number) => (init !== undefined && /[01]/.test(init) ? ` = ${lit(init.slice(-w).padStart(w, '0'))}` : '');
 
 const NET_KEYWORD: Record<NonNullable<Net['kind']>, string> = {
   wire: 'wire',
@@ -106,6 +109,10 @@ function printModule(m: Module, moduleNames: Map<string, string>, portNames: Map
   const gated = (stmt: string) => {
     usesLive = true;
     return `if (${live}) ${stmt}`;
+  };
+  const gatedTerm = (cond: string) => {
+    usesLive = true;
+    return `(${cond}) && ${live}`;
   };
 
   m.cells.forEach((c: Cell) => {
@@ -183,11 +190,11 @@ function printModule(m: Module, moduleNames: Map<string, string>, portNames: Map
         assign(c.out, `${rd(c.sel)} ? ${rx(c.onTrue)} : ${rx(c.onFalse)}`);
         break;
       case 'concat':
-        assign(c.out, `{${c.parts.map(rd).join(', ')}} ^ ${zeroOf(width(c.out))}`);
+        assign(c.out, `{${c.parts.map(rd).join(', ')}}`);
         break;
       case 'slice': {
         const hi = c.lsb + width(c.out) - 1;
-        assign(c.out, `${rd(c.a)}[${hi}:${c.lsb}] ^ ${zeroOf(width(c.out))}`);
+        assign(c.out, `${rd(c.a)}[${hi}:${c.lsb}]`);
         break;
       }
       case 'tribuf': {
@@ -199,7 +206,7 @@ function printModule(m: Module, moduleNames: Map<string, string>, portNames: Map
       }
       case 'dff': {
         const q = uid('q');
-        decls.push(`  reg ${vec(width(c.q))}${q};`);
+        decls.push(`  reg ${vec(width(c.q))}${q}${startsAt(c.init, width(c.q))};`);
         body.push(`  always @(${clocked(c.clk, c.edge)}) ${gated(`${q} <= ${rx(c.d)};`)}`);
         assign(c.q, q);
         break;
@@ -207,7 +214,7 @@ function printModule(m: Module, moduleNames: Map<string, string>, portNames: Map
       case 'adff': {
         const q = uid('q');
         const active = `1'b${c.arstLevel}`;
-        decls.push(`  reg ${vec(width(c.q))}${q};`);
+        decls.push(`  reg ${vec(width(c.q))}${q}${startsAt(c.init, width(c.q))};`);
         body.push(`  always @(${clocked(c.clk, c.edge)}) ${gated(`${q} <= ${rd(c.arst)} == ${active} ? ${lit(c.arstValue)} : ${rx(c.d)};`)}`);
         assign(c.q, `${rd(c.arst)} == ${active} ? ${lit(c.arstValue)} : ${q}`);
         break;
@@ -216,8 +223,11 @@ function printModule(m: Module, moduleNames: Map<string, string>, portNames: Map
         const q = uid('q');
         const on = `1'b${c.enLevel}`;
         const off = `1'b${1 - c.enLevel}`;
-        decls.push(`  reg ${vec(width(c.q))}${q};`);
-        body.push(`  always @* if (${rd(c.en)} === ${on}) ${q} = ${rx(c.d)}; else if (${rd(c.en)} !== ${off}) ${q} = ${rd(c.en)} ? ${rx(c.d)} : ${q};`);
+        decls.push(`  reg ${vec(width(c.q))}${q}${startsAt(c.init, width(c.q))};`);
+        // A latch that holds a power-on value must not merge it away while the nets are still settling and its enable reads x:
+        // the merge waits until time 1. A known enable acts at once, so a latch that is open at power-on follows `d` from time 0.
+        const hold = c.init !== undefined && /[01]/.test(c.init) ? gatedTerm(`${rd(c.en)} !== ${off}`) : `${rd(c.en)} !== ${off}`;
+        body.push(`  always @* if (${rd(c.en)} === ${on}) ${q} = ${rx(c.d)}; else if (${hold}) ${q} = ${rd(c.en)} ? ${rx(c.d)} : ${q};`);
         assign(c.q, q);
         break;
       }

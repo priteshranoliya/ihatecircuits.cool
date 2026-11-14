@@ -1,6 +1,6 @@
 import type { MemoryCell } from '@ihatecircuits/hdl/design';
 import type { Ctx } from './ctx';
-import { POWER_ON_MARK } from './ctx';
+import { powerOnProp } from './ctx';
 import type { Src } from './gb';
 import { bitDff, bitwiseRegister } from './gates';
 import { LowerError } from './graph';
@@ -22,10 +22,9 @@ import { LowerError } from './graph';
  *   - A write whose address has an unknown bit poisons the words it might hit (their enable is unknown), where the IR writes
  *     nothing. Hardware cannot tell an unknown address from a known one.
  *
- * Initial contents in the register form. A library register powers on at 0, and the project's power-on state is the
- * only way to start a register at anything else. So a word with initial contents `v` stores `word ^ v`: it holds 0 at
- * power-on, which reads back as `v`, and a write stores `data ^ v`. Those registers carry a label ending in
- * POWER_ON_MARK, which tells the trace runner and the exporter to start them at 0 instead of x.
+ * Initial contents in the register form. A word with initial contents `v` is a register whose `init` property is `v`
+ * (a part's power-on value, the same mechanism as `reg q = 4'd5;`), so it powers on at `v` and the trace runner and
+ * the exporter leave it there. A word with no initial contents has no `init` and starts at x in the runner.
  */
 
 const log2ceil = (n: number) => Math.max(1, Math.ceil(Math.log2(Math.max(2, n))));
@@ -91,12 +90,10 @@ function generalMemory(ctx: Ctx, c: MemoryCell) {
   const { b } = ctx;
   const k = log2ceil(c.depth);
   if (k > 16) throw new LowerError(`The memory '${c.name}' has ${c.depth} words, too many to build from registers.`);
-  const initial = (a: number) => known(c.init?.[a] ?? '0');
-  const hasInit = (c.init?.length ?? 0) > 0;
   const words: Src[] = [];
 
   if (c.writePorts.length === 0) {
-    for (let a = 0; a < c.depth; a++) words.push(b.konstWord(initial(a), c.width));
+    for (let a = 0; a < c.depth; a++) words.push(b.konstWord(known(c.init?.[a] ?? '0'), c.width));
   } else {
     const { clk, edge } = sharedEdge(c);
     const trigger = edge === 'pos' ? 'rising' : 'falling';
@@ -114,12 +111,11 @@ function generalMemory(ctx: Ctx, c: MemoryCell) {
       c.writePorts.slice(1).forEach((p, i) => {
         data = b.mux(sel[i + 1]!, data, ctx.net(p.data), c.width);
       });
-      const v = initial(a);
-      if (hasInit && v !== 0n) data = b.xor(data, b.konstWord(v, c.width), c.width);
-      const label = `${c.name}[${a}]${hasInit ? POWER_ON_MARK : ''}`;
+      const start = powerOnProp(c.init?.[a]);
+      const label = `${c.name}[${a}]`;
       let q: Src;
       if (ctx.view === 'blocks') {
-        const part = ctx.g.add('register', { bits: c.width, trigger }, label);
+        const part = ctx.g.add('register', { bits: c.width, trigger, ...(start ? { init: start } : {}) }, label);
         b.connect(data, { part, pin: 'd' });
         b.connect(enable, { part, pin: 'en' });
         b.connect(ctx.net(clk), { part, pin: 'clk' });
@@ -127,13 +123,13 @@ function generalMemory(ctx: Ctx, c: MemoryCell) {
       } else {
         const dBits = b.fan(data, c.width);
         const qBits = dBits.map((bit, i) => {
-          const ff = bitDff(b, { trigger, clk: ctx.net(clk), label: c.width > 1 ? `${label}.${i}` : label });
+          const ff = bitDff(b, { trigger, clk: ctx.net(clk), label: c.width > 1 ? `${label}.${i}` : label, ...(start ? { init: start[c.width - 1 - i]! } : {}) });
           b.connect(b.mux(enable, { part: ff.part, pin: 'q' }, bit), { part: ff.part, pin: 'd' });
           return ff.q;
         });
         q = b.join(qBits);
       }
-      words.push(hasInit && v !== 0n ? b.xor(q, b.konstWord(v, c.width), c.width) : q);
+      words.push(q);
     }
   }
 

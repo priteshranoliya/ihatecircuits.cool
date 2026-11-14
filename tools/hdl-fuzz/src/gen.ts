@@ -55,9 +55,11 @@ export interface Features {
   deep: boolean;
   /** Declared wires nothing drives, read by logic. */
   undriven: boolean;
+  /** Some regs are declared with a constant power-on value: `reg [3:0] r = 4'd5;`, `output reg q = 1'b1`. */
+  init: boolean;
 }
 
-export const DEFAULT_FEATURES: Features = { unreset: true, widthMismatch: true, clocks: false, wide: true, deep: true, undriven: false };
+export const DEFAULT_FEATURES: Features = { unreset: true, widthMismatch: true, clocks: false, wide: true, deep: true, undriven: false, init: true };
 
 export const FEATURE_NAMES = Object.keys(DEFAULT_FEATURES) as Array<keyof Features>;
 
@@ -187,13 +189,13 @@ export function renderModule(m: Module): string {
   const out: string[] = [`module ${m.name} (`];
   m.ports.forEach((p, i) => {
     const kw = p.dir === 'in' ? 'input' : p.reg ? 'output reg' : 'output';
-    out.push(`  ${kw} ${sigRange(p.sig)}${p.sig.name}${i < m.ports.length - 1 ? ',' : ''}`);
+    out.push(`  ${kw} ${sigRange(p.sig)}${p.sig.name}${p.init ? ` = ${renderExpr(p.init)}` : ''}${i < m.ports.length - 1 ? ',' : ''}`);
   });
   out.push(');');
   for (const it of m.items) {
     switch (it.k) {
       case 'decl':
-        out.push(`  ${it.type} ${sigRange(it.sig)}${it.sig.name};`);
+        out.push(`  ${it.type} ${sigRange(it.sig)}${it.sig.name}${it.init ? ` = ${renderExpr(it.init)}` : ''};`);
         break;
       case 'assign':
         out.push(`  assign ${it.lhs} = ${renderExpr(it.rhs)};`);
@@ -249,6 +251,7 @@ const P = {
   gatedReg: 0.4,
   gatedClk: 0.25,
   undrivenWire: 0.5,
+  initReg: 0.35,
 } as const;
 
 const DEEP_MAX_DEPTH = 12;
@@ -535,6 +538,12 @@ function genStmts(m: ModCtx, size: number, depth: number, group: Sig[]): Stmt[] 
 
 const exprDepth = (size: number) => Math.min(1 + Math.ceil(size / 2), 5);
 
+/** A constant for a reg's power-on value: sized in any base, or an unsized decimal (which the declaration truncates or zero extends). */
+function genInit(rng: Rng, width: number): Expr {
+  if (rng.bool(0.2)) return { k: 'lit', width: null, base: 'd', value: rng.int(0, 40) };
+  return { k: 'lit', width, base: rng.pick<LitBase>(['b', 'd', 'h']), value: randValue(rng, width) };
+}
+
 function genModule(rng: Rng, size: number, name: string, lower: Module[], used: Set<string>, isTop: boolean, f: Features, infos: Infos): Module {
   const mkSig = (n: string, width: number): Sig => ({ name: n, width, ranged: width > 1 || rng.bool(0.4) });
   const ports: Port[] = [
@@ -564,6 +573,15 @@ function genModule(rng: Rng, size: number, name: string, lower: Module[], used: 
     items.push({ k: 'decl', type: 'reg', sig });
   }
   avail.push(...regs);
+  if (f.init) {
+    for (const r of regs) {
+      if (!rng.bool(P.initReg)) continue;
+      const init = genInit(rng, r.width);
+      const port = ports.find((p) => p.reg && p.sig === r);
+      if (port) port.init = init;
+      else (items.find((it) => it.k === 'decl' && it.sig === r) as Extract<Item, { k: 'decl' }>).init = init;
+    }
+  }
 
   const tainted = new Set<string>();
   const kind = new Map<string, RegKind>();

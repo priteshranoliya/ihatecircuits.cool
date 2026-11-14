@@ -382,6 +382,17 @@ export class Consts {
     }
   }
 
+  /** `e` as the right-hand side of an assignment to something `target` bits wide: the value of that width, as a constant. */
+  evalAssigned(e: A.Expr, target: number, scope: Scope, what: string): CVal {
+    const t = this.typeOf(e, scope);
+    try {
+      return cv.resize(this.evalCtx(e, scope, Math.max(t.w, target), t.s), target, t.s);
+    } catch (err) {
+      if (err instanceof NotConstant) this.diag.fail('not-constant', `${what} must be a constant expression, but '${err.name}' is not a constant. Build it from numbers, parameters and genvars.`, err.span);
+      throw err;
+    }
+  }
+
   evalSelf(e: A.Expr, scope: Scope, store?: Store): CVal {
     const t = this.typeOf(e, scope);
     return this.evalCtx(e, scope, t.w, t.s, store);
