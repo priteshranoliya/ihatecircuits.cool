@@ -1,0 +1,29 @@
+{
+  "name": "ihatecircuits",
+  "version": "0.1.0",
+  "description": "Browser-based digital logic circuit simulator",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @ihatecircuits/web",
+    "build": "npm run build -w @ihatecircuits/web",
+    "preview": "npm run preview -w @ihatecircuits/web",
+    "typecheck": "npm run typecheck --workspaces --if-present && tsc -p tools/hdl-fuzz",
+    "test": "vitest run",
+    "test:e2e": "npm run test:e2e -w @ihatecircuits/web",
+    "fuzz:hdl": "node tools/hdl-fuzz/run.mjs",
+    "fuzz:ir": "node tools/hdl-fuzz/run-ir.mjs",
+    "licenses": "node tools/license-audit.mjs",
+    "check": "npm run typecheck && npm run test && npm run licenses && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
