@@ -1,0 +1,83 @@
+{
+  "seed": 9269,
+  "size": 3,
+  "features": {
+    "unreset": true,
+    "widthMismatch": true,
+    "clocks": true,
+    "wide": true,
+    "deep": true,
+    "undriven": true
+  },
+  "strict": false,
+  "runner": "ihatecircuits",
+  "kind": "ours-error",
+  "message": "runner failed: 11:11: error [not-supported]: Giving a 'wire' a value where it is declared is not supported yet.",
+  "top": "top",
+  "clock": "clk",
+  "source": "module top (\n  input clk,\n  input rst,\n  input [5:0] i0,\n  input en0,\n  input en1,\n  output reg o0\n);\n  wire g0;\n  assign g0 = clk & en0;\n  wire g1 = clk & en1;\n  always @(posedge g0) begin\n    if (rst) begin\n      o0 <= 1'b0;\n    end else begin\n    end\n  end\nendmodule\n",
+  "stimulus": [
+    {
+      "rst": "1",
+      "i0": "000000",
+      "en0": "1",
+      "en1": "1"
+    }
+  ],
+  "reference": {
+    "ok": true,
+    "ports": [
+      {
+        "name": "clk",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "rst",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "i0",
+        "width": 6,
+        "dir": "in"
+      },
+      {
+        "name": "en0",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "en1",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "o0",
+        "width": 1,
+        "dir": "out"
+      }
+    ],
+    "cycles": [
+      {
+        "pre": {
+          "o0": "x"
+        },
+        "post": {
+          "o0": "0"
+        }
+      }
+    ]
+  },
+  "ours": {
+    "ok": false,
+    "error": "11:11: error [not-supported]: Giving a 'wire' a value where it is declared is not supported yet."
+  },
+  "shrunk": {
+    "checks": 37,
+    "programSizeBefore": 47,
+    "programSizeAfter": 5,
+    "cyclesBefore": 21,
+    "cyclesAfter": 1
+  }
+}

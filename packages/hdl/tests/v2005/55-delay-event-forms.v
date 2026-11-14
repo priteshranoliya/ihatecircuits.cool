@@ -1,0 +1,64 @@
+// annex: A.6.5 delay-control; A.6.5 delay-or-event-control; A.6.5 event-control; A.6.5 event-expression; A.6.5 event-identifier; A.6.5 procedural-timing-control-statement; A.8.4 mintypmax-expression; A.9.3 delay-value
+// iverilog: ok
+module timing;
+    reg clk, a, b, c, q, d, x;
+    reg [3:0] v;
+    reg [7:0] w;
+    integer i, n;
+    real r;
+    event ev, ev2;
+    parameter P = 3;
+    initial begin
+        #5 x = 1;
+        #P x = 0;
+        #(P) x = 1;
+        #(1.5) x = 0;
+        #1.5 x = 1;
+        #(i + n) x = 0;
+        #(P * 2) x = 1;
+        #(1:2:3) x = 0;
+        #(i : i + 1 : i + 2) x = 1;
+        #0 x = 0;
+        #r x = 1;
+        #(r * 2.0) x = 0;
+        #5;
+        #(2 + 3);
+        #1 #2 #3 x = 1;
+        @(posedge clk) x = 1;
+        @(negedge clk) x = 0;
+        @(clk) x = 1;
+        @clk x = 0;
+        @ev x = 1;
+        @(ev) x = 0;
+        @(ev or ev2) x = 1;
+        @(posedge clk or negedge a) x = 0;
+        @(posedge clk, negedge a, b) x = 1;
+        @(a or b or c) x = 0;
+        @(a, b, c) x = 1;
+        @(v) x = 0;
+        @(v[0]) x = 1;
+        @(v[3:1]) x = 0;
+        @(posedge v[0]) x = 1;
+        @(w[i]) x = 0;
+        @(a & b) x = 1;
+        @(a | b or posedge c) x = 0;
+        @(posedge (a & b)) x = 1;
+        @(negedge ~a) x = 0;
+        @* x = 1;
+        @(*) x = 0;
+        @( * ) x = 1;
+        @ (*) x = 0;
+        @ ( * ) x = 1;
+        @ clk;
+        @(posedge clk);
+        @(posedge clk) ;
+        # 5 @(posedge clk) #1 x = 1;
+        @(posedge clk) @(negedge clk) x = 0;
+    end
+    always @* q = a ^ b;
+    always @(*) d = a | b;
+    always @ (*) c = ~a;
+    always @( *) x = v[0] & v[1];
+    always @(posedge clk or negedge a) q <= d;
+    always @(posedge clk, negedge a) q <= d;
+endmodule

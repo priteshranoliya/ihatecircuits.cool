@@ -1,0 +1,16 @@
+{
+  "name": "@ihatecircuits/hdl",
+  "version": "0.1.0",
+  "description": "iHateCircuits hardware description language compiler (independent of the circuit core)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "vitest run"
+  }
+}

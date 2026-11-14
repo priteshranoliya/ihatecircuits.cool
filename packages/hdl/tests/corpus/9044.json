@@ -1,0 +1,83 @@
+{
+  "seed": 9044,
+  "size": 3,
+  "features": {
+    "unreset": true,
+    "widthMismatch": true,
+    "clocks": true,
+    "wide": true,
+    "deep": true,
+    "undriven": true
+  },
+  "strict": false,
+  "runner": "ihatecircuits-export-iverilog",
+  "kind": "ours-error",
+  "message": "runner failed: design.v:1521: error: Unable to bind wire/reg/memory `n520['sd1:'sd0]' in `__gw_tb.__gw_dut'\ndesign.v:1521: error: Unable to elaborate r-value: n520['sd1:'sd0]\ndesign.v:1522: error: Unable to bind wire/reg/memory `n520['sd3:'sd2]' in `__gw_tb.__gw_dut'\ndesign.v:1522: error: Unable to elaborate r-value: n520['sd3:'sd2]\ndesign.v:1523: error: Unable to bind wire/reg/memory `n520['sd17:'sd4]' in `__gw_tb.__gw_dut'\ndesign.v:1523: error: Unable to elaborate r-value: n520['sd17:'sd4]\ndesign.v:1555: error: Unable to bind wire/reg/memory `n520' in `__gw_tb.__gw_dut'\ndesign.v:1555: error: Unable to elaborate r-value: (n520)|(n551)\n8 error(s) during elaboration.",
+  "top": "top",
+  "clock": "clk",
+  "source": "module m0 (\n  input clk,\n  input rst,\n  input [0:0] i0,\n  input [20:0] i1,\n  output reg [14:0] o0\n);\n  reg [3:0] r3;\n  reg [29:0] r2;\n  reg [8:0] r1;\n  wire [7:0] w0;\n  assign w0 = 1'b0;\n  wire [3:0] w1;\n  assign w1 = r2 | 246 | r3[1] | r3 | r2 | r3[1] | w0[5:0] | 1'd0 | i0 | 11 | r3 | r2[20:14] | 'h67 | i1 | 5'd21 | r2 | rst | 27'h7ecc54b | r1 | 'b11100111 | r1[5:0] | w0 | 8'd40 | 6'hd | r3 | r1;\n  always @(posedge clk) begin\n    if (rst) begin\n      r2 <= 30'o6253646132;\n    end else begin\n    end\n  end\n  always @(posedge clk) begin\n    if (rst) begin\n      r3 <= 4'd3;\n    end else begin\n    end\n  end\n  always @(posedge clk) begin\n    if (rst) begin\n      o0 <= 15'd8506;\n    end else begin\n      r1 <= r3[1] != 6'd13 & 4'b1111 ? {r3, 7'b0000000, r1[6:5]} ? ~r2 : 'h8 ^ rst : (r1 | i1 ? rst ? w1 : r3[3:0] : ~131);\n    end\n  end\nendmodule\n\nmodule top (\n  input clk,\n  input rst,\n  input [1:0] i0,\n  input [0:0] i1,\n  input en0,\n  output [11:0] o0\n);\n  wire g0;\n  assign g0 = clk & en0;\n  reg [11:0] r2;\n  reg [30:0] r1;\n  assign o0 = 1'd1;\n  wire [14:0] w0;\n  m0 u0 (.clk(clk), .rst(rst), .i0((en0 | 1'h1 ? {rst, i0[0], en0} : o0[5:3] != 7'o0) != (i0 ? en0 ? 'hc0 : en0 : 'o113 ? rst : i0[1:0])), .i1(21'o7777777), .o0(w0));\n  wire [0:0] w1;\n  assign w1 = ~2'o0 != (1'b1 | rst) ^ {{i1[0:0], 31'h285cc942}};\n  wire [5:0] w2;\n  assign w2 = {i1[0] != r1 & (r2[8:2] ? r2 : r1[27:8]), (~1'h0 | (w0 ? w1 : i0[1:0])) & {o0 != w0, i0 != w0, en0 + en0} != ({rst, 1'd0, w1} == (r1[24:3] & 1'd1))} == {i1} == 1'h1;\n  wire [3:0] w3;\n  assign w3 = ~('b10111110 == en0 ^ 15'h0 != w1);\n  wire [8:0] w4;\n  wire w5;\n  wire [12:0] w6;\n  assign w6 = (r1 == i0[0] ? r2[10:6] : o0 == 'b1000) + (~(~r1[28:0]) ? {r1 ? 8'h2e : 3'd4, i0 ? o0[7:1] : w3[3:2]} != (({{en0, w0[13:2], w5}, (i0[1:0] & i1[0]), i0} | (r2 ~^ w2[5:0] ? i1 ~^ 2'o2 : 4'h4 != r1[7:1])) == w1) : 'b100111) & w3 == w0[2:1] == (w2 ~^ w4) ? ~r1 ~^ i0[1:0] : {w3, 3'd7, 7'h0} ~^ 1'b1 != en0;\n  always @(posedge clk) begin\n    if (rst) begin\n      r1 <= 31'd2124365234;\n    end else begin\n    end\n  end\n  always @(posedge g0) begin\n    r2 <= ~(~((((~16'h8dc3 ~^ i1) ? {3'b001 + i1, ~w4} : ~(en0 ? w0 : rst)) & (1'd0 & w3[2:0] ^ (3'o0 ^ w6))) & (i1 == 1'd0 & (en0 != w4))));\n  end\nendmodule\n",
+  "stimulus": [
+    {
+      "rst": "1",
+      "i0": "11",
+      "i1": "1",
+      "en0": "1"
+    }
+  ],
+  "reference": {
+    "ok": true,
+    "ports": [
+      {
+        "name": "clk",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "rst",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "i0",
+        "width": 2,
+        "dir": "in"
+      },
+      {
+        "name": "i1",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "en0",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "o0",
+        "width": 12,
+        "dir": "out"
+      }
+    ],
+    "cycles": [
+      {
+        "pre": {
+          "o0": "000000000001"
+        },
+        "post": {
+          "o0": "000000000001"
+        }
+      }
+    ]
+  },
+  "ours": {
+    "ok": false,
+    "error": "design.v:1521: error: Unable to bind wire/reg/memory `n520['sd1:'sd0]' in `__gw_tb.__gw_dut'\ndesign.v:1521: error: Unable to elaborate r-value: n520['sd1:'sd0]\ndesign.v:1522: error: Unable to bind wire/reg/memory `n520['sd3:'sd2]' in `__gw_tb.__gw_dut'\ndesign.v:1522: error: Unable to elaborate r-value: n520['sd3:'sd2]\ndesign.v:1523: error: Unable to bind wire/reg/memory `n520['sd17:'sd4]' in `__gw_tb.__gw_dut'\ndesign.v:1523: error: Unable to elaborate r-value: n520['sd17:'sd4]\ndesign.v:1555: error: Unable to bind wire/reg/memory `n520' in `__gw_tb.__gw_dut'\ndesign.v:1555: error: Unable to elaborate r-value: (n520)|(n551)\n8 error(s) during elaboration."
+  },
+  "shrunk": {
+    "checks": 1500,
+    "programSizeBefore": 82,
+    "programSizeAfter": 36,
+    "cyclesBefore": 21,
+    "cyclesAfter": 1
+  }
+}

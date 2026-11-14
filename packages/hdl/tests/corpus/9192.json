@@ -1,0 +1,131 @@
+{
+  "seed": 9192,
+  "size": 3,
+  "features": {
+    "unreset": true,
+    "widthMismatch": true,
+    "clocks": true,
+    "wide": true,
+    "deep": true,
+    "undriven": true
+  },
+  "strict": false,
+  "runner": "ihatecircuits",
+  "kind": "value",
+  "message": "cycle 0 pre port o0: reference z vs ours x",
+  "mismatch": {
+    "cycle": 0,
+    "phase": "pre",
+    "port": "o0",
+    "ref": "z",
+    "ours": "x"
+  },
+  "top": "top",
+  "clock": "clk",
+  "source": "module m0 (\n  input clk,\n  input rst,\n  input i0,\n  input i1,\n  input [0:0] i2,\n  output [1:0] o0,\n  output [0:0] o1\n);\n  assign o1 = 4'hc;\n  assign o0 = 2'b00;\nendmodule\n\nmodule top (\n  input clk,\n  input rst,\n  input [29:0] i0,\n  input [1:0] i1,\n  input en0,\n  output o0\n);\n  wire g0;\n  assign g0 = clk & en0;\n  reg [1:0] r2;\n  reg [0:0] r1;\n  wire [4:0] w0;\n  wire [1:0] w1;\n  wire [2:0] w2;\n  wire w3;\n  assign w3 = 1'b0;\n  wire w4;\n  wire w5;\n  m0 u0 (.clk(clk), .rst(rst), .i0(w1), .i1(1'b0), .i2(i0[18:2] + 17'h14780), .o0(w4), .o1(w5));\n  wire [1:0] w6;\n  assign w6 = {~w0[4:0], {8'o145, 5'h7}, w5 ? 1'd1 : w2} != (({w5 ? 1'o0 : 1'h0, 5'b10001 ^ w1}) ^ (({rst, w3} & ~7'b0011110) == 'he6 ? en0 : {i1[1:0] | rst, (r2[1] ? 3'd0 : i1), (~8'o0)}) | (w5 == en0 ? r2[1:0] ^ 56 : i1 + w3));\n  wire w7;\n  assign w7 = {{r1 ? w0 : en0, w1[0] | i1[1:0], i1[1:0] & w1[1:0]}, (w2[2:0] & r1[0:0]) == (w0 ? i0 : 7'h74)};\n  assign o0 = {(w1 ~^ i0[29:27]) + {w5, w6[1:1]}, 12'h0, ~w0[4:3]};\n  always @(posedge clk) begin\n    if (rst) begin\n    end else begin\n      r1 <= w3 & ((o0 ? i1[0] : 4'b1100) | w7 == w5);\n    end\n  end\n  always @(posedge g0) begin\n    if (rst) begin\n      r2 <= 2'h0;\n    end else begin\n    end\n  end\nendmodule\n",
+  "stimulus": [
+    {
+      "rst": "1",
+      "i0": "001001001100111011010011011011",
+      "i1": "00",
+      "en0": "1"
+    }
+  ],
+  "reference": {
+    "ok": true,
+    "ports": [
+      {
+        "name": "clk",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "rst",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "i0",
+        "width": 30,
+        "dir": "in"
+      },
+      {
+        "name": "i1",
+        "width": 2,
+        "dir": "in"
+      },
+      {
+        "name": "en0",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "o0",
+        "width": 1,
+        "dir": "out"
+      }
+    ],
+    "cycles": [
+      {
+        "pre": {
+          "o0": "z"
+        },
+        "post": {
+          "o0": "z"
+        }
+      }
+    ]
+  },
+  "ours": {
+    "ok": true,
+    "ports": [
+      {
+        "name": "clk",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "rst",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "i0",
+        "width": 30,
+        "dir": "in"
+      },
+      {
+        "name": "i1",
+        "width": 2,
+        "dir": "in"
+      },
+      {
+        "name": "en0",
+        "width": 1,
+        "dir": "in"
+      },
+      {
+        "name": "o0",
+        "width": 1,
+        "dir": "out"
+      }
+    ],
+    "cycles": [
+      {
+        "pre": {
+          "o0": "x"
+        },
+        "post": {
+          "o0": "x"
+        }
+      }
+    ]
+  },
+  "shrunk": {
+    "checks": 1500,
+    "programSizeBefore": 61,
+    "programSizeAfter": 24,
+    "cyclesBefore": 21,
+    "cyclesAfter": 1
+  }
+}
